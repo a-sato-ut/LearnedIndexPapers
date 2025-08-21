@@ -13,21 +13,6 @@
       <p id="work-meta"></p>
     </header>
 
-    <section id="controls">
-      <div class="tag-filters">
-        <h3>タグで絞り込み</h3>
-        <div id="tag-checkboxes" class="tag-checkboxes"></div>
-        <button id="clear">クリア</button>
-      </div>
-      <div class="filter-help">※ 複数のタグを選択するとAND検索になります</div>
-    </section>
-
-    <section id="stats">
-      <div class="stat"><div class="k" id="total_works">–</div><div class="v">論文数</div></div>
-      <div class="stat"><div class="k" id="citations_sum">–</div><div class="v">総被引用数</div></div>
-      <div class="stat"><div class="k" id="last_updated">–</div><div class="v">最終更新 (JST)</div></div>
-    </section>
-
     <nav class="tabs">
       <button class="tab-btn active" data-tab="papers">論文一覧</button>
       <button class="tab-btn" data-tab="charts">統計グラフ</button>
@@ -36,6 +21,21 @@
 
     <section id="tab-papers" class="tab-content active">
       <h2>論文一覧 (被引用数順)</h2>
+      
+      <div class="filter-section">
+        <button id="filter-toggle" class="filter-toggle">
+          <span class="toggle-text">タグで絞り込み</span>
+          <span class="toggle-icon">▼</span>
+        </button>
+        <div id="filter-content" class="filter-content collapsed">
+          <div class="tag-filters">
+            <div id="tag-checkboxes" class="tag-checkboxes"></div>
+            <button id="clear">クリア</button>
+          </div>
+          <div class="filter-help">※ 複数のタグを選択するとAND検索になります</div>
+        </div>
+      </div>
+      
       <div id="list" class="cards"></div>
     </section>
 
@@ -54,6 +54,12 @@
     <section id="tab-authors" class="tab-content">
       <h2>主要著者 (論文数順)</h2>
       <ol id="top-authors"></ol>
+    </section>
+
+    <section id="stats">
+      <div class="stat"><div class="k" id="total_works">–</div><div class="v">論文数</div></div>
+      <div class="stat"><div class="k" id="citations_sum">–</div><div class="v">総被引用数</div></div>
+      <div class="stat"><div class="k" id="last_updated">–</div><div class="v">最終更新 (JST)</div></div>
     </section>
 
     <footer>

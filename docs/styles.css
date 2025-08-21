@@ -28,6 +28,15 @@ h1{ margin:0 0 4px; font-size:28px; }
 /* チャートコンテナ */
 .chart-container{ margin-bottom:32px; }
 .chart-container h3{ margin:0 0 16px; font-size:18px; color:var(--fg); }
+
+/* フィルター開閉機能 */
+.filter-section{ margin-bottom:16px; }
+.filter-toggle{ display:flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid #ddd; border-radius:8px; background:#fff; cursor:pointer; font-size:14px; color:var(--fg); }
+.filter-toggle:hover{ background:#f9f9f9; }
+.toggle-icon{ transition:transform 0.2s; }
+.filter-content{ overflow:hidden; transition:max-height 0.3s ease; }
+.filter-content.collapsed{ max-height:0; }
+.filter-content.expanded{ max-height:500px; }
 .stat{ background:var(--card); border:1px solid #eee; border-radius:12px; padding:12px; }
 .stat .k{ font-size:24px; font-weight:700; }
 .stat .v{ color:var(--muted); font-size:12px; }

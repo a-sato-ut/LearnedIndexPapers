@@ -138,6 +138,24 @@ function renderCharts(stats){
     refresh(); 
   });
 
+  // フィルター開閉機能
+  const filterToggle = document.getElementById('filter-toggle');
+  const filterContent = document.getElementById('filter-content');
+  const toggleIcon = filterToggle.querySelector('.toggle-icon');
+
+  filterToggle.addEventListener('click', () => {
+    const isCollapsed = filterContent.classList.contains('collapsed');
+    if (isCollapsed) {
+      filterContent.classList.remove('collapsed');
+      filterContent.classList.add('expanded');
+      toggleIcon.style.transform = 'rotate(180deg)';
+    } else {
+      filterContent.classList.remove('expanded');
+      filterContent.classList.add('collapsed');
+      toggleIcon.style.transform = 'rotate(0deg)';
+    }
+  });
+
   // タブ機能
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabContents = document.querySelectorAll('.tab-content');
