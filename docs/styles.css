@@ -227,6 +227,14 @@ footer{ padding:16px; border-top:1px solid #eee; color:var(--muted); font-size:1
   border-radius: 4px;
   border: 1px solid #e5e7eb;
   white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag-badge:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }
 
 /* 著者一覧ページのヘッダー */

@@ -146,6 +146,23 @@ function getAuthorTopTags(authorName, papers) {
   return topTags;
 }
 
+// フィルターを閉じる関数
+function closeAllFilters() {
+  // タグフィルターを閉じる
+  const filterContent = document.getElementById('filter-content');
+  const toggleIcon = document.querySelector('#filter-toggle .toggle-icon');
+  filterContent.classList.remove('expanded');
+  filterContent.classList.add('collapsed');
+  toggleIcon.style.transform = 'rotate(0deg)';
+  
+  // 著者フィルターを閉じる
+  const authorFilterContent = document.getElementById('author-filter-content');
+  const authorToggleIcon = document.querySelector('#author-filter-toggle .toggle-icon');
+  authorFilterContent.classList.remove('expanded');
+  authorFilterContent.classList.add('collapsed');
+  authorToggleIcon.style.transform = 'rotate(0deg)';
+}
+
 // グローバル変数として著者フィルター関数を定義
 window.filterByAuthor = function(authorName) {
   // 論文一覧タブに切り替え
@@ -160,15 +177,8 @@ window.filterByAuthor = function(authorName) {
   papersTab.classList.add('active');
   document.getElementById('tab-papers').classList.add('active');
   
-  // 著者フィルターを開く
-  const authorFilterContent = document.getElementById('author-filter-content');
-  const authorToggleIcon = document.querySelector('#author-filter-toggle .toggle-icon');
-  
-  if (authorFilterContent.classList.contains('collapsed')) {
-    authorFilterContent.classList.remove('collapsed');
-    authorFilterContent.classList.add('expanded');
-    authorToggleIcon.style.transform = 'rotate(180deg)';
-  }
+  // 全てのフィルターを閉じる
+  closeAllFilters();
   
   // 他の著者の選択をクリア
   const authorCheckboxes = document.querySelectorAll('#author-checkboxes input[type="checkbox"]');
@@ -182,6 +192,47 @@ window.filterByAuthor = function(authorName) {
     if (window.refreshPapers) {
       window.refreshPapers();
     }
+  }
+};
+
+// 著者とタグの両方でフィルタリングする関数
+window.filterByAuthorAndTag = function(authorName, tagName) {
+  // 論文一覧タブに切り替え
+  const papersTab = document.querySelector('.tab-btn[data-tab="papers"]');
+  const tabContents = document.querySelectorAll('.tab-content');
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  
+  // タブを切り替え
+  tabBtns.forEach(b => b.classList.remove('active'));
+  tabContents.forEach(c => c.classList.remove('active'));
+  
+  papersTab.classList.add('active');
+  document.getElementById('tab-papers').classList.add('active');
+  
+  // 全てのフィルターを閉じる
+  closeAllFilters();
+  
+  // 他の選択をクリア
+  const authorCheckboxes = document.querySelectorAll('#author-checkboxes input[type="checkbox"]');
+  const tagCheckboxes = document.querySelectorAll('#tag-checkboxes input[type="checkbox"]');
+  authorCheckboxes.forEach(cb => cb.checked = false);
+  tagCheckboxes.forEach(cb => cb.checked = false);
+  
+  // 指定された著者を選択
+  const targetAuthorCheckbox = document.querySelector(`#author-checkboxes input[value="${authorName}"]`);
+  if (targetAuthorCheckbox) {
+    targetAuthorCheckbox.checked = true;
+  }
+  
+  // 指定されたタグを選択
+  const targetTagCheckbox = document.querySelector(`#tag-checkboxes input[value="${tagName}"]`);
+  if (targetTagCheckbox) {
+    targetTagCheckbox.checked = true;
+  }
+  
+  // フィルタリングを実行
+  if (window.refreshPapers) {
+    window.refreshPapers();
   }
 };
 
@@ -219,7 +270,7 @@ function renderAuthorsPage() {
     // 著者の主要タグを取得
     const topTags = getAuthorTopTags(name, window.allPapers || []);
     const tagsHtml = topTags.map(tag => 
-      `<span class="tag-badge">${tag.tag} (${tag.count})</span>`
+      `<span class="tag-badge" onclick="filterByAuthorAndTag('${name}', '${tag.tag}')">${tag.tag} (${tag.count})</span>`
     ).join('');
     
     const tr = el('tr', {class: 'author-row'},
@@ -339,6 +390,9 @@ function renderCharts(stats){
   
   // 初期表示
   refresh();
+  
+  // 初期状態でフィルターを閉じる
+  closeAllFilters();
 
   const tagContainer = mountTagFilter(allTags, stats);
   const authorContainer = mountAuthorFilter(allAuthors, stats);
