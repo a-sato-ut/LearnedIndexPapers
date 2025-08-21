@@ -223,8 +223,8 @@ function renderAuthorsPage() {
     const totalCitations = Math.round(papers * avgCitations);
     const rank = startIndex + i + 1;
     
-    // 著者の主要カテゴリを取得
-    const topCategories = getAuthorTopCategories(name, papers, stats);
+    // 著者の主要カテゴリを取得（statsをグローバル変数として使用）
+    const topCategories = getAuthorTopCategories(name, window.allPapers || [], window.allStats || {});
     const categoriesHtml = topCategories.map(cat => 
       `<span class="category-tag">${cat.category} (${cat.count})</span>`
     ).join('');
@@ -331,12 +331,21 @@ function renderCharts(stats){
 
 
   const papers = citations.results||[];
+  console.log('Loaded papers:', papers.length);
   const allTags = new Set(papers.flatMap(p=>p.tags||[]));
   const allAuthors = new Set(papers.flatMap(p=>(p.authorships||[]).map(a=>a.name).filter(Boolean)));
+  
+  // グローバル変数にデータを保存
+  window.allPapers = papers;
+  window.allStats = stats;
+  
   renderCounters(stats);
   renderCharts(stats);
   renderTopAuthors(stats, papers);
   setupPagination();
+  
+  // 初期表示
+  refresh();
 
   const tagContainer = mountTagFilter(allTags, stats);
   const authorContainer = mountAuthorFilter(allAuthors, stats);
@@ -357,6 +366,7 @@ function renderCharts(stats){
     });
     
     const view = filterPapers(papers, selectedTags, selectedAuthors, currentSort);
+    console.log('Filtered papers:', view.length, 'Total papers:', papers.length);
     list.innerHTML = '';
     for(const w of view){ list.appendChild(renderCard(w)); }
   }
