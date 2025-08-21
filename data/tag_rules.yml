@@ -120,9 +120,9 @@ tag_rules:
     category: "Research Type"
   
   - name: "Benchmark"
-    pattern: "\\b(benchmark|microbenchmark|sosd|workload|evaluation framework)\\b"
+    pattern: "\\b(benchmark|microbenchmark|evaluation framework)\\b"
     category: "Research Type"
   
   - name: "Survey"
-    pattern: "\\b(survey|review|overview|systematic review|literature review|state[- ]of[- ]the[- ]art|sota)\\b"
+    pattern: "\\b(survey|review|overview|systematic review|literature review)\\b"
     category: "Research Type" 
