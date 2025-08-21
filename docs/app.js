@@ -48,21 +48,47 @@ function mountTagFilter(allTags, stats){
   const container = document.getElementById('tag-checkboxes');
   container.innerHTML = '';
   
-  // タグの使用頻度でソート
-  const sortedTags = [...allTags].sort((a, b) => {
-    const countA = stats.by_tag[a] || 0;
-    const countB = stats.by_tag[b] || 0;
-    return countB - countA; // 使用頻度の高い順
+  // カテゴリごとにタグをグループ化
+  const tagCategories = stats.tag_categories || {};
+  const categoryGroups = {};
+  
+  // 各タグをカテゴリに分類
+  [...allTags].forEach(tag => {
+    const category = tagCategories[tag] || 'Other';
+    if (!categoryGroups[category]) {
+      categoryGroups[category] = [];
+    }
+    categoryGroups[category].push(tag);
   });
   
-  sortedTags.forEach(tag => {
-    const count = stats.by_tag[tag] || 0;
-    const label = el('label', {class: 'tag-checkbox'}, 
-      el('input', {type: 'checkbox', value: tag}),
-      el('span', {class: 'tag-text'}, `${tag} (${count})`)
-    );
-    container.appendChild(label);
+  // カテゴリごとにタグを表示
+  Object.keys(categoryGroups).sort().forEach(category => {
+    const tags = categoryGroups[category];
+    
+    // カテゴリヘッダー
+    const categoryHeader = el('div', {class: 'category-header'}, category);
+    container.appendChild(categoryHeader);
+    
+    // タグの使用頻度でソート
+    const sortedTags = tags.sort((a, b) => {
+      const countA = stats.by_tag[a] || 0;
+      const countB = stats.by_tag[b] || 0;
+      return countB - countA; // 使用頻度の高い順
+    });
+    
+    // カテゴリ内のタグ
+    const categoryContainer = el('div', {class: 'category-tags'});
+    sortedTags.forEach(tag => {
+      const count = stats.by_tag[tag] || 0;
+      const label = el('label', {class: 'tag-checkbox'}, 
+        el('input', {type: 'checkbox', value: tag}),
+        el('span', {class: 'tag-text'}, `${tag} (${count})`)
+      );
+      categoryContainer.appendChild(label);
+    });
+    container.appendChild(categoryContainer);
   });
+  
   return container;
 }
 

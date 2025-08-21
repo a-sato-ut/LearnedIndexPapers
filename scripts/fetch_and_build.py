@@ -33,35 +33,44 @@ TARGET_DOI = os.getenv("TARGET_DOI", "10.1145/3183713.3196909")
 OPENALEX_MAILTO = os.getenv("OPENALEX_MAILTO", os.getenv("OPENALEX_EMAIL", ""))
 USER_AGENT = os.getenv("USER_AGENT", "learned-index-citations/1.0 (mailto:your-email@example.com)")
 
-def load_tag_rules() -> List[tuple[str,str]]:
+def load_tag_rules() -> List[tuple[str,str,str]]:
     """Load tagging rules from YAML file."""
     path = ROOT / "data" / "tag_rules.yml"
     if not path.exists() or yaml is None:
         # Fallback to default rules if YAML file doesn't exist
         return [
-            ("String Key", r"\b(string|text|varchar|character|lexicograph|dictionary)\b"),
-            ("Updatable", r"\b(update|updatable|mutable|insert|delete|dynamic|online|incremental|lsm)\b"),
-            ("Disk", r"\b(disk|ssd|storage|i/o|external memory|out[- ]of[- ]core)\b"),
-            ("Main-memory", r"\b(in[- ]?memory|ram)\b"),
-            ("Multidimensional", r"\b(multidimensional|multi[- ]?dimensional|spatial|kd[- ]?tree|r[- ]?tree|quadtree|octree)\b"),
-            ("Bloom Filter", r"\b(bloom filter|learned bloom|\bLBF\b)\b"),
-            ("Sketch", r"\b(count[- ]?min|cms|sketch|hyperloglog|countmin)\b"),
-            ("Hash Table", r"\b(hash table|cuckoo|robin hood|tabulation|perfect hash)\b"),
-            ("B-tree", r"\b(b[- ]?tree|b\+[- ]?tree|btree)\b"),
-            ("LSM-tree", r"\b(lsm[- ]?tree|log[- ]?structured merge)\b"),
-            ("GPU", r"\b(gpu|cuda)\b"),
-            ("Distributed", r"\b(distributed|cluster|spark|hadoop|federated)\b"),
-            ("Theoretical", r"\b(theorem|proof|approximation ratio|lower bound|upper bound|asymptotic|complexity)\b"),
-            ("Security/Adversarial", r"\b(poison|adversarial|attack|robust|privacy|secure)\b"),
-            ("Compression", r"\b(compress|compression|succinct|entropy)\b"),
-            ("Benchmark", r"\b(benchmark|microbenchmark|sosd|workload|evaluation framework)\b"),
-            ("Range", r"\b(range query|interval|scan)\b"),
-            ("Time-series", r"\b(time[- ]?series|temporal)\b"),
-            ("Disk-based Learned Index", r"learned index.*(disk|page|io|secondary storage)"),
-            ("Learned Index", r"\blearned[- ]?index(es)?\b"),
-            ("Query optimization", r"\b(query optimization|query plan|query execution|query processing)\b"),
-            ("Cardinality estimation", r"\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\b"),
-            ("Learned Bloom Filter", r"learned bloom filter|lbf"),
+            ("Learned Index", r"\blearned[- ]?index(es)?\b", "Core"),
+            ("Disk-based Learned Index", r"learned index.*(disk|page|io|secondary storage)", "Core"),
+            ("Learned Bloom Filter", r"learned bloom filter|lbf", "Core"),
+            ("String Key", r"\b(string|text|varchar|character|lexicograph|dictionary)\b", "Data Types"),
+            ("Multidimensional", r"\b(multidimensional|multi[- ]?dimensional|spatial|kd[- ]?tree|r[- ]?tree|quadtree|octree)\b", "Data Types"),
+            ("Time-series", r"\b(time[- ]?series|temporal)\b", "Data Types"),
+            ("Space-Filling Curve", r"\b(space[- ]?filling curve|hilbert curve|z[- ]?order|morton order|peano curve|sierpinski curve|gray code|quadtree|octree)\b", "Data Types"),
+            ("B-tree", r"\b(b[- ]?tree|b\+[- ]?tree|btree)\b", "Index Structures"),
+            ("LSM-tree", r"\b(lsm[- ]?tree|log[- ]?structured merge)\b", "Index Structures"),
+            ("Hash Table", r"\b(hash table|cuckoo|robin hood|tabulation|perfect hash)\b", "Index Structures"),
+            ("Bloom Filter", r"\b(bloom filter|learned bloom|\bLBF\b)\b", "Index Structures"),
+            ("Sketch", r"\b(count[- ]?min|cms|sketch|hyperloglog|countmin)\b", "Index Structures"),
+            ("Updatable", r"\b(update|updatable|mutable|insert|delete|dynamic|online|incremental|lsm)\b", "Operations"),
+            ("Range", r"\b(range query|interval|scan)\b", "Operations"),
+            ("Sorting Algorithm", r"\b(sort|sorting|quicksort|mergesort|heapsort|radix sort|bucket sort)\b", "Operations"),
+            ("Nearest Neighbor Search", r"\b(nearest neighbor|knn|k[- ]?nearest|similarity search|approximate nearest neighbor|ann|exact nearest neighbor|range search|radius search|similarity join)\b", "Operations"),
+            ("Filter", r"\b(filter|filtering)\b", "Operations"),
+            ("Disk", r"\b(disk|ssd|storage|i/o|external memory|out[- ]of[- ]core)\b", "Storage"),
+            ("Main-memory", r"\b(in[- ]?memory|ram)\b", "Storage"),
+            ("Caching", r"\b(cache|caching|memcached|redis|lru|fifo|lfu|cache eviction|cache replacement)\b", "Storage"),
+            ("Compression", r"\b(compress|compression|succinct|entropy)\b", "Storage"),
+            ("Database", r"\b(database|dbms|sql|postgresql|mysql|oracle|sqlite)\b", "Applications"),
+            ("Query optimization", r"\b(query optimization|query plan|query execution|query processing)\b", "Applications"),
+            ("Cardinality estimation", r"\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\b", "Applications"),
+            ("GPU", r"\b(gpu|cuda)\b", "Hardware"),
+            ("Distributed", r"\b(distributed|cluster|spark|hadoop|federated)\b", "Hardware"),
+            ("Reinforcement Learning", r"\b(reinforcement learning|rl|q[- ]?learning|policy gradient|actor[- ]?critic|deep q[- ]?network|dqn)\b", "Machine Learning"),
+            ("Spline", r"\b(spline|splines)\b", "Machine Learning"),
+            ("Theoretical", r"\b(theorem|proof|approximation ratio|lower bound|upper bound|asymptotic|complexity)\b", "Research Type"),
+            ("Security/Adversarial", r"\b(poison|adversarial|attack|robust|privacy|secure)\b", "Research Type"),
+            ("Benchmark", r"\b(benchmark|microbenchmark|sosd|workload|evaluation framework)\b", "Research Type"),
+            ("Survey", r"\b(survey|review|overview|systematic review|literature review|state[- ]of[- ]the[- ]art|sota)\b", "Research Type"),
         ]
     
     with open(path, "r", encoding="utf-8") as f:
@@ -71,8 +80,9 @@ def load_tag_rules() -> List[tuple[str,str]]:
     for rule in data.get("tag_rules", []):
         name = rule.get("name")
         pattern = rule.get("pattern")
+        category = rule.get("category", "Other")
         if name and pattern:
-            rules.append((name, pattern))
+            rules.append((name, pattern, category))
     
     return rules
 
@@ -206,7 +216,7 @@ def auto_tags_for(work: Dict[str,Any]) -> List[str]:
     blob = text_blob(work)
     tags: Set[str] = set()
     tag_rules = load_tag_rules()
-    for tag, pat in tag_rules:
+    for tag, pat, category in tag_rules:
         if re.search(pat, blob, flags=re.IGNORECASE):
             tags.add(tag)
             # より具体的なタグがマッチした場合、より一般的なタグも追加
@@ -247,6 +257,13 @@ def apply_overrides(items: List[Dict[str,Any]], overrides: Dict[str,Any]) -> Non
 def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
     by_year = Counter([w.get("publication_year") for w in items if w.get("publication_year")])
     by_tag = Counter(tag for w in items for tag in w.get("tags", []))
+    
+    # Tag categories
+    tag_categories = {}
+    tag_rules = load_tag_rules()
+    for tag, pattern, category in tag_rules:
+        tag_categories[tag] = category
+    
     by_venue = Counter()
     citations_sum = 0
     author_counts = Counter()
@@ -298,6 +315,8 @@ def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
         "total_works": len(items),
         "by_year": dict(sorted(by_year.items())),
         "by_tag": dict(sorted(by_tag.items(), key=lambda x:(-x[1], x[0]))),
+        "by_tag_category": dict(sorted(by_tag.items(), key=lambda x:(tag_categories.get(x[0], "Other"), -x[1], x[0]))),
+        "tag_categories": tag_categories,
         "by_venue": dict(by_venue.most_common(30)),
         "top_authors": top_authors,
         "citations_sum": citations_sum,
