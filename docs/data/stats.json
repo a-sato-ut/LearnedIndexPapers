@@ -43,6 +43,7 @@
     "Sorting Algorithm": 18,
     "Sketch": 16,
     "GPU": 13,
+    "Space-Filling Curve": 9,
     "Spline": 4
   },
   "by_venue": {
@@ -430,6 +431,6 @@
     }
   ],
   "citations_sum": 11082,
-  "last_updated": "2025-08-21T11:39:18Z",
-  "execution_time_seconds": 47.64
+  "last_updated": "2025-08-21T11:40:52Z",
+  "execution_time_seconds": 47.93
 }

@@ -97,4 +97,7 @@ tag_rules:
     pattern: "\\b(attack|adversarial|poisoning|backdoor|evasion|inference|membership inference|model inversion|data poisoning|label flipping|trojans|malicious|defense|defend|detect|detection|robustness|adversarial training|certified robustness)\\b"
   
   - name: "Nearest Neighbor Search"
-    pattern: "\\b(nearest neighbor|knn|k[- ]?nearest|similarity search|approximate nearest neighbor|ann|exact nearest neighbor|range search|radius search|similarity join)\\b" 
+    pattern: "\\b(nearest neighbor|knn|k[- ]?nearest|similarity search|approximate nearest neighbor|ann|exact nearest neighbor|range search|radius search|similarity join)\\b"
+  
+  - name: "Space-Filling Curve"
+    pattern: "\\b(space[- ]?filling curve|hilbert curve|z[- ]?order|morton order|peano curve|sierpinski curve|gray code|quadtree|octree)\\b" 
