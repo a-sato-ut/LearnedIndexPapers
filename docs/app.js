@@ -122,8 +122,8 @@ function mountAuthorFilter(allAuthors, stats){
   return container;
 }
 
-// 著者の主要カテゴリを計算する関数
-function getAuthorTopCategories(authorName, papers, stats) {
+// 著者の主要タグを計算する関数
+function getAuthorTopTags(authorName, papers) {
   // 著者の論文を取得
   const authorPapers = papers.filter(p => 
     (p.authorships || []).some(a => a.name === authorName)
@@ -137,20 +137,13 @@ function getAuthorTopCategories(authorName, papers, stats) {
     });
   });
   
-  // カテゴリ別に集計
-  const categoryCounts = {};
-  Object.entries(tagCounts).forEach(([tag, count]) => {
-    const category = stats.tag_categories[tag] || 'Other';
-    categoryCounts[category] = (categoryCounts[category] || 0) + count;
-  });
-  
-  // 上位3つのカテゴリを取得
-  const topCategories = Object.entries(categoryCounts)
+  // 上位5つのタグを取得
+  const topTags = Object.entries(tagCounts)
     .sort(([,a], [,b]) => b - a)
-    .slice(0, 3)
-    .map(([category, count]) => ({ category, count }));
+    .slice(0, 5)
+    .map(([tag, count]) => ({ tag, count }));
   
-  return topCategories;
+  return topTags;
 }
 
 // グローバル変数として著者フィルター関数を定義
@@ -223,10 +216,10 @@ function renderAuthorsPage() {
     const totalCitations = Math.round(papers * avgCitations);
     const rank = startIndex + i + 1;
     
-    // 著者の主要カテゴリを取得（statsをグローバル変数として使用）
-    const topCategories = getAuthorTopCategories(name, window.allPapers || [], window.allStats || {});
-    const categoriesHtml = topCategories.map(cat => 
-      `<span class="category-tag">${cat.category} (${cat.count})</span>`
+    // 著者の主要タグを取得
+    const topTags = getAuthorTopTags(name, window.allPapers || []);
+    const tagsHtml = topTags.map(tag => 
+      `<span class="tag-badge">${tag.tag} (${tag.count})</span>`
     ).join('');
     
     const tr = el('tr', {class: 'author-row'},
@@ -248,8 +241,8 @@ function renderAuthorsPage() {
       el('td', {class: 'total-citations-cell'}, 
         el('div', {class: 'total-citations'}, totalCitations.toString())
       ),
-      el('td', {class: 'categories-cell'}, 
-        el('div', {class: 'categories-container', html: categoriesHtml})
+      el('td', {class: 'tags-cell'}, 
+        el('div', {class: 'tags-container', html: tagsHtml})
       )
     );
     tbody.appendChild(tr);
