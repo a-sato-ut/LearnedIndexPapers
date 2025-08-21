@@ -28,19 +28,32 @@
       <div class="stat"><div class="k" id="last_updated">–</div><div class="v">最終更新 (JST)</div></div>
     </section>
 
-    <section id="charts">
-      <canvas id="byYear"></canvas>
-      <canvas id="byTag"></canvas>
-    </section>
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="papers">論文一覧</button>
+      <button class="tab-btn" data-tab="charts">統計グラフ</button>
+      <button class="tab-btn" data-tab="authors">主要著者</button>
+    </nav>
 
-    <section>
-      <h2>主要著者 (論文数順)</h2>
-      <ol id="top-authors"></ol>
-    </section>
-
-    <section>
+    <section id="tab-papers" class="tab-content active">
       <h2>論文一覧 (被引用数順)</h2>
       <div id="list" class="cards"></div>
+    </section>
+
+    <section id="tab-charts" class="tab-content">
+      <h2>統計グラフ</h2>
+      <div class="chart-container">
+        <h3>年度別論文数</h3>
+        <canvas id="byYear"></canvas>
+      </div>
+      <div class="chart-container">
+        <h3>タグ別論文数 (上位20)</h3>
+        <canvas id="byTag"></canvas>
+      </div>
+    </section>
+
+    <section id="tab-authors" class="tab-content">
+      <h2>主要著者 (論文数順)</h2>
+      <ol id="top-authors"></ol>
     </section>
 
     <footer>

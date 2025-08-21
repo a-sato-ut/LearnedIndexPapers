@@ -138,5 +138,22 @@ function renderCharts(stats){
     refresh(); 
   });
 
+  // タブ機能
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetTab = btn.getAttribute('data-tab');
+      
+      // アクティブタブを切り替え
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+      
+      btn.classList.add('active');
+      document.getElementById(`tab-${targetTab}`).classList.add('active');
+    });
+  });
+
   refresh();
 })(); 
