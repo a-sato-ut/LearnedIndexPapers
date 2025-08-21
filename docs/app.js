@@ -26,12 +26,18 @@ function renderCard(w){
   );
 }
 
-function filterPapers(papers, selectedTags, sortBy = 'citations'){
+function filterPapers(papers, selectedTags, selectedAuthors, sortBy = 'citations'){
   const filtered = papers.filter(w=>{
     // AND検索: 選択された全てのタグが含まれている必要がある
     const okTag = !selectedTags.size || selectedTags.size === 0 || 
                   Array.from(selectedTags).every(tag => (w.tags||[]).includes(tag));
-    return okTag;
+    
+    // AND検索: 選択された全ての著者が含まれている必要がある
+    const paperAuthors = (w.authorships||[]).map(a=>a.name).filter(Boolean);
+    const okAuthor = !selectedAuthors.size || selectedAuthors.size === 0 || 
+                     Array.from(selectedAuthors).every(author => paperAuthors.includes(author));
+    
+    return okTag && okAuthor;
   });
   
   // ソート順を適用
@@ -92,37 +98,194 @@ function mountTagFilter(allTags, stats){
   return container;
 }
 
-function renderTopAuthors(stats){
-  const ol = document.getElementById('top-authors');
-  ol.innerHTML = '';
-  for(const a of stats.top_authors||[]){
+function mountAuthorFilter(allAuthors, stats){
+  const container = document.getElementById('author-checkboxes');
+  container.innerHTML = '';
+  
+  // 著者名でソート
+  const sortedAuthors = [...allAuthors].sort((a, b) => a.localeCompare(b));
+  
+  // 著者の論文数を取得する関数
+  const getAuthorPaperCount = (authorName) => {
+    return stats.by_author ? stats.by_author[authorName] || 0 : 0;
+  };
+  
+  sortedAuthors.forEach(author => {
+    const count = getAuthorPaperCount(author);
+    const label = el('label', {class: 'author-checkbox'}, 
+      el('input', {type: 'checkbox', value: author}),
+      el('span', {class: 'author-text'}, `${author} (${count} papers)`)
+    );
+    container.appendChild(label);
+  });
+  
+  return container;
+}
+
+// 著者の主要カテゴリを計算する関数
+function getAuthorTopCategories(authorName, papers, stats) {
+  // 著者の論文を取得
+  const authorPapers = papers.filter(p => 
+    (p.authorships || []).some(a => a.name === authorName)
+  );
+  
+  // 著者の論文のタグを集計
+  const tagCounts = {};
+  authorPapers.forEach(paper => {
+    (paper.tags || []).forEach(tag => {
+      tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    });
+  });
+  
+  // カテゴリ別に集計
+  const categoryCounts = {};
+  Object.entries(tagCounts).forEach(([tag, count]) => {
+    const category = stats.tag_categories[tag] || 'Other';
+    categoryCounts[category] = (categoryCounts[category] || 0) + count;
+  });
+  
+  // 上位3つのカテゴリを取得
+  const topCategories = Object.entries(categoryCounts)
+    .sort(([,a], [,b]) => b - a)
+    .slice(0, 3)
+    .map(([category, count]) => ({ category, count }));
+  
+  return topCategories;
+}
+
+// グローバル変数として著者フィルター関数を定義
+window.filterByAuthor = function(authorName) {
+  // 論文一覧タブに切り替え
+  const papersTab = document.querySelector('.tab-btn[data-tab="papers"]');
+  const tabContents = document.querySelectorAll('.tab-content');
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  
+  // タブを切り替え
+  tabBtns.forEach(b => b.classList.remove('active'));
+  tabContents.forEach(c => c.classList.remove('active'));
+  
+  papersTab.classList.add('active');
+  document.getElementById('tab-papers').classList.add('active');
+  
+  // 著者フィルターを開く
+  const authorFilterContent = document.getElementById('author-filter-content');
+  const authorToggleIcon = document.querySelector('#author-filter-toggle .toggle-icon');
+  
+  if (authorFilterContent.classList.contains('collapsed')) {
+    authorFilterContent.classList.remove('collapsed');
+    authorFilterContent.classList.add('expanded');
+    authorToggleIcon.style.transform = 'rotate(180deg)';
+  }
+  
+  // 他の著者の選択をクリア
+  const authorCheckboxes = document.querySelectorAll('#author-checkboxes input[type="checkbox"]');
+  authorCheckboxes.forEach(cb => cb.checked = false);
+  
+  // 指定された著者を選択
+  const targetCheckbox = document.querySelector(`#author-checkboxes input[value="${authorName}"]`);
+  if (targetCheckbox) {
+    targetCheckbox.checked = true;
+    // フィルタリングを実行
+    if (window.refreshPapers) {
+      window.refreshPapers();
+    }
+  }
+};
+
+// ページネーション用のグローバル変数
+let currentPage = 1;
+let authorsPerPage = 50;
+let allAuthors = [];
+
+function renderTopAuthors(stats, papers){
+  allAuthors = stats.top_authors || [];
+  currentPage = 1;
+  
+  // 著者数を表示
+  document.getElementById('authors-count').textContent = allAuthors.length;
+  
+  renderAuthorsPage();
+}
+
+function renderAuthorsPage() {
+  const tbody = document.getElementById('top-authors-tbody');
+  tbody.innerHTML = '';
+  
+  const startIndex = (currentPage - 1) * authorsPerPage;
+  const endIndex = startIndex + authorsPerPage;
+  const pageAuthors = allAuthors.slice(startIndex, endIndex);
+  
+  for(let i = 0; i < pageAuthors.length; i++){
+    const a = pageAuthors[i];
     const name = a.name;
     const papers = a.papers;
     const avgCitations = a.avg_citations.toFixed(1);
     const totalCitations = Math.round(papers * avgCitations);
+    const rank = startIndex + i + 1;
     
-    // 著者のイニシャルを取得（アバター用）
-    const initials = name.split(' ').map(n => n.charAt(0)).join('').toUpperCase();
+    // 著者の主要カテゴリを取得
+    const topCategories = getAuthorTopCategories(name, papers, stats);
+    const categoriesHtml = topCategories.map(cat => 
+      `<span class="category-tag">${cat.category} (${cat.count})</span>`
+    ).join('');
     
-    const li = el('li', {},
-      el('div', {class: 'author-rank'}, (stats.top_authors.indexOf(a) + 1).toString()),
-      el('div', {class: 'author-avatar'}, initials),
-      el('div', {class: 'author-info'},
-        el('div', {class: 'author-name'}, name),
-        el('div', {class: 'author-stats'},
-          el('div', {class: 'paper-count'}, 
-            el('span', {}, '📄'),
-            `${papers} papers`
-          ),
-          el('div', {class: 'citation-count'}, 
-            el('span', {}, '📊'),
-            `avg ${avgCitations} citations`
-          )
+    const tr = el('tr', {class: 'author-row'},
+      el('td', {class: 'rank-cell'}, 
+        el('div', {class: 'author-rank'}, rank.toString())
+      ),
+      el('td', {class: 'name-cell'}, 
+        el('div', {class: 'author-name', onclick: `filterByAuthor('${name}')`}, name)
+      ),
+      el('td', {class: 'papers-cell'}, 
+        el('div', {class: 'paper-count'}, 
+          el('span', {}, '📄'),
+          papers.toString()
         )
+      ),
+      el('td', {class: 'avg-citations-cell'}, 
+        el('div', {class: 'avg-citations'}, avgCitations)
+      ),
+      el('td', {class: 'total-citations-cell'}, 
+        el('div', {class: 'total-citations'}, totalCitations.toString())
+      ),
+      el('td', {class: 'categories-cell'}, 
+        el('div', {class: 'categories-container', html: categoriesHtml})
       )
     );
-    ol.appendChild(li);
+    tbody.appendChild(tr);
   }
+  
+  // ページネーション情報を更新
+  updatePagination();
+}
+
+function updatePagination() {
+  const totalPages = Math.ceil(allAuthors.length / authorsPerPage);
+  const pageInfo = document.getElementById('page-info');
+  const prevBtn = document.getElementById('prev-page');
+  const nextBtn = document.getElementById('next-page');
+  
+  pageInfo.textContent = `${currentPage} / ${totalPages}`;
+  prevBtn.disabled = currentPage === 1;
+  nextBtn.disabled = currentPage === totalPages;
+}
+
+// ページネーションイベントリスナー
+function setupPagination() {
+  document.getElementById('prev-page').addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderAuthorsPage();
+    }
+  });
+  
+  document.getElementById('next-page').addEventListener('click', () => {
+    const totalPages = Math.ceil(allAuthors.length / authorsPerPage);
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderAuthorsPage();
+    }
+  });
 }
 
 function renderCounters(stats){
@@ -169,28 +332,47 @@ function renderCharts(stats){
 
   const papers = citations.results||[];
   const allTags = new Set(papers.flatMap(p=>p.tags||[]));
+  const allAuthors = new Set(papers.flatMap(p=>(p.authorships||[]).map(a=>a.name).filter(Boolean)));
   renderCounters(stats);
   renderCharts(stats);
-  renderTopAuthors(stats);
+  renderTopAuthors(stats, papers);
+  setupPagination();
 
   const tagContainer = mountTagFilter(allTags, stats);
+  const authorContainer = mountAuthorFilter(allAuthors, stats);
   const list = document.getElementById('list');
   const clear = document.getElementById('clear');
+  const clearAuthors = document.getElementById('clear-authors');
   let currentSort = 'citations'; // デフォルトは被引用数順
 
   function refresh(){
-    const selected = new Set();
+    const selectedTags = new Set();
     tagContainer.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
-      selected.add(cb.value);
+      selectedTags.add(cb.value);
     });
-    const view = filterPapers(papers, selected, currentSort);
+    
+    const selectedAuthors = new Set();
+    authorContainer.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
+      selectedAuthors.add(cb.value);
+    });
+    
+    const view = filterPapers(papers, selectedTags, selectedAuthors, currentSort);
     list.innerHTML = '';
     for(const w of view){ list.appendChild(renderCard(w)); }
   }
+  
+  // グローバルに公開（著者フィルター機能で使用）
+  window.refreshPapers = refresh;
 
   tagContainer.addEventListener('change', refresh);
   clear.addEventListener('click', ()=>{ 
     tagContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false); 
+    refresh(); 
+  });
+  
+  authorContainer.addEventListener('change', refresh);
+  clearAuthors.addEventListener('click', ()=>{ 
+    authorContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false); 
     refresh(); 
   });
 
@@ -231,6 +413,24 @@ function renderCharts(stats){
       filterContent.classList.remove('expanded');
       filterContent.classList.add('collapsed');
       toggleIcon.style.transform = 'rotate(0deg)';
+    }
+  });
+
+  // 著者フィルター開閉機能
+  const authorFilterToggle = document.getElementById('author-filter-toggle');
+  const authorFilterContent = document.getElementById('author-filter-content');
+  const authorToggleIcon = authorFilterToggle.querySelector('.toggle-icon');
+
+  authorFilterToggle.addEventListener('click', () => {
+    const isCollapsed = authorFilterContent.classList.contains('collapsed');
+    if (isCollapsed) {
+      authorFilterContent.classList.remove('collapsed');
+      authorFilterContent.classList.add('expanded');
+      authorToggleIcon.style.transform = 'rotate(180deg)';
+    } else {
+      authorFilterContent.classList.remove('expanded');
+      authorFilterContent.classList.add('collapsed');
+      authorToggleIcon.style.transform = 'rotate(0deg)';
     }
   });
 

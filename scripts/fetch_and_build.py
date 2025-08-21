@@ -271,7 +271,7 @@ def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
             "sum_citations": int(author_citations[author_key]),
             "avg_citations": (author_citations[author_key] / cnt) if cnt else 0.0,
         }
-        for author_key, cnt in author_counts.most_common(50)
+        for author_key, cnt in author_counts.most_common()
     ]
 
     # 著者名による論文数統計を追加

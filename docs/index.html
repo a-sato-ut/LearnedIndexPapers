@@ -27,7 +27,7 @@
     <nav class="tabs">
       <button class="tab-btn active" data-tab="papers">論文一覧</button>
       <button class="tab-btn" data-tab="charts">統計グラフ</button>
-      <button class="tab-btn" data-tab="authors">主要著者</button>
+      <button class="tab-btn" data-tab="authors">著者一覧</button>
     </nav>
 
     <section id="tab-papers" class="tab-content active">
@@ -54,6 +54,20 @@
         </div>
       </div>
       
+      <div class="filter-section">
+        <button id="author-filter-toggle" class="filter-toggle">
+          <span class="toggle-text">著者で絞り込み</span>
+          <span class="toggle-icon">▼</span>
+        </button>
+        <div id="author-filter-content" class="filter-content collapsed">
+          <div class="author-filters">
+            <div id="author-checkboxes" class="author-checkboxes"></div>
+            <button id="clear-authors">クリア</button>
+          </div>
+          <div class="filter-help">※ 複数の著者を選択するとAND検索になります</div>
+        </div>
+      </div>
+      
       <div id="list" class="cards"></div>
     </section>
 
@@ -71,10 +85,34 @@
 
     <section id="tab-authors" class="tab-content">
       <div class="authors-header">
-        <h2>主要著者</h2>
-        <p class="authors-description">論文数と平均被引用数でランキングされた主要な研究者たち</p>
+        <h2>著者一覧</h2>
+        <p class="authors-description">論文数が多い順</p>
       </div>
-      <ol id="top-authors"></ol>
+      <div class="authors-table-container">
+        <div class="authors-controls">
+          <div class="authors-info">
+            <span id="authors-count">0</span> 人の著者
+          </div>
+          <div class="authors-pagination">
+            <button id="prev-page" class="pagination-btn">← 前</button>
+            <span id="page-info">1 / 1</span>
+            <button id="next-page" class="pagination-btn">次 →</button>
+          </div>
+        </div>
+        <table id="top-authors-table">
+          <thead>
+            <tr>
+              <th>順位</th>
+              <th>著者名</th>
+              <th>論文数</th>
+              <th>平均被引用数</th>
+              <th>総被引用数</th>
+              <th>主要カテゴリ</th>
+            </tr>
+          </thead>
+          <tbody id="top-authors-tbody"></tbody>
+        </table>
+      </div>
     </section>
 
     <section id="stats">
