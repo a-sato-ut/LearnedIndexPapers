@@ -21,6 +21,7 @@
     "Disk": 125,
     "Query optimization": 112,
     "Disk-based Learned Index": 103,
+    "Attack": 78,
     "Multidimensional": 78,
     "Filter": 77,
     "Theoretical": 57,
@@ -428,6 +429,6 @@
     }
   ],
   "citations_sum": 11082,
-  "last_updated": "2025-08-21T11:36:07Z",
+  "last_updated": "2025-08-21T11:37:26Z",
   "execution_time_seconds": 47.56
 }
