@@ -271,7 +271,6 @@
         }
       ],
       "tags": [
-        "ALEX",
         "B-tree",
         "Disk",
         "Disk-based Learned Index",
@@ -306,7 +305,6 @@
         "B-tree",
         "Compression",
         "Disk-based Learned Index",
-        "PGM-index",
         "Range",
         "Updatable"
       ]
@@ -626,7 +624,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4206499307",
@@ -1247,6 +1247,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "Security/Adversarial"
       ]
     },
@@ -1290,7 +1291,10 @@
           "institutions": []
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W2525739395",
@@ -1719,7 +1723,8 @@
         }
       ],
       "tags": [
-        "Benchmark"
+        "Benchmark",
+        "Query optimization"
       ]
     },
     {
@@ -1789,6 +1794,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "Security/Adversarial"
       ]
     },
@@ -1956,7 +1962,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3107842002",
@@ -2049,6 +2057,8 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -2160,7 +2170,10 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3081786030",
@@ -2203,7 +2216,8 @@
       "tags": [
         "B-tree",
         "Disk",
-        "Multidimensional"
+        "Multidimensional",
+        "Query optimization"
       ]
     },
     {
@@ -2475,6 +2489,7 @@
       ],
       "tags": [
         "Disk-based Learned Index",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -2695,7 +2710,8 @@
       "tags": [
         "B-tree",
         "Disk-based Learned Index",
-        "Multidimensional"
+        "Multidimensional",
+        "Query optimization"
       ]
     },
     {
@@ -2853,6 +2869,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -3120,7 +3137,8 @@
         }
       ],
       "tags": [
-        "Benchmark"
+        "Benchmark",
+        "Query optimization"
       ]
     },
     {
@@ -3321,6 +3339,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "Compression",
         "Disk",
         "Updatable"
@@ -3365,6 +3384,7 @@
         }
       ],
       "tags": [
+        "Cardinality estimation",
         "Security/Adversarial"
       ]
     },
@@ -3613,7 +3633,9 @@
           "institutions": []
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3035590076",
@@ -3824,6 +3846,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "Theoretical"
       ]
     },
@@ -3992,7 +4015,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3082230371",
@@ -4181,9 +4206,7 @@
           ]
         }
       ],
-      "tags": [
-        "ALEX"
-      ]
+      "tags": []
     },
     {
       "id": "https://openalex.org/W4281753793",
@@ -4521,6 +4544,7 @@
         }
       ],
       "tags": [
+        "Cardinality estimation",
         "Updatable"
       ]
     },
@@ -4608,6 +4632,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Query optimization",
         "Security/Adversarial"
       ]
     },
@@ -4842,6 +4867,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -4897,7 +4923,10 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W2923407516",
@@ -4946,6 +4975,7 @@
       ],
       "tags": [
         "Compression",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -5213,6 +5243,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "String Key"
       ]
     },
@@ -5924,7 +5955,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation"
+      ]
     },
     {
       "id": "https://openalex.org/W2913737421",
@@ -6133,7 +6166,8 @@
       ],
       "tags": [
         "Benchmark",
-        "Disk"
+        "Disk",
+        "Query optimization"
       ]
     },
     {
@@ -6432,7 +6466,9 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "Main-memory",
+        "Query optimization",
         "Sketch",
         "Theoretical",
         "Updatable"
@@ -6589,6 +6625,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "Security/Adversarial",
         "Updatable"
       ]
@@ -6626,6 +6663,8 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -6775,7 +6814,6 @@
         }
       ],
       "tags": [
-        "ALEX",
         "B-tree",
         "Benchmark",
         "Compression",
@@ -6808,6 +6846,8 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -7622,6 +7662,7 @@
       "tags": [
         "Disk",
         "Distributed",
+        "Query optimization",
         "Range",
         "Updatable"
       ]
@@ -8052,6 +8093,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "String Key"
       ]
     },
@@ -8135,7 +8177,6 @@
       ],
       "tags": [
         "B-tree",
-        "PGM-index",
         "Theoretical"
       ]
     },
@@ -8178,6 +8219,7 @@
         }
       ],
       "tags": [
+        "Cardinality estimation",
         "Compression",
         "String Key"
       ]
@@ -8458,7 +8500,8 @@
         "Benchmark",
         "Disk",
         "Distributed",
-        "Main-memory"
+        "Main-memory",
+        "Query optimization"
       ]
     },
     {
@@ -8656,7 +8699,8 @@
         }
       ],
       "tags": [
-        "Benchmark"
+        "Benchmark",
+        "Cardinality estimation"
       ]
     },
     {
@@ -8850,7 +8894,9 @@
           "institutions": []
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3117094843",
@@ -9088,7 +9134,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation"
+      ]
     },
     {
       "id": "https://openalex.org/W3150692941",
@@ -9212,6 +9260,8 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -9279,7 +9329,8 @@
         "Compression",
         "Disk",
         "Distributed",
-        "LSM-tree"
+        "LSM-tree",
+        "Query optimization"
       ]
     },
     {
@@ -9363,7 +9414,8 @@
         }
       ],
       "tags": [
-        "Benchmark"
+        "Benchmark",
+        "Query optimization"
       ]
     },
     {
@@ -9432,7 +9484,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4289533929",
@@ -9942,6 +9996,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "Time-series",
         "Updatable"
       ]
@@ -9976,7 +10031,9 @@
           "institutions": []
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation"
+      ]
     },
     {
       "id": "https://openalex.org/W2955135504",
@@ -10024,6 +10081,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -10209,6 +10267,7 @@
       ],
       "tags": [
         "Multidimensional",
+        "Query optimization",
         "Theoretical"
       ]
     },
@@ -10386,6 +10445,8 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -10668,6 +10729,8 @@
         }
       ],
       "tags": [
+        "Cardinality estimation",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -10842,6 +10905,7 @@
       ],
       "tags": [
         "Distributed",
+        "Query optimization",
         "Theoretical"
       ]
     },
@@ -10932,6 +10996,7 @@
         "Disk",
         "Disk-based Learned Index",
         "Distributed",
+        "Query optimization",
         "Range",
         "Updatable"
       ]
@@ -11274,6 +11339,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Query optimization",
         "Theoretical"
       ]
     },
@@ -11407,6 +11473,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "String Key"
       ]
     },
@@ -11791,7 +11858,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4294904012",
@@ -11943,7 +12012,8 @@
       ],
       "tags": [
         "Compression",
-        "Disk"
+        "Disk",
+        "Query optimization"
       ]
     },
     {
@@ -12817,7 +12887,8 @@
         }
       ],
       "tags": [
-        "Disk-based Learned Index"
+        "Disk-based Learned Index",
+        "Query optimization"
       ]
     },
     {
@@ -13181,7 +13252,10 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4411403452",
@@ -13729,7 +13803,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W2963845891",
@@ -13756,6 +13832,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -13825,7 +13902,9 @@
         }
       ],
       "tags": [
-        "Hash Table"
+        "Cardinality estimation",
+        "Hash Table",
+        "Query optimization"
       ]
     },
     {
@@ -13995,7 +14074,8 @@
         }
       ],
       "tags": [
-        "Main-memory"
+        "Main-memory",
+        "Query optimization"
       ]
     },
     {
@@ -14072,7 +14152,8 @@
         }
       ],
       "tags": [
-        "Distributed"
+        "Distributed",
+        "Query optimization"
       ]
     },
     {
@@ -14755,7 +14836,6 @@
         }
       ],
       "tags": [
-        "ALEX",
         "Benchmark",
         "Disk-based Learned Index",
         "String Key",
@@ -14822,7 +14902,9 @@
           "institutions": []
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W2941668905",
@@ -15016,6 +15098,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "Range",
         "String Key"
       ]
@@ -15072,6 +15155,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "Disk",
         "Updatable"
       ]
@@ -15541,7 +15625,8 @@
         }
       ],
       "tags": [
-        "Benchmark"
+        "Benchmark",
+        "Query optimization"
       ]
     },
     {
@@ -15853,7 +15938,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3175913714",
@@ -16416,6 +16503,7 @@
         }
       ],
       "tags": [
+        "Cardinality estimation",
         "Updatable"
       ]
     },
@@ -16443,7 +16531,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4294755440",
@@ -16608,6 +16698,7 @@
         "Disk",
         "Disk-based Learned Index",
         "Multidimensional",
+        "Query optimization",
         "Range",
         "Time-series",
         "Updatable"
@@ -17526,7 +17617,8 @@
       "tags": [
         "B-tree",
         "Benchmark",
-        "Disk-based Learned Index"
+        "Disk-based Learned Index",
+        "Query optimization"
       ]
     },
     {
@@ -17820,6 +17912,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "String Key"
       ]
     },
@@ -18072,7 +18165,6 @@
         }
       ],
       "tags": [
-        "ALEX",
         "B-tree",
         "Disk-based Learned Index"
       ]
@@ -18115,7 +18207,8 @@
         "B-tree",
         "Disk",
         "Disk-based Learned Index",
-        "Multidimensional"
+        "Multidimensional",
+        "Query optimization"
       ]
     },
     {
@@ -18336,6 +18429,7 @@
       "tags": [
         "Distributed",
         "Main-memory",
+        "Query optimization",
         "Range",
         "Updatable"
       ]
@@ -18592,7 +18686,10 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W2986105311",
@@ -18680,7 +18777,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3124118810",
@@ -19002,7 +19101,6 @@
         }
       ],
       "tags": [
-        "ALEX",
         "B-tree",
         "Disk-based Learned Index",
         "Main-memory",
@@ -19109,7 +19207,8 @@
         }
       ],
       "tags": [
-        "Benchmark"
+        "Benchmark",
+        "Query optimization"
       ]
     },
     {
@@ -19411,6 +19510,7 @@
         "Disk",
         "Distributed",
         "Multidimensional",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -19744,11 +19844,9 @@
         }
       ],
       "tags": [
-        "ALEX",
         "B-tree",
         "Disk",
-        "Disk-based Learned Index",
-        "PGM-index"
+        "Disk-based Learned Index"
       ]
     },
     {
@@ -19959,6 +20057,7 @@
         "Benchmark",
         "Compression",
         "Disk",
+        "Query optimization",
         "Time-series"
       ]
     },
@@ -20062,6 +20161,8 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -21211,7 +21312,8 @@
         }
       ],
       "tags": [
-        "Distributed"
+        "Distributed",
+        "Query optimization"
       ]
     },
     {
@@ -21627,7 +21729,9 @@
           "institutions": []
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3173134617",
@@ -21712,7 +21816,8 @@
       ],
       "tags": [
         "Benchmark",
-        "Distributed"
+        "Distributed",
+        "Query optimization"
       ]
     },
     {
@@ -21814,7 +21919,6 @@
       "tags": [
         "Disk",
         "Disk-based Learned Index",
-        "PGM-index",
         "String Key",
         "Theoretical"
       ]
@@ -21882,8 +21986,10 @@
         }
       ],
       "tags": [
+        "Cardinality estimation",
         "Distributed",
         "Main-memory",
+        "Query optimization",
         "Theoretical"
       ]
     },
@@ -22118,7 +22224,10 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4214910385",
@@ -22211,8 +22320,7 @@
       "tags": [
         "Disk-based Learned Index",
         "Distributed",
-        "GPU",
-        "PGM-index"
+        "GPU"
       ]
     },
     {
@@ -22502,7 +22610,8 @@
       "tags": [
         "Disk",
         "Distributed",
-        "Multidimensional"
+        "Multidimensional",
+        "Query optimization"
       ]
     },
     {
@@ -22539,7 +22648,8 @@
       "tags": [
         "Benchmark",
         "Compression",
-        "Disk"
+        "Disk",
+        "Query optimization"
       ]
     },
     {
@@ -23049,7 +23159,6 @@
         }
       ],
       "tags": [
-        "ALEX",
         "Disk-based Learned Index",
         "Security/Adversarial",
         "Theoretical",
@@ -23501,7 +23610,8 @@
         }
       ],
       "tags": [
-        "Benchmark"
+        "Benchmark",
+        "Query optimization"
       ]
     },
     {
@@ -23537,6 +23647,7 @@
       ],
       "tags": [
         "Disk",
+        "Query optimization",
         "Range",
         "Updatable"
       ]
@@ -23615,7 +23726,8 @@
       ],
       "tags": [
         "Disk",
-        "Multidimensional"
+        "Multidimensional",
+        "Query optimization"
       ]
     },
     {
@@ -23994,7 +24106,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3157724116",
@@ -24119,6 +24233,7 @@
         }
       ],
       "tags": [
+        "Cardinality estimation",
         "Multidimensional",
         "Updatable"
       ]
@@ -24154,7 +24269,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3216813966",
@@ -24248,7 +24365,8 @@
       ],
       "tags": [
         "Distributed",
-        "Main-memory"
+        "Main-memory",
+        "Query optimization"
       ]
     },
     {
@@ -24324,7 +24442,10 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4281387166",
@@ -24948,7 +25069,8 @@
         }
       ],
       "tags": [
-        "Distributed"
+        "Distributed",
+        "Query optimization"
       ]
     },
     {
@@ -25269,7 +25391,10 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3128631229",
@@ -25527,6 +25652,7 @@
       "tags": [
         "B-tree",
         "Multidimensional",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -25640,7 +25766,8 @@
       ],
       "tags": [
         "Benchmark",
-        "Distributed"
+        "Distributed",
+        "Query optimization"
       ]
     },
     {
@@ -27123,9 +27250,7 @@
         }
       ],
       "tags": [
-        "ALEX",
         "Disk-based Learned Index",
-        "PGM-index",
         "Updatable"
       ]
     },
@@ -27310,7 +27435,8 @@
       ],
       "tags": [
         "B-tree",
-        "Benchmark"
+        "Benchmark",
+        "Query optimization"
       ]
     },
     {
@@ -27442,7 +27568,10 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3037669163",
@@ -27649,7 +27778,8 @@
       "tags": [
         "B-tree",
         "Disk-based Learned Index",
-        "Multidimensional"
+        "Multidimensional",
+        "Query optimization"
       ]
     },
     {
@@ -27723,6 +27853,8 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -27794,6 +27926,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "Disk",
         "Updatable"
       ]
@@ -27966,6 +28099,7 @@
       ],
       "tags": [
         "Disk-based Learned Index",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -28224,6 +28358,7 @@
       ],
       "tags": [
         "Multidimensional",
+        "Query optimization",
         "Range",
         "Updatable"
       ]
@@ -28441,6 +28576,7 @@
         }
       ],
       "tags": [
+        "Query optimization",
         "Security/Adversarial"
       ]
     },
@@ -28924,7 +29060,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation"
+      ]
     },
     {
       "id": "https://openalex.org/W4399156171",
@@ -29043,6 +29181,7 @@
       "tags": [
         "Benchmark",
         "Distributed",
+        "Query optimization",
         "String Key"
       ]
     },
@@ -29672,7 +29811,8 @@
         }
       ],
       "tags": [
-        "Benchmark"
+        "Benchmark",
+        "Query optimization"
       ]
     },
     {
@@ -30460,6 +30600,7 @@
       "tags": [
         "B-tree",
         "Compression",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -30497,6 +30638,7 @@
       "tags": [
         "Distributed",
         "Multidimensional",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -30636,7 +30778,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W2981354846",
@@ -30660,7 +30804,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3009210929",
@@ -30686,7 +30832,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3016646082",
@@ -30708,7 +30856,10 @@
           "institutions": []
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3033907207",
@@ -30965,7 +31116,8 @@
       "tags": [
         "B-tree",
         "Benchmark",
-        "Disk-based Learned Index"
+        "Disk-based Learned Index",
+        "Query optimization"
       ]
     },
     {
@@ -30995,6 +31147,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "Updatable"
       ]
     },
@@ -31250,7 +31403,8 @@
       ],
       "tags": [
         "Distributed",
-        "Main-memory"
+        "Main-memory",
+        "Query optimization"
       ]
     },
     {
@@ -31513,6 +31667,7 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "Security/Adversarial",
         "Updatable"
       ]
@@ -31557,7 +31712,9 @@
       ],
       "tags": [
         "Benchmark",
+        "Cardinality estimation",
         "Main-memory",
+        "Query optimization",
         "Sketch",
         "Theoretical",
         "Updatable"
@@ -31657,7 +31814,6 @@
         }
       ],
       "tags": [
-        "ALEX",
         "B-tree",
         "Benchmark",
         "Compression",
@@ -31690,6 +31846,7 @@
       ],
       "tags": [
         "Multidimensional",
+        "Query optimization",
         "Range"
       ]
     },
@@ -33121,7 +33278,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation"
+      ]
     },
     {
       "id": "https://openalex.org/W2962713659",
@@ -33254,6 +33413,7 @@
       ],
       "tags": [
         "Distributed",
+        "Query optimization",
         "String Key"
       ]
     },
@@ -33762,6 +33922,7 @@
       ],
       "tags": [
         "Bloom Filter",
+        "Query optimization",
         "Updatable"
       ]
     },
@@ -33935,7 +34096,10 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Cardinality estimation",
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4213448581",
@@ -33954,7 +34118,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4293057519",
@@ -33979,7 +34145,9 @@
           "institutions": []
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4296984147",
@@ -34040,7 +34208,8 @@
         }
       ],
       "tags": [
-        "Multidimensional"
+        "Multidimensional",
+        "Query optimization"
       ]
     },
     {
@@ -34078,8 +34247,7 @@
         }
       ],
       "tags": [
-        "Disk-based Learned Index",
-        "PGM-index"
+        "Disk-based Learned Index"
       ]
     },
     {
@@ -34106,7 +34274,9 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W4312538189",
@@ -34310,7 +34480,8 @@
       "tags": [
         "Benchmark",
         "Disk-based Learned Index",
-        "Distributed"
+        "Distributed",
+        "Query optimization"
       ]
     },
     {
@@ -34707,7 +34878,9 @@
           "institutions": []
         }
       ],
-      "tags": []
+      "tags": [
+        "Query optimization"
+      ]
     },
     {
       "id": "https://openalex.org/W3204918079",
@@ -35111,6 +35284,7 @@
       ],
       "tags": [
         "GPU",
+        "Query optimization",
         "Updatable"
       ]
     }

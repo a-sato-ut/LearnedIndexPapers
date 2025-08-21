@@ -54,8 +54,8 @@ TAG_RULES: List[tuple[str,str]] = [
     ("Range", r"\b(range query|interval|scan)\b"),
     ("Time-series", r"\b(time[- ]?series|temporal)\b"),
     ("Disk-based Learned Index", r"learned index.*(disk|page|io|secondary storage)"),
-    ("PGM-index", r"\bpgm[- ]?index\b"),
-    ("ALEX", r"\balex\b"),
+    ("Query optimization", r"\b(query optimization|query plan|query execution|query processing)\b"),
+    ("Cardinality estimation", r"\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\b"),
     ("Learned Bloom Filter", r"learned bloom filter|lbf"),
 ]
 
