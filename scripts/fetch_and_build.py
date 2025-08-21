@@ -35,44 +35,7 @@ USER_AGENT = os.getenv("USER_AGENT", "learned-index-citations/1.0 (mailto:your-e
 
 def load_tag_rules() -> List[tuple[str,str,str]]:
     """Load tagging rules from YAML file."""
-    path = ROOT / "data" / "tag_rules.yml"
-    if not path.exists() or yaml is None:
-        # Fallback to default rules if YAML file doesn't exist
-        return [
-            ("Learned Index", r"\blearned[- ]?index(es)?\b", "Core"),
-            ("Disk-based Learned Index", r"learned index.*(disk|page|io|secondary storage)", "Core"),
-            ("Learned Bloom Filter", r"learned bloom filter|lbf", "Core"),
-            ("String Key", r"\b(string|text|varchar|character|lexicograph|dictionary)\b", "Data Types"),
-            ("Multidimensional", r"\b(multidimensional|multi[- ]?dimensional|spatial|kd[- ]?tree|r[- ]?tree|quadtree|octree)\b", "Data Types"),
-            ("Time-series", r"\b(time[- ]?series|temporal)\b", "Data Types"),
-            ("Space-Filling Curve", r"\b(space[- ]?filling curve|hilbert curve|z[- ]?order|morton order|peano curve|sierpinski curve|gray code|quadtree|octree)\b", "Data Types"),
-            ("B-tree", r"\b(b[- ]?tree|b\+[- ]?tree|btree)\b", "Index Structures"),
-            ("LSM-tree", r"\b(lsm[- ]?tree|log[- ]?structured merge)\b", "Index Structures"),
-            ("Hash Table", r"\b(hash table|cuckoo|robin hood|tabulation|perfect hash)\b", "Index Structures"),
-            ("Bloom Filter", r"\b(bloom filter|learned bloom|\bLBF\b)\b", "Index Structures"),
-            ("Sketch", r"\b(count[- ]?min|cms|sketch|hyperloglog|countmin)\b", "Index Structures"),
-            ("Updatable", r"\b(update|updatable|mutable|insert|delete|dynamic|online|incremental|lsm)\b", "Operations"),
-            ("Range", r"\b(range query|interval|scan)\b", "Operations"),
-            ("Sorting Algorithm", r"\b(sort|sorting|quicksort|mergesort|heapsort|radix sort|bucket sort)\b", "Operations"),
-            ("Nearest Neighbor Search", r"\b(nearest neighbor|knn|k[- ]?nearest|similarity search|approximate nearest neighbor|ann|exact nearest neighbor|range search|radius search|similarity join)\b", "Operations"),
-            ("Filter", r"\b(filter|filtering)\b", "Operations"),
-            ("Disk", r"\b(disk|ssd|storage|i/o|external memory|out[- ]of[- ]core)\b", "Storage"),
-            ("Main-memory", r"\b(in[- ]?memory|ram)\b", "Storage"),
-            ("Caching", r"\b(cache|caching|memcached|redis|lru|fifo|lfu|cache eviction|cache replacement)\b", "Storage"),
-            ("Compression", r"\b(compress|compression|succinct|entropy)\b", "Storage"),
-            ("Database", r"\b(database|dbms|sql|postgresql|mysql|oracle|sqlite)\b", "Applications"),
-            ("Query optimization", r"\b(query optimization|query plan|query execution|query processing)\b", "Applications"),
-            ("Cardinality estimation", r"\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\b", "Applications"),
-            ("GPU", r"\b(gpu|cuda)\b", "Hardware"),
-            ("Distributed", r"\b(distributed|cluster|spark|hadoop|federated)\b", "Hardware"),
-            ("Reinforcement Learning", r"\b(reinforcement learning|rl|q[- ]?learning|policy gradient|actor[- ]?critic|deep q[- ]?network|dqn)\b", "Machine Learning"),
-            ("Spline", r"\b(spline|splines)\b", "Machine Learning"),
-            ("Theoretical", r"\b(theorem|proof|approximation ratio|lower bound|upper bound|asymptotic|complexity)\b", "Research Type"),
-            ("Security/Adversarial", r"\b(poison|adversarial|attack|robust|privacy|secure)\b", "Research Type"),
-            ("Benchmark", r"\b(benchmark|microbenchmark|sosd|workload|evaluation framework)\b", "Research Type"),
-            ("Survey", r"\b(survey|review|overview|systematic review|literature review|state[- ]of[- ]the[- ]art|sota)\b", "Research Type"),
-        ]
-    
+    path = ROOT / "data" / "tag_rules.yml"    
     with open(path, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f) or {}
     

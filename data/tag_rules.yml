@@ -7,12 +7,28 @@ tag_rules:
     pattern: "\\blearned[- ]?index(es)?\\b"
     category: "Core"
   
-  - name: "Disk-based Learned Index"
-    pattern: "learned index.*(disk|page|io|secondary storage)"
-    category: "Core"
-  
   - name: "Learned Bloom Filter"
     pattern: "learned bloom filter|lbf"
+    category: "Core"
+  
+  - name: "B-tree"
+    pattern: "\\b(b[- ]?tree|b\\+[- ]?tree|btree)\\b"
+    category: "Core"
+  
+  - name: "LSM-tree"
+    pattern: "\\b(lsm[- ]?tree|log[- ]?structured merge)\\b"
+    category: "Core"
+  
+  - name: "Hash Table"
+    pattern: "\\b(hash table|cuckoo|robin hood|tabulation|perfect hash)\\b"
+    category: "Core"
+  
+  - name: "Bloom Filter"
+    pattern: "\\b(bloom filter|learned bloom|\\bLBF\\b)\\b"
+    category: "Core"
+  
+  - name: "Sketch"
+    pattern: "\\b(count[- ]?min|cms|sketch|hyperloglog|countmin)\\b"
     category: "Core"
   
   - name: "String Key"
@@ -30,26 +46,6 @@ tag_rules:
   - name: "Space-Filling Curve"
     pattern: "\\b(space[- ]?filling curve|hilbert curve|z[- ]?order|morton order|peano curve|sierpinski curve|gray code|quadtree|octree)\\b"
     category: "Data Types"
-  
-  - name: "B-tree"
-    pattern: "\\b(b[- ]?tree|b\\+[- ]?tree|btree)\\b"
-    category: "Index Structures"
-  
-  - name: "LSM-tree"
-    pattern: "\\b(lsm[- ]?tree|log[- ]?structured merge)\\b"
-    category: "Index Structures"
-  
-  - name: "Hash Table"
-    pattern: "\\b(hash table|cuckoo|robin hood|tabulation|perfect hash)\\b"
-    category: "Index Structures"
-  
-  - name: "Bloom Filter"
-    pattern: "\\b(bloom filter|learned bloom|\\bLBF\\b)\\b"
-    category: "Index Structures"
-  
-  - name: "Sketch"
-    pattern: "\\b(count[- ]?min|cms|sketch|hyperloglog|countmin)\\b"
-    category: "Index Structures"
   
   - name: "Updatable"
     pattern: "\\b(update|updatable|mutable|insert|delete|dynamic|online|incremental|lsm)\\b"
@@ -73,19 +69,27 @@ tag_rules:
   
   - name: "Disk"
     pattern: "\\b(disk|ssd|storage|i/o|external memory|out[- ]of[- ]core)\\b"
-    category: "Storage"
+    category: "System"
   
   - name: "Main-memory"
     pattern: "\\b(in[- ]?memory|ram)\\b"
-    category: "Storage"
+    category: "System"
   
   - name: "Caching"
     pattern: "\\b(cache|caching|memcached|redis|lru|fifo|lfu|cache eviction|cache replacement)\\b"
-    category: "Storage"
+    category: "System"
   
   - name: "Compression"
     pattern: "\\b(compress|compression|succinct|entropy)\\b"
-    category: "Storage"
+    category: "System"
+  
+  - name: "GPU"
+    pattern: "\\b(gpu|cuda)\\b"
+    category: "System"
+  
+  - name: "Distributed"
+    pattern: "\\b(distributed|cluster|spark|hadoop|federated)\\b"
+    category: "System"
   
   - name: "Database"
     pattern: "\\b(database|dbms|sql|postgresql|mysql|oracle|sqlite)\\b"
@@ -99,21 +103,13 @@ tag_rules:
     pattern: "\\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\\b"
     category: "Applications"
   
-  - name: "GPU"
-    pattern: "\\b(gpu|cuda)\\b"
-    category: "Hardware"
-  
-  - name: "Distributed"
-    pattern: "\\b(distributed|cluster|spark|hadoop|federated)\\b"
-    category: "Hardware"
-  
   - name: "Reinforcement Learning"
     pattern: "\\b(reinforcement learning|rl|q[- ]?learning|policy gradient|actor[- ]?critic|deep q[- ]?network|dqn)\\b"
-    category: "Machine Learning"
+    category: "Others"
   
   - name: "Spline"
     pattern: "\\b(spline|splines)\\b"
-    category: "Machine Learning"
+    category: "Others"
   
   - name: "Theoretical"
     pattern: "\\b(theorem|proof|approximation ratio|lower bound|upper bound|asymptotic|complexity)\\b"
