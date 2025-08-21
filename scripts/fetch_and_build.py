@@ -307,6 +307,8 @@ def main() -> None:
             "cited_by_count": w.get("cited_by_count"),
             "host_venue": (w.get("primary_location") or {}).get("source",{}).get("display_name") if w.get("primary_location") and w.get("primary_location").get("source") else "Unknown",
             "landing_page_url": (w.get("primary_location") or {}).get("landing_page_url"),
+            "abstract_inverted_index": w.get("abstract_inverted_index"),
+            "concepts": w.get("concepts"),
             "authorships": [
                 {
                     "author_id": (a.get("author") or {}).get("id"),

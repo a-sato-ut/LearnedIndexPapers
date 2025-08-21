@@ -12,29 +12,29 @@
     "2025": 43
   },
   "by_tag": {
-    "Learned Index": 104,
-    "Updatable": 59,
+    "Learned Index": 105,
+    "Updatable": 60,
     "Multidimensional": 46,
-    "Disk": 34,
+    "Disk": 35,
     "Bloom Filter": 31,
     "Query optimization": 30,
-    "Disk-based Learned Index": 26,
+    "Disk-based Learned Index": 28,
     "Cardinality estimation": 20,
     "Distributed": 17,
     "Learned Bloom Filter": 17,
-    "Benchmark": 12,
-    "Compression": 11,
+    "Benchmark": 14,
+    "Compression": 12,
     "Time-series": 11,
     "Main-memory": 9,
+    "Security/Adversarial": 9,
     "String Key": 9,
-    "Security/Adversarial": 8,
     "LSM-tree": 7,
     "GPU": 6,
+    "Range": 5,
     "Hash Table": 4,
-    "Range": 4,
     "Sketch": 4,
     "Theoretical": 4,
-    "B-tree": 1
+    "B-tree": 3
   },
   "by_venue": {
     "Unknown": 168,
@@ -421,6 +421,6 @@
     }
   ],
   "citations_sum": 11082,
-  "last_updated": "2025-08-21T11:16:44Z",
+  "last_updated": "2025-08-21T11:19:06Z",
   "execution_time_seconds": 0.5
 }

@@ -82,7 +82,716 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Benchmark",
+        "Security/Adversarial"
+      ],
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "Deep": [
+          1
+        ],
+        "learning": [
+          2,
+          37
+        ],
+        "(DL)": [
+          3
+        ],
+        "is": [
+          4,
+          52,
+          131,
+          150
+        ],
+        "revolutionizing": [
+          5
+        ],
+        "evidence-based": [
+          6
+        ],
+        "decision-making": [
+          7
+        ],
+        "techniques": [
+          8,
+          82
+        ],
+        "that": [
+          9,
+          51,
+          59,
+          94,
+          228
+        ],
+        "can": [
+          10,
+          117
+        ],
+        "be": [
+          11,
+          106,
+          118
+        ],
+        "applied": [
+          12
+        ],
+        "across": [
+          13
+        ],
+        "various": [
+          14
+        ],
+        "sectors.": [
+          15,
+          177
+        ],
+        "Specifically,": [
+          16
+        ],
+        "it": [
+          17
+        ],
+        "possesses": [
+          18
+        ],
+        "the": [
+          19,
+          32,
+          64,
+          68,
+          78,
+          97,
+          167,
+          181,
+          203,
+          217,
+          221,
+          246,
+          254
+        ],
+        "ability": [
+          20
+        ],
+        "to": [
+          21,
+          40,
+          134,
+          140,
+          152,
+          163,
+          219,
+          239
+        ],
+        "utilize": [
+          22
+        ],
+        "two": [
+          23,
+          109
+        ],
+        "or": [
+          24,
+          110
+        ],
+        "more": [
+          25,
+          111,
+          154
+        ],
+        "levels": [
+          26
+        ],
+        "of": [
+          27,
+          31,
+          67,
+          96,
+          148,
+          205,
+          250
+        ],
+        "non-linear": [
+          28
+        ],
+        "feature": [
+          29
+        ],
+        "transformation": [
+          30
+        ],
+        "given": [
+          33
+        ],
+        "data": [
+          34
+        ],
+        "via": [
+          35
+        ],
+        "representation": [
+          36
+        ],
+        "in": [
+          38,
+          54,
+          166,
+          245,
+          253
+        ],
+        "order": [
+          39
+        ],
+        "overcome": [
+          41,
+          220
+        ],
+        "limitations": [
+          42
+        ],
+        "posed": [
+          43
+        ],
+        "by": [
+          44,
+          108,
+          224
+        ],
+        "large": [
+          45
+        ],
+        "datasets.": [
+          46
+        ],
+        "As": [
+          47
+        ],
+        "a": [
+          48,
+          100
+        ],
+        "multidisciplinary": [
+          49
+        ],
+        "field": [
+          50,
+          69
+        ],
+        "still": [
+          53
+        ],
+        "its": [
+          55
+        ],
+        "nascent": [
+          56
+        ],
+        "phase,": [
+          57
+        ],
+        "articles": [
+          58
+        ],
+        "survey": [
+          60
+        ],
+        "DL": [
+          61,
+          80,
+          115,
+          130,
+          158,
+          214,
+          234,
+          251
+        ],
+        "architectures": [
+          62,
+          215,
+          230
+        ],
+        "encompassing": [
+          63
+        ],
+        "full": [
+          65
+        ],
+        "scope": [
+          66
+        ],
+        "are": [
+          70,
+          199
+        ],
+        "rather": [
+          71
+        ],
+        "limited.": [
+          72
+        ],
+        "Thus,": [
+          73
+        ],
+        "this": [
+          74,
+          236
+        ],
+        "paper": [
+          75
+        ],
+        "comprehensively": [
+          76
+        ],
+        "reviews": [
+          77
+        ],
+        "state-of-art": [
+          79
+        ],
+        "modelling": [
+          81
+        ],
+        "and": [
+          83,
+          89,
+          104,
+          122,
+          136,
+          138,
+          197,
+          248
+        ],
+        "provides": [
+          84
+        ],
+        "insights": [
+          85
+        ],
+        "into": [
+          86
+        ],
+        "their": [
+          87
+        ],
+        "advantages": [
+          88
+        ],
+        "challenges.": [
+          90
+        ],
+        "It": [
+          91
+        ],
+        "was": [
+          92
+        ],
+        "found": [
+          93
+        ],
+        "many": [
+          95
+        ],
+        "models": [
+          98,
+          116,
+          207,
+          252
+        ],
+        "exhibit": [
+          99
+        ],
+        "highly": [
+          101
+        ],
+        "domain-specific": [
+          102
+        ],
+        "efficiency": [
+          103
+        ],
+        "could": [
+          105
+        ],
+        "trained": [
+          107
+        ],
+        "methods.": [
+          112
+        ],
+        "However,": [
+          113
+        ],
+        "training": [
+          114
+        ],
+        "very": [
+          119
+        ],
+        "time-consuming,": [
+          120
+        ],
+        "expensive,": [
+          121
+        ],
+        "requires": [
+          123
+        ],
+        "huge": [
+          124
+        ],
+        "samples": [
+          125
+        ],
+        "for": [
+          126,
+          242
+        ],
+        "better": [
+          127
+        ],
+        "accuracy.": [
+          128
+        ],
+        "Since": [
+          129
+        ],
+        "also": [
+          132
+        ],
+        "susceptible": [
+          133
+        ],
+        "deception": [
+          135
+        ],
+        "misclassification": [
+          137
+        ],
+        "tends": [
+          139
+        ],
+        "get": [
+          141
+        ],
+        "stuck": [
+          142
+        ],
+        "on": [
+          143
+        ],
+        "local": [
+          144
+        ],
+        "minima,": [
+          145
+        ],
+        "improved": [
+          146
+        ],
+        "optimization": [
+          147
+        ],
+        "parameters": [
+          149
+        ],
+        "required": [
+          151
+        ],
+        "create": [
+          153
+        ],
+        "robust": [
+          155
+        ],
+        "models.": [
+          156,
+          226
+        ],
+        "Regardless,": [
+          157
+        ],
+        "has": [
+          159
+        ],
+        "already": [
+          160
+        ],
+        "been": [
+          161
+        ],
+        "leading": [
+          162
+        ],
+        "groundbreaking": [
+          164
+        ],
+        "results": [
+          165
+        ],
+        "healthcare,": [
+          168
+        ],
+        "education,": [
+          169
+        ],
+        "security,": [
+          170
+        ],
+        "commercial,": [
+          171
+        ],
+        "industrial,": [
+          172
+        ],
+        "as": [
+          173,
+          175
+        ],
+        "well": [
+          174
+        ],
+        "government": [
+          176
+        ],
+        "Some": [
+          178
+        ],
+        "models,": [
+          179,
+          235
+        ],
+        "like": [
+          180
+        ],
+        "convolutional": [
+          182
+        ],
+        "neural": [
+          183,
+          191,
+          195
+        ],
+        "network": [
+          184,
+          192
+        ],
+        "(CNN),": [
+          185
+        ],
+        "generative": [
+          186
+        ],
+        "adversarial": [
+          187
+        ],
+        "networks": [
+          188
+        ],
+        "(GAN),": [
+          189
+        ],
+        "recurrent": [
+          190
+        ],
+        "(RNN),": [
+          193
+        ],
+        "recursive": [
+          194
+        ],
+        "networks,": [
+          196
+        ],
+        "autoencoders,": [
+          198
+        ],
+        "frequently": [
+          200
+        ],
+        "used,": [
+          201
+        ],
+        "while": [
+          202
+        ],
+        "potential": [
+          204
+        ],
+        "other": [
+          206
+        ],
+        "remains": [
+          208
+        ],
+        "widely": [
+          209
+        ],
+        "unexplored.": [
+          210
+        ],
+        "Pertinently,": [
+          211
+        ],
+        "hybrid": [
+          212
+        ],
+        "conventional": [
+          213,
+          225
+        ],
+        "have": [
+          216
+        ],
+        "capacity": [
+          218
+        ],
+        "challenges": [
+          222
+        ],
+        "experienced": [
+          223
+        ],
+        "Considering": [
+          227
+        ],
+        "capsule": [
+          229
+        ],
+        "may": [
+          231
+        ],
+        "dominate": [
+          232
+        ],
+        "future": [
+          233
+        ],
+        "work": [
+          237
+        ],
+        "aimed": [
+          238
+        ],
+        "compile": [
+          240
+        ],
+        "information": [
+          241
+        ],
+        "stakeholders": [
+          243
+        ],
+        "involved": [
+          244
+        ],
+        "development": [
+          247
+        ],
+        "use": [
+          249
+        ],
+        "contemporary": [
+          255
+        ],
+        "world.": [
+          256
+        ]
+      },
+      "concepts": [
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.8000987
+        },
+        {
+          "id": "https://openalex.org/C108583219",
+          "wikidata": "https://www.wikidata.org/wiki/Q197536",
+          "display_name": "Deep learning",
+          "level": 2,
+          "score": 0.68557024
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.6676303
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.57493675
+        },
+        {
+          "id": "https://openalex.org/C9652623",
+          "wikidata": "https://www.wikidata.org/wiki/Q190109",
+          "display_name": "Field (mathematics)",
+          "level": 2,
+          "score": 0.54830503
+        },
+        {
+          "id": "https://openalex.org/C81363708",
+          "wikidata": "https://www.wikidata.org/wiki/Q17084460",
+          "display_name": "Convolutional neural network",
+          "level": 2,
+          "score": 0.46701223
+        },
+        {
+          "id": "https://openalex.org/C185798385",
+          "wikidata": "https://www.wikidata.org/wiki/Q1161707",
+          "display_name": "Benchmark (surveying)",
+          "level": 2,
+          "score": 0.4270448
+        },
+        {
+          "id": "https://openalex.org/C59404180",
+          "wikidata": "https://www.wikidata.org/wiki/Q17013334",
+          "display_name": "Feature learning",
+          "level": 2,
+          "score": 0.41384217
+        },
+        {
+          "id": "https://openalex.org/C2522767166",
+          "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+          "display_name": "Data science",
+          "level": 1,
+          "score": 0.3649816
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C13280743",
+          "wikidata": "https://www.wikidata.org/wiki/Q131089",
+          "display_name": "Geodesy",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C202444582",
+          "wikidata": "https://www.wikidata.org/wiki/Q837863",
+          "display_name": "Pure mathematics",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C205649164",
+          "wikidata": "https://www.wikidata.org/wiki/Q1071",
+          "display_name": "Geography",
+          "level": 0,
+          "score": 0.0
+        }
+      ]
     },
     {
       "id": "https://openalex.org/W2922386288",
@@ -167,7 +876,131 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "Benchmark"
+      ],
+      "abstract_inverted_index": null,
+      "concepts": [
+        {
+          "id": "https://openalex.org/C189430467",
+          "wikidata": "https://www.wikidata.org/wiki/Q7293293",
+          "display_name": "Ranking (information retrieval)",
+          "level": 2,
+          "score": 0.7948985
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.7512374
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.7390314
+        },
+        {
+          "id": "https://openalex.org/C154945302",
+          "wikidata": "https://www.wikidata.org/wiki/Q11660",
+          "display_name": "Artificial intelligence",
+          "level": 1,
+          "score": 0.73183036
+        },
+        {
+          "id": "https://openalex.org/C185798385",
+          "wikidata": "https://www.wikidata.org/wiki/Q1161707",
+          "display_name": "Benchmark (surveying)",
+          "level": 2,
+          "score": 0.7055743
+        },
+        {
+          "id": "https://openalex.org/C158154518",
+          "wikidata": "https://www.wikidata.org/wiki/Q7310970",
+          "display_name": "Relevance (law)",
+          "level": 2,
+          "score": 0.6952653
+        },
+        {
+          "id": "https://openalex.org/C50644808",
+          "wikidata": "https://www.wikidata.org/wiki/Q192776",
+          "display_name": "Artificial neural network",
+          "level": 2,
+          "score": 0.59500223
+        },
+        {
+          "id": "https://openalex.org/C173801870",
+          "wikidata": "https://www.wikidata.org/wiki/Q201413",
+          "display_name": "Heuristic",
+          "level": 2,
+          "score": 0.5861812
+        },
+        {
+          "id": "https://openalex.org/C108583219",
+          "wikidata": "https://www.wikidata.org/wiki/Q197536",
+          "display_name": "Deep learning",
+          "level": 2,
+          "score": 0.5852944
+        },
+        {
+          "id": "https://openalex.org/C86037889",
+          "wikidata": "https://www.wikidata.org/wiki/Q4330127",
+          "display_name": "Learning to rank",
+          "level": 3,
+          "score": 0.46574768
+        },
+        {
+          "id": "https://openalex.org/C136197465",
+          "wikidata": "https://www.wikidata.org/wiki/Q1729295",
+          "display_name": "Variety (cybernetics)",
+          "level": 2,
+          "score": 0.44976503
+        },
+        {
+          "id": "https://openalex.org/C124975894",
+          "wikidata": "https://www.wikidata.org/wiki/Q7293290",
+          "display_name": "Ranking SVM",
+          "level": 3,
+          "score": 0.43739823
+        },
+        {
+          "id": "https://openalex.org/C49937458",
+          "wikidata": "https://www.wikidata.org/wiki/Q2599292",
+          "display_name": "Probabilistic logic",
+          "level": 2,
+          "score": 0.4237386
+        },
+        {
+          "id": "https://openalex.org/C199539241",
+          "wikidata": "https://www.wikidata.org/wiki/Q7748",
+          "display_name": "Law",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C205649164",
+          "wikidata": "https://www.wikidata.org/wiki/Q1071",
+          "display_name": "Geography",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C13280743",
+          "wikidata": "https://www.wikidata.org/wiki/Q131089",
+          "display_name": "Geodesy",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C17744445",
+          "wikidata": "https://www.wikidata.org/wiki/Q36442",
+          "display_name": "Political science",
+          "level": 0,
+          "score": 0.0
+        }
+      ]
     },
     {
       "id": "https://openalex.org/W3103567827",
@@ -266,8 +1099,609 @@
         }
       ],
       "tags": [
+        "B-tree",
+        "Disk",
+        "Disk-based Learned Index",
         "Learned Index",
         "Updatable"
+      ],
+      "abstract_inverted_index": {
+        "Recent": [
+          0
+        ],
+        "work": [
+          1,
+          47
+        ],
+        "on": [
+          2,
+          163
+        ],
+        "\"learned": [
+          3
+        ],
+        "indexes\"": [
+          4
+        ],
+        "has": [
+          5
+        ],
+        "changed": [
+          6
+        ],
+        "the": [
+          7,
+          12,
+          32,
+          127,
+          152,
+          173
+        ],
+        "way": [
+          8
+        ],
+        "we": [
+          9,
+          90
+        ],
+        "look": [
+          10
+        ],
+        "at": [
+          11
+        ],
+        "decades-old": [
+          13
+        ],
+        "field": [
+          14
+        ],
+        "of": [
+          15,
+          27,
+          34,
+          63,
+          74,
+          114,
+          175,
+          212
+        ],
+        "DBMS": [
+          16
+        ],
+        "indexing.": [
+          17
+        ],
+        "The": [
+          18,
+          45
+        ],
+        "key": [
+          19,
+          36,
+          201
+        ],
+        "idea": [
+          20
+        ],
+        "is": [
+          21,
+          81
+        ],
+        "that": [
+          22,
+          30,
+          53,
+          102,
+          110
+        ],
+        "indexes": [
+          23,
+          107,
+          132,
+          206
+        ],
+        "can": [
+          24
+        ],
+        "be": [
+          25,
+          43
+        ],
+        "thought": [
+          26
+        ],
+        "as": [
+          28
+        ],
+        "\"models\"": [
+          29
+        ],
+        "predict": [
+          31
+        ],
+        "position": [
+          33
+        ],
+        "a": [
+          35,
+          38,
+          54,
+          58,
+          61,
+          92,
+          112,
+          200,
+          209
+        ],
+        "in": [
+          37,
+          67,
+          76
+        ],
+        "dataset.": [
+          39
+        ],
+        "Indexes": [
+          40
+        ],
+        "can,": [
+          41
+        ],
+        "thus,": [
+          42
+        ],
+        "learned.": [
+          44
+        ],
+        "original": [
+          46
+        ],
+        "by": [
+          48,
+          60,
+          71,
+          159,
+          181
+        ],
+        "Kraska": [
+          49,
+          156
+        ],
+        "et": [
+          50,
+          157
+        ],
+        "al.": [
+          51,
+          158
+        ],
+        "shows": [
+          52
+        ],
+        "learned": [
+          55,
+          94,
+          106,
+          131,
+          153,
+          205
+        ],
+        "index": [
+          56,
+          95,
+          154,
+          170,
+          194
+        ],
+        "beats": [
+          57,
+          151,
+          179
+        ],
+        "B+Tree": [
+          59
+        ],
+        "factor": [
+          62
+        ],
+        "up": [
+          64,
+          160,
+          166,
+          182,
+          190
+        ],
+        "to": [
+          65,
+          83,
+          139,
+          161,
+          167,
+          183,
+          191
+        ],
+        "three": [
+          66
+        ],
+        "search": [
+          68
+        ],
+        "time": [
+          69
+        ],
+        "and": [
+          70,
+          122,
+          136,
+          143
+        ],
+        "an": [
+          72
+        ],
+        "order": [
+          73
+        ],
+        "magnitude": [
+          75
+        ],
+        "memory": [
+          77,
+          145
+        ],
+        "footprint.": [
+          78,
+          146
+        ],
+        "However,": [
+          79
+        ],
+        "it": [
+          80
+        ],
+        "limited": [
+          82
+        ],
+        "static,": [
+          84
+        ],
+        "read-only": [
+          85,
+          148
+        ],
+        "workloads.": [
+          86
+        ],
+        "In": [
+          87
+        ],
+        "this": [
+          88
+        ],
+        "paper,": [
+          89
+        ],
+        "present": [
+          91
+        ],
+        "new": [
+          93
+        ],
+        "called": [
+          96
+        ],
+        "ALEX": [
+          97,
+          124,
+          150,
+          178,
+          198
+        ],
+        "which": [
+          98
+        ],
+        "addresses": [
+          99
+        ],
+        "practical": [
+          100,
+          207
+        ],
+        "issues": [
+          101
+        ],
+        "arise": [
+          103
+        ],
+        "when": [
+          104
+        ],
+        "implementing": [
+          105
+        ],
+        "for": [
+          108,
+          208
+        ],
+        "workloads": [
+          109,
+          214
+        ],
+        "contain": [
+          111
+        ],
+        "mix": [
+          113
+        ],
+        "point": [
+          115
+        ],
+        "lookups,": [
+          116
+        ],
+        "short": [
+          117
+        ],
+        "range": [
+          118
+        ],
+        "queries,": [
+          119
+        ],
+        "inserts,": [
+          120
+        ],
+        "updates,": [
+          121
+        ],
+        "deletes.": [
+          123
+        ],
+        "effectively": [
+          125
+        ],
+        "combines": [
+          126
+        ],
+        "core": [
+          128
+        ],
+        "insights": [
+          129
+        ],
+        "from": [
+          130,
+          155
+        ],
+        "with": [
+          133,
+          165,
+          189,
+          215
+        ],
+        "proven": [
+          134
+        ],
+        "storage": [
+          135
+        ],
+        "indexing": [
+          137
+        ],
+        "techniques": [
+          138
+        ],
+        "achieve": [
+          140
+        ],
+        "high": [
+          141
+        ],
+        "performance": [
+          142,
+          164
+        ],
+        "low": [
+          144
+        ],
+        "On": [
+          147
+        ],
+        "workloads,": [
+          149,
+          177
+        ],
+        "2.2X": [
+          162
+        ],
+        "15X": [
+          168
+        ],
+        "smaller": [
+          169,
+          193
+        ],
+        "size.": [
+          171,
+          195
+        ],
+        "Across": [
+          172
+        ],
+        "spectrum": [
+          174
+        ],
+        "read-write": [
+          176
+        ],
+        "B+Trees": [
+          180
+        ],
+        "4.1X": [
+          184
+        ],
+        "while": [
+          185
+        ],
+        "never": [
+          186
+        ],
+        "performing": [
+          187
+        ],
+        "worse,": [
+          188
+        ],
+        "2000X": [
+          192
+        ],
+        "We": [
+          196
+        ],
+        "believe": [
+          197
+        ],
+        "presents": [
+          199
+        ],
+        "step": [
+          202
+        ],
+        "towards": [
+          203
+        ],
+        "making": [
+          204
+        ],
+        "broader": [
+          210
+        ],
+        "class": [
+          211
+        ],
+        "database": [
+          213
+        ],
+        "dynamic": [
+          216
+        ],
+        "updates.": [
+          217
+        ]
+      },
+      "concepts": [
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.8804706
+        },
+        {
+          "id": "https://openalex.org/C75165309",
+          "wikidata": "https://www.wikidata.org/wiki/Q2258979",
+          "display_name": "Search engine indexing",
+          "level": 2,
+          "score": 0.7931934
+        },
+        {
+          "id": "https://openalex.org/C2777382242",
+          "wikidata": "https://www.wikidata.org/wiki/Q6017816",
+          "display_name": "Index (typography)",
+          "level": 2,
+          "score": 0.72923666
+        },
+        {
+          "id": "https://openalex.org/C74912251",
+          "wikidata": "https://www.wikidata.org/wiki/Q6815727",
+          "display_name": "Memory footprint",
+          "level": 2,
+          "score": 0.7166208
+        },
+        {
+          "id": "https://openalex.org/C26517878",
+          "wikidata": "https://www.wikidata.org/wiki/Q228039",
+          "display_name": "Key (lock)",
+          "level": 2,
+          "score": 0.52783895
+        },
+        {
+          "id": "https://openalex.org/C9652623",
+          "wikidata": "https://www.wikidata.org/wiki/Q190109",
+          "display_name": "Field (mathematics)",
+          "level": 2,
+          "score": 0.514027
+        },
+        {
+          "id": "https://openalex.org/C113174947",
+          "wikidata": "https://www.wikidata.org/wiki/Q2859736",
+          "display_name": "Tree (set theory)",
+          "level": 2,
+          "score": 0.50022674
+        },
+        {
+          "id": "https://openalex.org/C78669399",
+          "wikidata": "https://www.wikidata.org/wiki/Q677051",
+          "display_name": "B-tree",
+          "level": 3,
+          "score": 0.45530054
+        },
+        {
+          "id": "https://openalex.org/C2779960059",
+          "wikidata": "https://www.wikidata.org/wiki/Q7113681",
+          "display_name": "Overhead (engineering)",
+          "level": 2,
+          "score": 0.42425662
+        },
+        {
+          "id": "https://openalex.org/C124101348",
+          "wikidata": "https://www.wikidata.org/wiki/Q172491",
+          "display_name": "Data mining",
+          "level": 1,
+          "score": 0.39098442
+        },
+        {
+          "id": "https://openalex.org/C23123220",
+          "wikidata": "https://www.wikidata.org/wiki/Q816826",
+          "display_name": "Information retrieval",
+          "level": 1,
+          "score": 0.32541755
+        },
+        {
+          "id": "https://openalex.org/C111919701",
+          "wikidata": "https://www.wikidata.org/wiki/Q9135",
+          "display_name": "Operating system",
+          "level": 1,
+          "score": 0.19167596
+        },
+        {
+          "id": "https://openalex.org/C136764020",
+          "wikidata": "https://www.wikidata.org/wiki/Q466",
+          "display_name": "World Wide Web",
+          "level": 1,
+          "score": 0.17877409
+        },
+        {
+          "id": "https://openalex.org/C134306372",
+          "wikidata": "https://www.wikidata.org/wiki/Q7754",
+          "display_name": "Mathematical analysis",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C202444582",
+          "wikidata": "https://www.wikidata.org/wiki/Q837863",
+          "display_name": "Pure mathematics",
+          "level": 1,
+          "score": 0.0
+        }
       ]
     },
     {
@@ -294,7 +1728,807 @@
           ]
         }
       ],
-      "tags": []
+      "tags": [
+        "B-tree",
+        "Compression",
+        "Disk-based Learned Index",
+        "Learned Index",
+        "Range",
+        "Updatable"
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0,
+          41
+        ],
+        "present": [
+          1,
+          107
+        ],
+        "the": [
+          2,
+          21,
+          25,
+          46,
+          65,
+          75,
+          83,
+          86,
+          92,
+          104,
+          109,
+          112,
+          117,
+          134,
+          181,
+          185,
+          218,
+          226,
+          229,
+          247,
+          256,
+          259
+        ],
+        "first": [
+          3,
+          72,
+          93
+        ],
+        "learned": [
+          4,
+          44,
+          68,
+          96,
+          113,
+          192
+        ],
+        "index": [
+          5,
+          45,
+          50,
+          97
+        ],
+        "that": [
+          6,
+          115,
+          136,
+          180
+        ],
+        "supports": [
+          7
+        ],
+        "predecessor,": [
+          8
+        ],
+        "range": [
+          9,
+          32,
+          224
+        ],
+        "queries": [
+          10,
+          33
+        ],
+        "and": [
+          11,
+          17,
+          31,
+          161,
+          191,
+          210,
+          223,
+          252,
+          261
+        ],
+        "updates": [
+          12
+        ],
+        "within": [
+          13,
+          237,
+          274
+        ],
+        "provably": [
+          14
+        ],
+        "efficient": [
+          15
+        ],
+        "time": [
+          16,
+          157,
+          212,
+          263
+        ],
+        "space": [
+          18,
+          124,
+          186
+        ],
+        "bounds": [
+          19,
+          35
+        ],
+        "in": [
+          20,
+          64,
+          91,
+          140,
+          217,
+          246
+        ],
+        "worst": [
+          22
+        ],
+        "case.": [
+          23
+        ],
+        "In": [
+          24
+        ],
+        "(static)": [
+          26
+        ],
+        "context": [
+          27,
+          66
+        ],
+        "of": [
+          28,
+          67,
+          74,
+          85,
+          111,
+          133,
+          146,
+          148,
+          172,
+          188,
+          199,
+          221,
+          232,
+          240,
+          265,
+          277
+        ],
+        "just": [
+          29
+        ],
+        "predecessor": [
+          30,
+          222
+        ],
+        "these": [
+          34
+        ],
+        "turn": [
+          36
+        ],
+        "out": [
+          37
+        ],
+        "to": [
+          38,
+          57,
+          79,
+          82,
+          98,
+          119,
+          150,
+          196,
+          272
+        ],
+        "be": [
+          39
+        ],
+        "optimal.": [
+          40
+        ],
+        "call": [
+          42
+        ],
+        "this": [
+          43
+        ],
+        "Piecewise": [
+          47
+        ],
+        "Geometric": [
+          48
+        ],
+        "Model": [
+          49
+        ],
+        "(PGM-index).": [
+          51
+        ],
+        "Its": [
+          52
+        ],
+        "flexible": [
+          53
+        ],
+        "design": [
+          54
+        ],
+        "allows": [
+          55
+        ],
+        "us": [
+          56
+        ],
+        "introduce": [
+          58
+        ],
+        "three": [
+          59,
+          197,
+          275
+        ],
+        "variants": [
+          60
+        ],
+        "which": [
+          61,
+          154,
+          178
+        ],
+        "are": [
+          62,
+          166,
+          254
+        ],
+        "novel": [
+          63
+        ],
+        "data": [
+          69
+        ],
+        "structures.": [
+          70
+        ],
+        "The": [
+          71,
+          100,
+          126
+        ],
+        "variant": [
+          73,
+          102,
+          132
+        ],
+        "PGM-index": [
+          76,
+          118,
+          135,
+          183,
+          227,
+          257
+        ],
+        "is": [
+          77,
+          129
+        ],
+        "able": [
+          78
+        ],
+        "adapt": [
+          80
+        ],
+        "itself": [
+          81,
+          139
+        ],
+        "distribution": [
+          84
+        ],
+        "query": [
+          87,
+          209,
+          230,
+          260
+        ],
+        "operations,": [
+          88
+        ],
+        "thus": [
+          89
+        ],
+        "resulting": [
+          90
+        ],
+        "known": [
+          94,
+          176
+        ],
+        "distribution-aware": [
+          95
+        ],
+        "date.": [
+          99
+        ],
+        "second": [
+          101
+        ],
+        "exploits": [
+          103
+        ],
+        "repetitiveness": [
+          105
+        ],
+        "possibly": [
+          106
+        ],
+        "at": [
+          108
+        ],
+        "level": [
+          110
+        ],
+        "models": [
+          114
+        ],
+        "compose": [
+          116
+        ],
+        "further": [
+          120
+        ],
+        "compress": [
+          121
+        ],
+        "its": [
+          122
+        ],
+        "succinct": [
+          123
+        ],
+        "footprint.": [
+          125
+        ],
+        "third": [
+          127
+        ],
+        "one": [
+          128
+        ],
+        "a": [
+          130,
+          141,
+          169,
+          233,
+          266
+        ],
+        "multicriteria": [
+          131
+        ],
+        "efficiently": [
+          137
+        ],
+        "auto-tunes": [
+          138
+        ],
+        "few": [
+          142
+        ],
+        "seconds": [
+          143
+        ],
+        "over": [
+          144,
+          156
+        ],
+        "hundreds": [
+          145
+        ],
+        "millions": [
+          147
+        ],
+        "keys": [
+          149
+        ],
+        "satisfy": [
+          151
+        ],
+        "space-time": [
+          152
+        ],
+        "constraints": [
+          153
+        ],
+        "evolve": [
+          155
+        ],
+        "across": [
+          158
+        ],
+        "users,": [
+          159
+        ],
+        "devices": [
+          160
+        ],
+        "applications.": [
+          162
+        ],
+        "These": [
+          163
+        ],
+        "theoretical": [
+          164
+        ],
+        "achievements": [
+          165
+        ],
+        "supported": [
+          167
+        ],
+        "by": [
+          168,
+          194,
+          270
+        ],
+        "large": [
+          170
+        ],
+        "set": [
+          171
+        ],
+        "experimental": [
+          173
+        ],
+        "results": [
+          174
+        ],
+        "on": [
+          175
+        ],
+        "datasets": [
+          177
+        ],
+        "show": [
+          179
+        ],
+        "fully-dynamic": [
+          182,
+          248
+        ],
+        "improves": [
+          184,
+          258
+        ],
+        "occupancy": [
+          187
+        ],
+        "existing": [
+          189
+        ],
+        "traditional": [
+          190
+        ],
+        "indexes": [
+          193
+        ],
+        "up": [
+          195,
+          271
+        ],
+        "orders": [
+          198,
+          239,
+          276
+        ],
+        "magnitude,": [
+          200
+        ],
+        "while": [
+          201
+        ],
+        "still": [
+          202
+        ],
+        "achieving": [
+          203
+        ],
+        "their": [
+          204
+        ],
+        "same": [
+          205
+        ],
+        "or": [
+          206
+        ],
+        "even": [
+          207
+        ],
+        "better": [
+          208
+        ],
+        "update": [
+          211,
+          262
+        ],
+        "efficiency.": [
+          213
+        ],
+        "As": [
+          214
+        ],
+        "an": [
+          215
+        ],
+        "example,": [
+          216
+        ],
+        "static": [
+          219,
+          235
+        ],
+        "setting": [
+          220
+        ],
+        "queries,": [
+          225
+        ],
+        "matches": [
+          228
+        ],
+        "performance": [
+          231,
+          264
+        ],
+        "cache-optimised": [
+          234
+        ],
+        "B+-tree": [
+          236
+        ],
+        "two": [
+          238
+        ],
+        "magnitude": [
+          241,
+          278
+        ],
+        "(83×)": [
+          242
+        ],
+        "less": [
+          243,
+          280
+        ],
+        "space;": [
+          244
+        ],
+        "whereas": [
+          245
+        ],
+        "setting,": [
+          249
+        ],
+        "where": [
+          250
+        ],
+        "insertions": [
+          251
+        ],
+        "deletions": [
+          253
+        ],
+        "allowed,": [
+          255
+        ],
+        "B": [
+          267
+        ],
+        "+": [
+          268
+        ],
+        "-tree": [
+          269
+        ],
+        "71%": [
+          273
+        ],
+        "(1140×)": [
+          279
+        ],
+        "space.": [
+          281
+        ]
+      },
+      "concepts": [
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.8029078
+        },
+        {
+          "id": "https://openalex.org/C2779343474",
+          "wikidata": "https://www.wikidata.org/wiki/Q3109175",
+          "display_name": "Context (archaeology)",
+          "level": 2,
+          "score": 0.6285655
+        },
+        {
+          "id": "https://openalex.org/C2777382242",
+          "wikidata": "https://www.wikidata.org/wiki/Q6017816",
+          "display_name": "Index (typography)",
+          "level": 2,
+          "score": 0.5954478
+        },
+        {
+          "id": "https://openalex.org/C177264268",
+          "wikidata": "https://www.wikidata.org/wiki/Q1514741",
+          "display_name": "Set (abstract data type)",
+          "level": 2,
+          "score": 0.5872847
+        },
+        {
+          "id": "https://openalex.org/C204323151",
+          "wikidata": "https://www.wikidata.org/wiki/Q905424",
+          "display_name": "Range (aeronautics)",
+          "level": 2,
+          "score": 0.5692564
+        },
+        {
+          "id": "https://openalex.org/C136736807",
+          "wikidata": "https://www.wikidata.org/wiki/Q818943",
+          "display_name": "Range query (database)",
+          "level": 5,
+          "score": 0.54392976
+        },
+        {
+          "id": "https://openalex.org/C124101348",
+          "wikidata": "https://www.wikidata.org/wiki/Q172491",
+          "display_name": "Data mining",
+          "level": 1,
+          "score": 0.5337046
+        },
+        {
+          "id": "https://openalex.org/C115537543",
+          "wikidata": "https://www.wikidata.org/wiki/Q165596",
+          "display_name": "Cache",
+          "level": 2,
+          "score": 0.5131103
+        },
+        {
+          "id": "https://openalex.org/C113174947",
+          "wikidata": "https://www.wikidata.org/wiki/Q2859736",
+          "display_name": "Tree (set theory)",
+          "level": 2,
+          "score": 0.49488276
+        },
+        {
+          "id": "https://openalex.org/C165696696",
+          "wikidata": "https://www.wikidata.org/wiki/Q11287",
+          "display_name": "Exploit",
+          "level": 2,
+          "score": 0.48531598
+        },
+        {
+          "id": "https://openalex.org/C74912251",
+          "wikidata": "https://www.wikidata.org/wiki/Q6815727",
+          "display_name": "Memory footprint",
+          "level": 2,
+          "score": 0.43827355
+        },
+        {
+          "id": "https://openalex.org/C11413529",
+          "wikidata": "https://www.wikidata.org/wiki/Q8366",
+          "display_name": "Algorithm",
+          "level": 1,
+          "score": 0.32514107
+        },
+        {
+          "id": "https://openalex.org/C23123220",
+          "wikidata": "https://www.wikidata.org/wiki/Q816826",
+          "display_name": "Information retrieval",
+          "level": 1,
+          "score": 0.24201122
+        },
+        {
+          "id": "https://openalex.org/C164120249",
+          "wikidata": "https://www.wikidata.org/wiki/Q995982",
+          "display_name": "Web search query",
+          "level": 3,
+          "score": 0.22079924
+        },
+        {
+          "id": "https://openalex.org/C192939062",
+          "wikidata": "https://www.wikidata.org/wiki/Q104840822",
+          "display_name": "Sargable",
+          "level": 4,
+          "score": 0.20454898
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.15723717
+        },
+        {
+          "id": "https://openalex.org/C97854310",
+          "wikidata": "https://www.wikidata.org/wiki/Q19541",
+          "display_name": "Search engine",
+          "level": 2,
+          "score": 0.11987293
+        },
+        {
+          "id": "https://openalex.org/C173608175",
+          "wikidata": "https://www.wikidata.org/wiki/Q232661",
+          "display_name": "Parallel computing",
+          "level": 1,
+          "score": 0.11247751
+        },
+        {
+          "id": "https://openalex.org/C136764020",
+          "wikidata": "https://www.wikidata.org/wiki/Q466",
+          "display_name": "World Wide Web",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C151730666",
+          "wikidata": "https://www.wikidata.org/wiki/Q7205",
+          "display_name": "Paleontology",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C134306372",
+          "wikidata": "https://www.wikidata.org/wiki/Q7754",
+          "display_name": "Mathematical analysis",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C192562407",
+          "wikidata": "https://www.wikidata.org/wiki/Q228736",
+          "display_name": "Materials science",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C111919701",
+          "wikidata": "https://www.wikidata.org/wiki/Q9135",
+          "display_name": "Operating system",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C38652104",
+          "wikidata": "https://www.wikidata.org/wiki/Q3510521",
+          "display_name": "Computer security",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C159985019",
+          "wikidata": "https://www.wikidata.org/wiki/Q181790",
+          "display_name": "Composite material",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C86803240",
+          "wikidata": "https://www.wikidata.org/wiki/Q420",
+          "display_name": "Biology",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C199360897",
+          "wikidata": "https://www.wikidata.org/wiki/Q9143",
+          "display_name": "Programming language",
+          "level": 1,
+          "score": 0.0
+        }
+      ]
     },
     {
       "id": "https://openalex.org/W2964277307",
@@ -343,6 +2577,666 @@
       ],
       "tags": [
         "Bloom Filter"
+      ],
+      "abstract_inverted_index": {
+        "Bloom": [
+          0
+        ],
+        "filter": [
+          1
+        ],
+        "(BF)": [
+          2
+        ],
+        "has": [
+          3
+        ],
+        "been": [
+          4
+        ],
+        "widely": [
+          5
+        ],
+        "used": [
+          6
+        ],
+        "to": [
+          7,
+          12,
+          40,
+          122,
+          215
+        ],
+        "support": [
+          8
+        ],
+        "membership": [
+          9,
+          50
+        ],
+        "query,": [
+          10
+        ],
+        "i.e.,": [
+          11,
+          109
+        ],
+        "judge": [
+          13
+        ],
+        "whether": [
+          14
+        ],
+        "a": [
+          15,
+          20,
+          23,
+          33
+        ],
+        "given": [
+          16,
+          24
+        ],
+        "element": [
+          17
+        ],
+        "x": [
+          18
+        ],
+        "is": [
+          19
+        ],
+        "member": [
+          21
+        ],
+        "of": [
+          22,
+          37,
+          43,
+          48,
+          62,
+          76,
+          88,
+          118,
+          132,
+          161,
+          178,
+          201,
+          210,
+          218
+        ],
+        "set": [
+          25
+        ],
+        "S": [
+          26
+        ],
+        "or": [
+          27,
+          55
+        ],
+        "not.": [
+          28
+        ],
+        "Recent": [
+          29
+        ],
+        "years": [
+          30
+        ],
+        "have": [
+          31
+        ],
+        "seen": [
+          32
+        ],
+        "flourish": [
+          34
+        ],
+        "design": [
+          35,
+          78,
+          176
+        ],
+        "explosion": [
+          36
+        ],
+        "BF": [
+          38,
+          89,
+          136,
+          166,
+          202
+        ],
+        "due": [
+          39
+        ],
+        "its": [
+          41,
+          91
+        ],
+        "characteristic": [
+          42
+        ],
+        "space-efficiency": [
+          44
+        ],
+        "and": [
+          45,
+          90,
+          111,
+          127,
+          146,
+          181,
+          193
+        ],
+        "the": [
+          46,
+          60,
+          69,
+          97,
+          103,
+          115,
+          124,
+          135,
+          143,
+          148,
+          153,
+          162,
+          175,
+          184,
+          199,
+          207,
+          216,
+          221
+        ],
+        "functionality": [
+          47
+        ],
+        "constant-time": [
+          49
+        ],
+        "query.": [
+          51
+        ],
+        "The": [
+          52
+        ],
+        "existing": [
+          53,
+          104,
+          154,
+          163
+        ],
+        "reviews": [
+          54
+        ],
+        "surveys": [
+          56
+        ],
+        "mainly": [
+          57
+        ],
+        "focus": [
+          58
+        ],
+        "on": [
+          59,
+          96,
+          165
+        ],
+        "applications": [
+          61
+        ],
+        "BF,": [
+          63
+        ],
+        "but": [
+          64
+        ],
+        "fall": [
+          65
+        ],
+        "short": [
+          66
+        ],
+        "in": [
+          67,
+          138
+        ],
+        "covering": [
+          68,
+          168
+        ],
+        "current": [
+          70
+        ],
+        "trends,": [
+          71
+        ],
+        "thereby": [
+          72
+        ],
+        "lacking": [
+          73
+        ],
+        "intrinsic": [
+          74
+        ],
+        "understanding": [
+          75
+        ],
+        "their": [
+          77
+        ],
+        "philosophy.": [
+          79
+        ],
+        "To": [
+          80,
+          113,
+          151
+        ],
+        "this": [
+          81,
+          83
+        ],
+        "end,": [
+          82
+        ],
+        "survey": [
+          84,
+          102,
+          223
+        ],
+        "provides": [
+          85
+        ],
+        "an": [
+          86,
+          94,
+          158
+        ],
+        "overview": [
+          87
+        ],
+        "variants,": [
+          92
+        ],
+        "with": [
+          93
+        ],
+        "emphasis": [
+          95
+        ],
+        "optimization": [
+          98,
+          186
+        ],
+        "techniques.": [
+          99
+        ],
+        "Basically,": [
+          100
+        ],
+        "we": [
+          101,
+          156,
+          205
+        ],
+        "variants": [
+          105,
+          119,
+          133,
+          180
+        ],
+        "from": [
+          106,
+          198
+        ],
+        "two": [
+          107
+        ],
+        "dimensions,": [
+          108
+        ],
+        "performance": [
+          110
+        ],
+        "generalization.": [
+          112
+        ],
+        "improve": [
+          114,
+          188
+        ],
+        "performance,": [
+          116
+        ],
+        "dozens": [
+          117
+        ],
+        "devote": [
+          120
+        ],
+        "themselves": [
+          121
+        ],
+        "reducing": [
+          123
+        ],
+        "false": [
+          125
+        ],
+        "positives": [
+          126
+        ],
+        "implementation": [
+          128
+        ],
+        "costs.": [
+          129
+        ],
+        "Besides,": [
+          130
+        ],
+        "tens": [
+          131
+        ],
+        "generalize": [
+          134
+        ],
+        "framework": [
+          137
+        ],
+        "more": [
+          139,
+          169
+        ],
+        "scenarios": [
+          140
+        ],
+        "by": [
+          141
+        ],
+        "diversifying": [
+          142
+        ],
+        "input": [
+          144
+        ],
+        "sets": [
+          145
+        ],
+        "enriching": [
+          147
+        ],
+        "output": [
+          149
+        ],
+        "functionalities.": [
+          150
+        ],
+        "summarize": [
+          152
+        ],
+        "efforts,": [
+          155
+        ],
+        "conduct": [
+          157
+        ],
+        "in-depth": [
+          159
+        ],
+        "study": [
+          160
+        ],
+        "literature": [
+          164
+        ],
+        "optimization,": [
+          167
+        ],
+        "than": [
+          170
+        ],
+        "60": [
+          171
+        ],
+        "variants.": [
+          172
+        ],
+        "We": [
+          173
+        ],
+        "unearth": [
+          174
+        ],
+        "philosophy": [
+          177
+        ],
+        "these": [
+          179
+        ],
+        "elaborate": [
+          182
+        ],
+        "how": [
+          183
+        ],
+        "employed": [
+          185
+        ],
+        "techniques": [
+          187
+        ],
+        "BF.": [
+          189
+        ],
+        "Furthermore,": [
+          190
+        ],
+        "comprehensive": [
+          191
+        ],
+        "analysis": [
+          192
+        ],
+        "qualitative": [
+          194
+        ],
+        "comparison": [
+          195
+        ],
+        "are": [
+          196
+        ],
+        "conducted": [
+          197
+        ],
+        "perspectives": [
+          200
+        ],
+        "components.": [
+          203
+        ],
+        "Lastly,": [
+          204
+        ],
+        "highlight": [
+          206
+        ],
+        "future": [
+          208
+        ],
+        "trends": [
+          209
+        ],
+        "designing": [
+          211
+        ],
+        "BFs.": [
+          212
+        ],
+        "This": [
+          213
+        ],
+        "is,": [
+          214
+        ],
+        "best": [
+          217
+        ],
+        "our": [
+          219
+        ],
+        "knowledge,": [
+          220
+        ],
+        "first": [
+          222
+        ],
+        "that": [
+          224
+        ],
+        "accomplishes": [
+          225
+        ],
+        "such": [
+          226
+        ],
+        "goals.": [
+          227
+        ]
+      },
+      "concepts": [
+        {
+          "id": "https://openalex.org/C147224247",
+          "wikidata": "https://www.wikidata.org/wiki/Q885373",
+          "display_name": "Bloom filter",
+          "level": 2,
+          "score": 0.9117629
+        },
+        {
+          "id": "https://openalex.org/C64869954",
+          "wikidata": "https://www.wikidata.org/wiki/Q1859747",
+          "display_name": "False positive paradox",
+          "level": 2,
+          "score": 0.768103
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.7587587
+        },
+        {
+          "id": "https://openalex.org/C177148314",
+          "wikidata": "https://www.wikidata.org/wiki/Q170084",
+          "display_name": "Generalization",
+          "level": 2,
+          "score": 0.66939116
+        },
+        {
+          "id": "https://openalex.org/C177264268",
+          "wikidata": "https://www.wikidata.org/wiki/Q1514741",
+          "display_name": "Set (abstract data type)",
+          "level": 2,
+          "score": 0.6432621
+        },
+        {
+          "id": "https://openalex.org/C106131492",
+          "wikidata": "https://www.wikidata.org/wiki/Q3072260",
+          "display_name": "Filter (signal processing)",
+          "level": 2,
+          "score": 0.55314726
+        },
+        {
+          "id": "https://openalex.org/C192209626",
+          "wikidata": "https://www.wikidata.org/wiki/Q190909",
+          "display_name": "Focus (optics)",
+          "level": 2,
+          "score": 0.4293004
+        },
+        {
+          "id": "https://openalex.org/C23123220",
+          "wikidata": "https://www.wikidata.org/wiki/Q816826",
+          "display_name": "Information retrieval",
+          "level": 1,
+          "score": 0.40787572
+        },
+        {
+          "id": "https://openalex.org/C124101348",
+          "wikidata": "https://www.wikidata.org/wiki/Q172491",
+          "display_name": "Data mining",
+          "level": 1,
+          "score": 0.3816093
+        },
+        {
+          "id": "https://openalex.org/C2522767166",
+          "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+          "display_name": "Data science",
+          "level": 1,
+          "score": 0.32869902
+        },
+        {
+          "id": "https://openalex.org/C119857082",
+          "wikidata": "https://www.wikidata.org/wiki/Q2539",
+          "display_name": "Machine learning",
+          "level": 1,
+          "score": 0.24241993
+        },
+        {
+          "id": "https://openalex.org/C11413529",
+          "wikidata": "https://www.wikidata.org/wiki/Q8366",
+          "display_name": "Algorithm",
+          "level": 1,
+          "score": 0.21539298
+        },
+        {
+          "id": "https://openalex.org/C199360897",
+          "wikidata": "https://www.wikidata.org/wiki/Q9143",
+          "display_name": "Programming language",
+          "level": 1,
+          "score": 0.114228904
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.106755465
+        },
+        {
+          "id": "https://openalex.org/C134306372",
+          "wikidata": "https://www.wikidata.org/wiki/Q7754",
+          "display_name": "Mathematical analysis",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C121332964",
+          "wikidata": "https://www.wikidata.org/wiki/Q413",
+          "display_name": "Physics",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C120665830",
+          "wikidata": "https://www.wikidata.org/wiki/Q14620",
+          "display_name": "Optics",
+          "level": 1,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C31972630",
+          "wikidata": "https://www.wikidata.org/wiki/Q844240",
+          "display_name": "Computer vision",
+          "level": 1,
+          "score": 0.0
+        }
       ]
     },
     {
