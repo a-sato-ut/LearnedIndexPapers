@@ -38,13 +38,26 @@ function filterPapers(papers, selectedTags){
   return filtered.sort((a, b) => (b.cited_by_count || 0) - (a.cited_by_count || 0));
 }
 
-function mountTagFilter(allTags){
-  const sel = document.getElementById('tag-filter');
-  sel.innerHTML = '';
-  [...allTags].sort().forEach(t=>{
-    sel.appendChild(el('option', {value:t}, t));
+function mountTagFilter(allTags, stats){
+  const container = document.getElementById('tag-checkboxes');
+  container.innerHTML = '';
+  
+  // タグの使用頻度でソート
+  const sortedTags = [...allTags].sort((a, b) => {
+    const countA = stats.by_tag[a] || 0;
+    const countB = stats.by_tag[b] || 0;
+    return countB - countA; // 使用頻度の高い順
   });
-  return sel;
+  
+  sortedTags.forEach(tag => {
+    const count = stats.by_tag[tag] || 0;
+    const label = el('label', {class: 'tag-checkbox'}, 
+      el('input', {type: 'checkbox', value: tag}),
+      el('span', {class: 'tag-text'}, `${tag} (${count})`)
+    );
+    container.appendChild(label);
+  });
+  return container;
 }
 
 function renderTopAuthors(stats){
@@ -105,19 +118,25 @@ function renderCharts(stats){
   renderCharts(stats);
   renderTopAuthors(stats);
 
-  const tagSel = mountTagFilter(allTags);
+  const tagContainer = mountTagFilter(allTags, stats);
   const list = document.getElementById('list');
   const clear = document.getElementById('clear');
 
   function refresh(){
-    const selected = new Set([...tagSel.selectedOptions].map(o=>o.value));
+    const selected = new Set();
+    tagContainer.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
+      selected.add(cb.value);
+    });
     const view = filterPapers(papers, selected);
     list.innerHTML = '';
     for(const w of view){ list.appendChild(renderCard(w)); }
   }
 
-  tagSel.addEventListener('change', refresh);
-  clear.addEventListener('click', ()=>{ [...tagSel.options].forEach(o=>o.selected=false); refresh(); });
+  tagContainer.addEventListener('change', refresh);
+  clear.addEventListener('click', ()=>{ 
+    tagContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false); 
+    refresh(); 
+  });
 
   refresh();
 })(); 

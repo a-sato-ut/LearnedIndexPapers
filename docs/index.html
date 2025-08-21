@@ -14,9 +14,12 @@
     </header>
 
     <section id="controls">
-      <select id="tag-filter" multiple></select>
-      <button id="clear">クリア</button>
-      <div class="filter-help">※ タグは複数選択可能（AND検索）</div>
+      <div class="tag-filters">
+        <h3>タグで絞り込み</h3>
+        <div id="tag-checkboxes" class="tag-checkboxes"></div>
+        <button id="clear">クリア</button>
+      </div>
+      <div class="filter-help">※ 複数のタグを選択するとAND検索になります</div>
     </section>
 
     <section id="stats">
