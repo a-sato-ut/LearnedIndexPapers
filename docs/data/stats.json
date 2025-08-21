@@ -23,6 +23,7 @@
     "Multidimensional": 78,
     "Filter": 77,
     "Theoretical": 57,
+    "Caching": 53,
     "Bloom Filter": 51,
     "Compression": 44,
     "Cardinality estimation": 42,
@@ -426,6 +427,6 @@
     }
   ],
   "citations_sum": 11082,
-  "last_updated": "2025-08-21T11:31:39Z",
-  "execution_time_seconds": 47.92
+  "last_updated": "2025-08-21T11:33:04Z",
+  "execution_time_seconds": 48.46
 }

@@ -85,4 +85,7 @@ tag_rules:
     pattern: "\\b(sort|sorting|quicksort|mergesort|heapsort|radix sort|bucket sort)\\b"
   
   - name: "Filter"
-    pattern: "\\b(filter|filtering)\\b" 
+    pattern: "\\b(filter|filtering)\\b"
+  
+  - name: "Caching"
+    pattern: "\\b(cache|caching|memcached|redis|lru|fifo|lfu|cache eviction|cache replacement)\\b" 
