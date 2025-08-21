@@ -1,0 +1,61 @@
+{
+  "work": {
+    "doi": "10.1145/3183713.3196909",
+    "openalex_id": "https://openalex.org/W2962771342",
+    "display_name": "The Case for Learned Index Structures",
+    "cited_by_count": 1234
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W1234567890",
+      "title": "Learned Index Structures for String Keys",
+      "publication_year": 2020,
+      "doi": "10.1145/3318464.3389741",
+      "cited_by_count": 45,
+      "host_venue": "SIGMOD",
+      "landing_page_url": "https://dl.acm.org/doi/10.1145/3318464.3389741",
+      "authorships": [
+        {
+          "author_id": "https://openalex.org/A1234567890",
+          "name": "John Doe",
+          "institutions": ["MIT"]
+        }
+      ],
+      "tags": ["String Key", "Updatable"]
+    },
+    {
+      "id": "https://openalex.org/W0987654321",
+      "title": "PGM-index: Learned Index Structures for Main Memory",
+      "publication_year": 2021,
+      "doi": "10.1145/3448016.3452831",
+      "cited_by_count": 67,
+      "host_venue": "SIGMOD",
+      "landing_page_url": "https://dl.acm.org/doi/10.1145/3448016.3452831",
+      "authorships": [
+        {
+          "author_id": "https://openalex.org/A0987654321",
+          "name": "Jane Smith",
+          "institutions": ["Stanford"]
+        }
+      ],
+      "tags": ["Main-memory", "PGM-index"]
+    },
+    {
+      "id": "https://openalex.org/W1111111111",
+      "title": "ALEX: An Updatable Adaptive Learned Index",
+      "publication_year": 2020,
+      "doi": "10.1145/3318464.3389742",
+      "cited_by_count": 89,
+      "host_venue": "SIGMOD",
+      "landing_page_url": "https://dl.acm.org/doi/10.1145/3318464.3389742",
+      "authorships": [
+        {
+          "author_id": "https://openalex.org/A1111111111",
+          "name": "Bob Johnson",
+          "institutions": ["CMU"]
+        }
+      ],
+      "tags": ["Updatable", "ALEX", "Main-memory"]
+    }
+  ]
+} 

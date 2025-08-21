@@ -1,0 +1,42 @@
+{
+  "total_works": 3,
+  "by_year": {
+    "2020": 2,
+    "2021": 1
+  },
+  "by_tag": {
+    "Updatable": 2,
+    "Main-memory": 2,
+    "String Key": 1,
+    "PGM-index": 1,
+    "ALEX": 1
+  },
+  "by_venue": {
+    "SIGMOD": 3
+  },
+  "top_authors": [
+    {
+      "author_id": "https://openalex.org/A1234567890",
+      "name": "John Doe",
+      "papers": 1,
+      "sum_citations": 45,
+      "avg_citations": 45.0
+    },
+    {
+      "author_id": "https://openalex.org/A0987654321",
+      "name": "Jane Smith",
+      "papers": 1,
+      "sum_citations": 67,
+      "avg_citations": 67.0
+    },
+    {
+      "author_id": "https://openalex.org/A1111111111",
+      "name": "Bob Johnson",
+      "papers": 1,
+      "sum_citations": 89,
+      "avg_citations": 89.0
+    }
+  ],
+  "citations_sum": 201,
+  "last_updated": "2024-01-01T00:00:00Z"
+} 

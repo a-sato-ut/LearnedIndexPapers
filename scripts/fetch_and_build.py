@@ -71,9 +71,27 @@ def get_work_by_doi(sess: requests.Session, doi: str) -> Dict[str, Any]:
     # Using the documented "external ID" syntax for DOIs
     url = f"https://api.openalex.org/works/https://doi.org/{doi}"
     params = {"mailto": OPENALEX_MAILTO} if OPENALEX_MAILTO else {}
-    r = sess.get(url, params=params, timeout=30)
-    r.raise_for_status()
-    return r.json()
+    
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            r = sess.get(url, params=params, timeout=30)
+            r.raise_for_status()
+            return r.json()
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 403 and attempt < max_retries - 1:
+                print(f"Rate limited (403), retrying in {2 ** attempt} seconds...")
+                time.sleep(2 ** attempt)
+                continue
+            else:
+                raise
+        except requests.exceptions.RequestException as e:
+            if attempt < max_retries - 1:
+                print(f"Request failed, retrying in {2 ** attempt} seconds...")
+                time.sleep(2 ** attempt)
+                continue
+            else:
+                raise
 
 
 def iter_citations(sess: requests.Session, cited_by_api_url: str) -> Iterable[Dict[str, Any]]:
@@ -91,9 +109,28 @@ def iter_citations(sess: requests.Session, cited_by_api_url: str) -> Iterable[Di
     ])
 
     total = 0
+    max_retries = 3
     while True:
-        r = sess.get(base, params=params, timeout=60)
-        r.raise_for_status()
+        for attempt in range(max_retries):
+            try:
+                r = sess.get(base, params=params, timeout=60)
+                r.raise_for_status()
+                break
+            except requests.exceptions.HTTPError as e:
+                if e.response.status_code == 403 and attempt < max_retries - 1:
+                    print(f"Rate limited (403), retrying in {2 ** attempt} seconds...")
+                    time.sleep(2 ** attempt)
+                    continue
+                else:
+                    raise
+            except requests.exceptions.RequestException as e:
+                if attempt < max_retries - 1:
+                    print(f"Request failed, retrying in {2 ** attempt} seconds...")
+                    time.sleep(2 ** attempt)
+                    continue
+                else:
+                    raise
+        
         data = r.json()
         results = data.get("results", [])
         for w in results:
@@ -104,7 +141,7 @@ def iter_citations(sess: requests.Session, cited_by_api_url: str) -> Iterable[Di
             break
         params["cursor"] = cursor
         # polite delay
-        time.sleep(0.2)
+        time.sleep(0.5)
 
 
 def text_blob(work: Dict[str,Any]) -> str:
