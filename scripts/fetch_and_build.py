@@ -274,6 +274,12 @@ def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
         for author_key, cnt in author_counts.most_common(50)
     ]
 
+    # 著者名による論文数統計を追加
+    by_author = {}
+    for author_key, cnt in author_counts.items():
+        author_name = get_author_display_name(author_key)
+        by_author[author_name] = cnt
+
     return {
         "total_works": len(items),
         "by_year": dict(sorted(by_year.items())),
@@ -281,6 +287,7 @@ def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
         "by_tag_category": dict(sorted(by_tag.items(), key=lambda x:(tag_categories.get(x[0], "Other"), -x[1], x[0]))),
         "tag_categories": tag_categories,
         "by_venue": dict(by_venue.most_common(30)),
+        "by_author": by_author,
         "top_authors": top_authors,
         "citations_sum": citations_sum,
         "last_updated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
