@@ -26,7 +26,7 @@ function renderCard(w){
   );
 }
 
-function filterPapers(papers, selectedTags){
+function filterPapers(papers, selectedTags, sortBy = 'citations'){
   const filtered = papers.filter(w=>{
     // AND検索: 選択された全てのタグが含まれている必要がある
     const okTag = !selectedTags.size || selectedTags.size === 0 || 
@@ -34,8 +34,14 @@ function filterPapers(papers, selectedTags){
     return okTag;
   });
   
-  // 被引用数で降順ソート
-  return filtered.sort((a, b) => (b.cited_by_count || 0) - (a.cited_by_count || 0));
+  // ソート順を適用
+  if (sortBy === 'year') {
+    // 出版年で降順ソート（新しい順）
+    return filtered.sort((a, b) => (b.publication_year || 0) - (a.publication_year || 0));
+  } else {
+    // 被引用数で降順ソート（デフォルト）
+    return filtered.sort((a, b) => (b.cited_by_count || 0) - (a.cited_by_count || 0));
+  }
 }
 
 function mountTagFilter(allTags, stats){
@@ -121,13 +127,14 @@ function renderCharts(stats){
   const tagContainer = mountTagFilter(allTags, stats);
   const list = document.getElementById('list');
   const clear = document.getElementById('clear');
+  let currentSort = 'citations'; // デフォルトは被引用数順
 
   function refresh(){
     const selected = new Set();
     tagContainer.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
       selected.add(cb.value);
     });
-    const view = filterPapers(papers, selected);
+    const view = filterPapers(papers, selected, currentSort);
     list.innerHTML = '';
     for(const w of view){ list.appendChild(renderCard(w)); }
   }
@@ -136,6 +143,28 @@ function renderCharts(stats){
   clear.addEventListener('click', ()=>{ 
     tagContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false); 
     refresh(); 
+  });
+
+  // ソート機能
+  const sortCitationsBtn = document.getElementById('sort-citations');
+  const sortYearBtn = document.getElementById('sort-year');
+  const sortBtns = [sortCitationsBtn, sortYearBtn];
+
+  sortBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // アクティブボタンを切り替え
+      sortBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      // ソート順を更新
+      if (btn === sortCitationsBtn) {
+        currentSort = 'citations';
+      } else {
+        currentSort = 'year';
+      }
+      
+      refresh();
+    });
   });
 
   // フィルター開閉機能

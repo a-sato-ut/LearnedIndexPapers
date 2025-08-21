@@ -20,7 +20,14 @@
     </nav>
 
     <section id="tab-papers" class="tab-content active">
-      <h2>論文一覧 (被引用数順)</h2>
+      <div class="papers-header">
+        <h2>論文一覧</h2>
+        <div class="sort-controls">
+          <span class="sort-label">ソート:</span>
+          <button id="sort-citations" class="sort-btn active">被引用数順</button>
+          <button id="sort-year" class="sort-btn">新しさ順</button>
+        </div>
+      </div>
       
       <div class="filter-section">
         <button id="filter-toggle" class="filter-toggle">
