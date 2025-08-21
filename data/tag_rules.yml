@@ -1,0 +1,73 @@
+# Tagging rules for learned index papers
+# Format: (TAG_NAME, regex pattern)
+# Case-insensitive search on title/abstract/venue
+
+tag_rules:
+  - name: "String Key"
+    pattern: "\\b(string|text|varchar|character|lexicograph|dictionary)\\b"
+  
+  - name: "Updatable"
+    pattern: "\\b(update|updatable|mutable|insert|delete|dynamic|online|incremental|lsm)\\b"
+  
+  - name: "Disk"
+    pattern: "\\b(disk|ssd|storage|i/o|external memory|out[- ]of[- ]core)\\b"
+  
+  - name: "Main-memory"
+    pattern: "\\b(in[- ]?memory|ram)\\b"
+  
+  - name: "Multidimensional"
+    pattern: "\\b(multidimensional|multi[- ]?dimensional|spatial|kd[- ]?tree|r[- ]?tree|quadtree|octree)\\b"
+  
+  - name: "Bloom Filter"
+    pattern: "\\b(bloom filter|learned bloom|\\bLBF\\b)\\b"
+  
+  - name: "Sketch"
+    pattern: "\\b(count[- ]?min|cms|sketch|hyperloglog|countmin)\\b"
+  
+  - name: "Hash Table"
+    pattern: "\\b(hash table|cuckoo|robin hood|tabulation|perfect hash)\\b"
+  
+  - name: "B-tree"
+    pattern: "\\b(b[- ]?tree|b\\+[- ]?tree|btree)\\b"
+  
+  - name: "LSM-tree"
+    pattern: "\\b(lsm[- ]?tree|log[- ]?structured merge)\\b"
+  
+  - name: "GPU"
+    pattern: "\\b(gpu|cuda)\\b"
+  
+  - name: "Distributed"
+    pattern: "\\b(distributed|cluster|spark|hadoop|federated)\\b"
+  
+  - name: "Theoretical"
+    pattern: "\\b(theorem|proof|approximation ratio|lower bound|upper bound|asymptotic|complexity)\\b"
+  
+  - name: "Security/Adversarial"
+    pattern: "\\b(poison|adversarial|attack|robust|privacy|secure)\\b"
+  
+  - name: "Compression"
+    pattern: "\\b(compress|compression|succinct|entropy)\\b"
+  
+  - name: "Benchmark"
+    pattern: "\\b(benchmark|microbenchmark|sosd|workload|evaluation framework)\\b"
+  
+  - name: "Range"
+    pattern: "\\b(range query|interval|scan)\\b"
+  
+  - name: "Time-series"
+    pattern: "\\b(time[- ]?series|temporal)\\b"
+  
+  - name: "Disk-based Learned Index"
+    pattern: "learned index.*(disk|page|io|secondary storage)"
+  
+  - name: "Learned Index"
+    pattern: "\\blearned[- ]?index(es)?\\b"
+  
+  - name: "Query optimization"
+    pattern: "\\b(query optimization|query plan|query execution|query processing)\\b"
+  
+  - name: "Cardinality estimation"
+    pattern: "\\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\\b"
+  
+  - name: "Learned Bloom Filter"
+    pattern: "learned bloom filter|lbf" 

@@ -33,32 +33,48 @@ TARGET_DOI = os.getenv("TARGET_DOI", "10.1145/3183713.3196909")
 OPENALEX_MAILTO = os.getenv("OPENALEX_MAILTO", os.getenv("OPENALEX_EMAIL", ""))
 USER_AGENT = os.getenv("USER_AGENT", "learned-index-citations/1.0 (mailto:your-email@example.com)")
 
-# Tagging rules: (TAG_NAME, regex pattern). Case-insensitive search on title/abstract/venue.
-TAG_RULES: List[tuple[str,str]] = [
-    ("String Key", r"\b(string|text|varchar|character|lexicograph|dictionary)\b"),
-    ("Updatable", r"\b(update|updatable|mutable|insert|delete|dynamic|online|incremental|lsm)\b"),
-    ("Disk", r"\b(disk|ssd|storage|i/o|external memory|out[- ]of[- ]core)\b"),
-    ("Main-memory", r"\b(in[- ]?memory|ram)\b"),
-    ("Multidimensional", r"\b(multidimensional|multi[- ]?dimensional|spatial|kd[- ]?tree|r[- ]?tree|quadtree|octree)\b"),
-    ("Bloom Filter", r"\b(bloom filter|learned bloom|\bLBF\b)\b"),
-    ("Sketch", r"\b(count[- ]?min|cms|sketch|hyperloglog|countmin)\b"),
-    ("Hash Table", r"\b(hash table|cuckoo|robin hood|tabulation|perfect hash)\b"),
-    ("B-tree", r"\b(b[- ]?tree|b\+[- ]?tree|btree)\b"),
-    ("LSM-tree", r"\b(lsm[- ]?tree|log[- ]?structured merge)\b"),
-    ("GPU", r"\b(gpu|cuda)\b"),
-    ("Distributed", r"\b(distributed|cluster|spark|hadoop|federated)\b"),
-    ("Theoretical", r"\b(theorem|proof|approximation ratio|lower bound|upper bound|asymptotic|complexity)\b"),
-    ("Security/Adversarial", r"\b(poison|adversarial|attack|robust|privacy|secure)\b"),
-    ("Compression", r"\b(compress|compression|succinct|entropy)\b"),
-    ("Benchmark", r"\b(benchmark|microbenchmark|sosd|workload|evaluation framework)\b"),
-    ("Range", r"\b(range query|interval|scan)\b"),
-    ("Time-series", r"\b(time[- ]?series|temporal)\b"),
-    ("Disk-based Learned Index", r"learned index.*(disk|page|io|secondary storage)"),
-    ("Learned Index", r"\blearned[- ]?index(es)?\b"),
-    ("Query optimization", r"\b(query optimization|query plan|query execution|query processing)\b"),
-    ("Cardinality estimation", r"\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\b"),
-    ("Learned Bloom Filter", r"learned bloom filter|lbf"),
-]
+def load_tag_rules() -> List[tuple[str,str]]:
+    """Load tagging rules from YAML file."""
+    path = ROOT / "data" / "tag_rules.yml"
+    if not path.exists() or yaml is None:
+        # Fallback to default rules if YAML file doesn't exist
+        return [
+            ("String Key", r"\b(string|text|varchar|character|lexicograph|dictionary)\b"),
+            ("Updatable", r"\b(update|updatable|mutable|insert|delete|dynamic|online|incremental|lsm)\b"),
+            ("Disk", r"\b(disk|ssd|storage|i/o|external memory|out[- ]of[- ]core)\b"),
+            ("Main-memory", r"\b(in[- ]?memory|ram)\b"),
+            ("Multidimensional", r"\b(multidimensional|multi[- ]?dimensional|spatial|kd[- ]?tree|r[- ]?tree|quadtree|octree)\b"),
+            ("Bloom Filter", r"\b(bloom filter|learned bloom|\bLBF\b)\b"),
+            ("Sketch", r"\b(count[- ]?min|cms|sketch|hyperloglog|countmin)\b"),
+            ("Hash Table", r"\b(hash table|cuckoo|robin hood|tabulation|perfect hash)\b"),
+            ("B-tree", r"\b(b[- ]?tree|b\+[- ]?tree|btree)\b"),
+            ("LSM-tree", r"\b(lsm[- ]?tree|log[- ]?structured merge)\b"),
+            ("GPU", r"\b(gpu|cuda)\b"),
+            ("Distributed", r"\b(distributed|cluster|spark|hadoop|federated)\b"),
+            ("Theoretical", r"\b(theorem|proof|approximation ratio|lower bound|upper bound|asymptotic|complexity)\b"),
+            ("Security/Adversarial", r"\b(poison|adversarial|attack|robust|privacy|secure)\b"),
+            ("Compression", r"\b(compress|compression|succinct|entropy)\b"),
+            ("Benchmark", r"\b(benchmark|microbenchmark|sosd|workload|evaluation framework)\b"),
+            ("Range", r"\b(range query|interval|scan)\b"),
+            ("Time-series", r"\b(time[- ]?series|temporal)\b"),
+            ("Disk-based Learned Index", r"learned index.*(disk|page|io|secondary storage)"),
+            ("Learned Index", r"\blearned[- ]?index(es)?\b"),
+            ("Query optimization", r"\b(query optimization|query plan|query execution|query processing)\b"),
+            ("Cardinality estimation", r"\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\b"),
+            ("Learned Bloom Filter", r"learned bloom filter|lbf"),
+        ]
+    
+    with open(path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+    
+    rules = []
+    for rule in data.get("tag_rules", []):
+        name = rule.get("name")
+        pattern = rule.get("pattern")
+        if name and pattern:
+            rules.append((name, pattern))
+    
+    return rules
 
 # ===== Helpers =====
 
@@ -189,7 +205,8 @@ def text_blob(work: Dict[str,Any]) -> str:
 def auto_tags_for(work: Dict[str,Any]) -> List[str]:
     blob = text_blob(work)
     tags: Set[str] = set()
-    for tag, pat in TAG_RULES:
+    tag_rules = load_tag_rules()
+    for tag, pat in tag_rules:
         if re.search(pat, blob, flags=re.IGNORECASE):
             tags.add(tag)
             # より具体的なタグがマッチした場合、より一般的なタグも追加
