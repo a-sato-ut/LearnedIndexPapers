@@ -31,7 +31,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 TARGET_DOI = os.getenv("TARGET_DOI", "10.1145/3183713.3196909")
 # Your email for OpenAlex usage statistics (optional, no emails sent)
 OPENALEX_MAILTO = os.getenv("OPENALEX_MAILTO", os.getenv("OPENALEX_EMAIL", ""))
-USER_AGENT = os.getenv("USER_AGENT", "learned-index-citations/1.0 (+GitHub Actions)")
+USER_AGENT = os.getenv("USER_AGENT", "learned-index-citations/1.0 (https://github.com/yourusername/learned-index-citations)")
 
 # Tagging rules: (TAG_NAME, regex pattern). Case-insensitive search on title/abstract/venue.
 TAG_RULES: List[tuple[str,str]] = [
@@ -141,7 +141,7 @@ def iter_citations(sess: requests.Session, cited_by_api_url: str) -> Iterable[Di
             break
         params["cursor"] = cursor
         # polite delay
-        time.sleep(0.5)
+        time.sleep(1.0)
 
 
 def text_blob(work: Dict[str,Any]) -> str:

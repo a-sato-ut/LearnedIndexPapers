@@ -1,42 +1,61 @@
 {
-  "total_works": 3,
+  "total_works": 5,
   "by_year": {
     "2020": 2,
-    "2021": 1
+    "2021": 2,
+    "2022": 1
   },
   "by_tag": {
+    "Main-memory": 3,
+    "String Key": 2,
     "Updatable": 2,
-    "Main-memory": 2,
-    "String Key": 1,
-    "PGM-index": 1,
-    "ALEX": 1
+    "ALEX": 1,
+    "Bloom Filter": 1,
+    "Distributed": 1,
+    "Learned Bloom Filter": 1,
+    "PGM-index": 1
   },
   "by_venue": {
-    "SIGMOD": 3
+    "SIGMOD": 4,
+    "VLDB": 1
   },
   "top_authors": [
     {
       "author_id": "https://openalex.org/A1234567890",
-      "name": "John Doe",
+      "name": "A1234567890",
       "papers": 1,
       "sum_citations": 45,
       "avg_citations": 45.0
     },
     {
       "author_id": "https://openalex.org/A0987654321",
-      "name": "Jane Smith",
+      "name": "A0987654321",
       "papers": 1,
       "sum_citations": 67,
       "avg_citations": 67.0
     },
     {
       "author_id": "https://openalex.org/A1111111111",
-      "name": "Bob Johnson",
+      "name": "A1111111111",
       "papers": 1,
       "sum_citations": 89,
       "avg_citations": 89.0
+    },
+    {
+      "author_id": "https://openalex.org/A2222222222",
+      "name": "A2222222222",
+      "papers": 1,
+      "sum_citations": 34,
+      "avg_citations": 34.0
+    },
+    {
+      "author_id": "https://openalex.org/A3333333333",
+      "name": "A3333333333",
+      "papers": 1,
+      "sum_citations": 56,
+      "avg_citations": 56.0
     }
   ],
-  "citations_sum": 201,
-  "last_updated": "2024-01-01T00:00:00Z"
-} 
+  "citations_sum": 291,
+  "last_updated": "2025-08-21T09:26:17Z"
+}
