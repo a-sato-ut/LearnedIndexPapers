@@ -266,7 +266,8 @@
         }
       ],
       "tags": [
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -2417,7 +2418,8 @@
       ],
       "tags": [
         "Disk-based Learned Index",
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -3470,7 +3472,8 @@
         }
       ],
       "tags": [
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -5230,7 +5233,8 @@
       "tags": [
         "Disk",
         "Disk-based Learned Index",
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -10791,7 +10795,8 @@
         }
       ],
       "tags": [
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -12012,7 +12017,8 @@
         }
       ],
       "tags": [
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -12892,7 +12898,8 @@
         }
       ],
       "tags": [
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -17549,7 +17556,8 @@
         }
       ],
       "tags": [
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -18293,7 +18301,8 @@
         }
       ],
       "tags": [
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -20763,7 +20772,8 @@
       ],
       "tags": [
         "Disk",
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {
@@ -27154,7 +27164,8 @@
       ],
       "tags": [
         "Disk-based Learned Index",
-        "Learned Index"
+        "Learned Index",
+        "Updatable"
       ]
     },
     {

@@ -36,7 +36,7 @@ USER_AGENT = os.getenv("USER_AGENT", "learned-index-citations/1.0 (mailto:your-e
 # Tagging rules: (TAG_NAME, regex pattern). Case-insensitive search on title/abstract/venue.
 TAG_RULES: List[tuple[str,str]] = [
     ("String Key", r"\b(string|text|varchar|character|lexicograph|dictionary)\b"),
-    ("Updatable", r"\b(update|mutable|insert|delete|dynamic|online|incremental|lsm)\b"),
+    ("Updatable", r"\b(update|updatable|mutable|insert|delete|dynamic|online|incremental|lsm)\b"),
     ("Disk", r"\b(disk|ssd|storage|i/o|external memory|out[- ]of[- ]core)\b"),
     ("Main-memory", r"\b(in[- ]?memory|ram)\b"),
     ("Multidimensional", r"\b(multidimensional|multi[- ]?dimensional|spatial|kd[- ]?tree|r[- ]?tree|quadtree|octree)\b"),

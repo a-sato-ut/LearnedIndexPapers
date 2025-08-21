@@ -13,7 +13,7 @@
   },
   "by_tag": {
     "Learned Index": 104,
-    "Updatable": 48,
+    "Updatable": 59,
     "Multidimensional": 46,
     "Disk": 34,
     "Bloom Filter": 31,
@@ -421,6 +421,6 @@
     }
   ],
   "citations_sum": 11082,
-  "last_updated": "2025-08-21T11:12:27Z",
+  "last_updated": "2025-08-21T11:16:44Z",
   "execution_time_seconds": 0.5
 }
