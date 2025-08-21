@@ -94,4 +94,7 @@ tag_rules:
     pattern: "\\b(survey|review|overview|systematic review|literature review|state[- ]of[- ]the[- ]art|sota)\\b"
   
   - name: "Attack"
-    pattern: "\\b(attack|adversarial|poisoning|backdoor|evasion|inference|membership inference|model inversion|data poisoning|label flipping|trojans|malicious|defense|defend|detect|detection|robustness|adversarial training|certified robustness)\\b" 
+    pattern: "\\b(attack|adversarial|poisoning|backdoor|evasion|inference|membership inference|model inversion|data poisoning|label flipping|trojans|malicious|defense|defend|detect|detection|robustness|adversarial training|certified robustness)\\b"
+  
+  - name: "Nearest Neighbor Search"
+    pattern: "\\b(nearest neighbor|knn|k[- ]?nearest|similarity search|approximate nearest neighbor|ann|exact nearest neighbor|range search|radius search|similarity join)\\b" 
