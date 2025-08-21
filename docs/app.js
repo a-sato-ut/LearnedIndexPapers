@@ -26,7 +26,7 @@ function renderCard(w){
   );
 }
 
-function filterPapers(papers, selectedTags, selectedAuthors, sortBy = 'citations'){
+function filterPapers(papers, selectedTags, selectedAuthors, selectedVenues, sortBy = 'citations'){
   const filtered = papers.filter(w=>{
     // AND検索: 選択された全てのタグが含まれている必要がある
     const okTag = !selectedTags.size || selectedTags.size === 0 || 
@@ -37,7 +37,16 @@ function filterPapers(papers, selectedTags, selectedAuthors, sortBy = 'citations
     const okAuthor = !selectedAuthors.size || selectedAuthors.size === 0 || 
                      Array.from(selectedAuthors).every(author => paperAuthors.includes(author));
     
-    return okTag && okAuthor;
+    // OR検索: 選択された学会・ジャーナルのいずれかに含まれていればOK
+    const paperVenue = w.host_venue || 'Unknown';
+    const okVenue = !selectedVenues.size || selectedVenues.size === 0 || 
+                    Array.from(selectedVenues).some(venueGroup => {
+                      // venueGroupは|で区切られた複数の学会名
+                      const venues = venueGroup.split('|');
+                      return venues.includes(paperVenue);
+                    });
+    
+    return okTag && okAuthor && okVenue;
   });
   
   // ソート順を適用
@@ -122,6 +131,144 @@ function mountAuthorFilter(allAuthors, stats){
   return container;
 }
 
+function mountVenueFilter(allVenues, stats){
+  const container = document.getElementById('venue-checkboxes');
+  container.innerHTML = '';
+  
+  // 学会・ジャーナルの論文数を取得する関数
+  const getVenuePaperCount = (venueName) => {
+    return stats.by_venue ? stats.by_venue[venueName] || 0 : 0;
+  };
+  
+  // 学会名を正規化する関数（年を除去して同じ学会をまとめる）
+  const normalizeVenueName = (venueName) => {
+    // 年を含むパターンを除去
+    const normalized = venueName
+      .replace(/\d{4}\s+(IEEE|ACM|International|Conference|Symposium)/gi, '$1')
+      .replace(/\d{4}\s*[-–]\s*\d{4}/g, '') // 年範囲を除去
+      .replace(/\d{4}/g, '') // 単独の年を除去
+      .replace(/\s+/g, ' ') // 複数の空白を単一の空白に
+      .trim();
+    
+    // 略称を抽出
+    const abbreviation = extractAbbreviation(venueName);
+    
+    return { normalized, abbreviation };
+  };
+  
+  // 略称を抽出する関数
+  const extractAbbreviation = (venueName) => {
+    // 括弧内の略称を抽出
+    const match = venueName.match(/\(([A-Z]{2,})\)/);
+    if (match) {
+      return match[1];
+    }
+    
+    // 一般的な略称パターンを抽出
+    const patterns = [
+      { pattern: /Proceedings of the VLDB Endowment/i, abbr: 'PVLDB' },
+      { pattern: /Proceedings of the ACM on Management of Data/i, abbr: 'SIGMOD' },
+      { pattern: /Proceedings of the International Conference on Management of Data/i, abbr: 'SIGMOD' },
+      { pattern: /IEEE International Conference on Data Engineering/i, abbr: 'ICDE' },
+      { pattern: /Conference on Innovative Data Systems Research/i, abbr: 'CIDR' },
+      { pattern: /IEEE Transactions on Knowledge and Data Engineering/i, abbr: 'TKDE' },
+      { pattern: /The VLDB Journal/i, abbr: 'VLDBJ' },
+      { pattern: /ACM Transactions on Storage/i, abbr: 'TOS' },
+      { pattern: /Proceedings of the AAAI Conference on Artificial Intelligence/i, abbr: 'AAAI' },
+      { pattern: /International Conference on Learning Representations/i, abbr: 'ICLR' },
+      { pattern: /IEEE Transactions on Parallel and Distributed Systems/i, abbr: 'TPDS' },
+      { pattern: /IEEE Communications Surveys & Tutorials/i, abbr: 'COMST' },
+      { pattern: /ACM Computing Surveys/i, abbr: 'CSUR' },
+      { pattern: /Journal of the ACM/i, abbr: 'JACM' },
+      { pattern: /Communications of the ACM/i, abbr: 'CACM' },
+      { pattern: /ACM Transactions on Graphics/i, abbr: 'TOG' },
+      { pattern: /IEEE Transactions on Pattern Analysis and Machine Intelligence/i, abbr: 'TPAMI' },
+      { pattern: /Proceedings of the ACM Web Conference/i, abbr: 'WWW' },
+      { pattern: /Neural Information Processing Systems/i, abbr: 'NeurIPS' },
+      { pattern: /International Conference on Machine Learning/i, abbr: 'ICML' },
+      { pattern: /IEEE International Solid-State Circuits Conference/i, abbr: 'ISSCC' },
+      { pattern: /International Journal of Geographical Information Science/i, abbr: 'IJGIS' },
+      { pattern: /IEEE Transactions on Network and Service Management/i, abbr: 'TNSM' },
+      { pattern: /Distributed and Parallel Databases/i, abbr: 'DPD' },
+      { pattern: /Knowledge and Information Systems/i, abbr: 'KAIS' },
+      { pattern: /The Journal of Supercomputing/i, abbr: 'JSC' },
+      { pattern: /Information Processing & Management/i, abbr: 'IPM' },
+      { pattern: /Data Science and Engineering/i, abbr: 'DSE' },
+      { pattern: /Nucleic Acids Research/i, abbr: 'NAR' },
+      { pattern: /Nature Computational Science/i, abbr: 'NCS' },
+      { pattern: /Cell Genomics/i, abbr: 'CG' },
+      { pattern: /Bioinformatics/i, abbr: 'BIO' },
+      { pattern: /Artificial Intelligence Review/i, abbr: 'AIR' },
+      { pattern: /Information Sciences/i, abbr: 'IS' },
+      { pattern: /Applied Sciences/i, abbr: 'AS' },
+      { pattern: /Electronics/i, abbr: 'EL' },
+      { pattern: /Synthesis lectures on data management/i, abbr: 'SLDM' },
+      { pattern: /Communications in computer and information science/i, abbr: 'CCIS' },
+      { pattern: /Lecture notes in computer science/i, abbr: 'LNCS' },
+      { pattern: /IEEE Data\(base\) Engineering Bulletin/i, abbr: 'DEB' },
+      { pattern: /ACM SIGMOD Record/i, abbr: 'SIGMOD Record' },
+      { pattern: /IEEE Access/i, abbr: 'Access' },
+      { pattern: /arXiv \(Cornell University\)/i, abbr: 'arXiv' },
+      { pattern: /bioRxiv \(Cold Spring Harbor Laboratory\)/i, abbr: 'bioRxiv' },
+      { pattern: /Chapman and Hall\/CRC eBooks/i, abbr: 'CRC' },
+      { pattern: /Daedalus/i, abbr: 'Daedalus' },
+      { pattern: /Computer Communications/i, abbr: 'CC' },
+      { pattern: /Discrete Optimization/i, abbr: 'DO' },
+      { pattern: /International Journal of Scientific Research in Science Engineering and Technology/i, abbr: 'IJSRET' }
+    ];
+    
+    for (const { pattern, abbr } of patterns) {
+      if (pattern.test(venueName)) {
+        return abbr;
+      }
+    }
+    
+    return null;
+  };
+  
+  // 学会名を正規化してグループ化
+  const venueGroups = {};
+  [...allVenues].forEach(venue => {
+    const count = getVenuePaperCount(venue);
+    if (count > 0) { // 0論文の学会を除外
+      const { normalized, abbreviation } = normalizeVenueName(venue);
+      const key = normalized;
+      if (!venueGroups[key]) {
+        venueGroups[key] = { 
+          count: 0, 
+          originalNames: [], 
+          abbreviation: abbreviation 
+        };
+      }
+      venueGroups[key].count += count;
+      venueGroups[key].originalNames.push(venue);
+      // 略称が複数ある場合は最初のものを保持
+      if (!venueGroups[key].abbreviation && abbreviation) {
+        venueGroups[key].abbreviation = abbreviation;
+      }
+    }
+  });
+  
+  // 論文数の多い順にソート
+  const sortedVenues = Object.entries(venueGroups)
+    .sort(([,a], [,b]) => b.count - a.count);
+  
+  sortedVenues.forEach(([normalizedName, data]) => {
+    // 略称を含めた表示名を作成
+    const displayName = data.abbreviation 
+      ? `${normalizedName} (${data.abbreviation})`
+      : normalizedName;
+    
+    const label = el('label', {class: 'venue-checkbox'}, 
+      el('input', {type: 'checkbox', value: data.originalNames.join('|')}), // 元の名前を|で結合
+      el('span', {class: 'venue-text'}, `${displayName} (${data.count} papers)`)
+    );
+    container.appendChild(label);
+  });
+  
+  return container;
+}
+
 // 著者の主要タグを計算する関数
 function getAuthorTopTags(authorName, papers) {
   // 著者の論文を取得
@@ -164,6 +311,15 @@ function closeAllFilters() {
     authorFilterContent.classList.remove('expanded');
     authorFilterContent.classList.add('collapsed');
     authorToggleIcon.style.transform = 'rotate(0deg)';
+  }
+  
+  // 学会フィルターを閉じる
+  const venueFilterContent = document.getElementById('venue-filter-content');
+  const venueToggleIcon = document.querySelector('#venue-filter-toggle .toggle-icon');
+  if (venueFilterContent && venueToggleIcon) {
+    venueFilterContent.classList.remove('expanded');
+    venueFilterContent.classList.add('collapsed');
+    venueToggleIcon.style.transform = 'rotate(0deg)';
   }
 }
 
@@ -382,6 +538,7 @@ function renderCharts(stats){
   console.log('Loaded papers:', papers.length);
   const allTags = new Set(papers.flatMap(p=>p.tags||[]));
   const allAuthors = new Set(papers.flatMap(p=>(p.authorships||[]).map(a=>a.name).filter(Boolean)));
+  const allVenues = new Set(papers.map(p=>p.host_venue||'Unknown').filter(Boolean));
   
   // グローバル変数にデータを保存
   window.allPapers = papers;
@@ -394,15 +551,18 @@ function renderCharts(stats){
 
   const tagContainer = mountTagFilter(allTags, stats);
   const authorContainer = mountAuthorFilter(allAuthors, stats);
+  const venueContainer = mountVenueFilter(allVenues, stats);
   const list = document.getElementById('list');
   const clear = document.getElementById('clear');
   const clearAuthors = document.getElementById('clear-authors');
+  const clearVenues = document.getElementById('clear-venues');
   let currentSort = 'citations'; // デフォルトは被引用数順
 
   function refresh(){
     console.log('refresh() called');
     console.log('tagContainer:', tagContainer);
     console.log('authorContainer:', authorContainer);
+    console.log('venueContainer:', venueContainer);
     
     const selectedTags = new Set();
     if (tagContainer) {
@@ -418,10 +578,18 @@ function renderCharts(stats){
       });
     }
     
+    const selectedVenues = new Set();
+    if (venueContainer) {
+      venueContainer.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
+        selectedVenues.add(cb.value);
+      });
+    }
+    
     console.log('Selected tags:', selectedTags.size);
     console.log('Selected authors:', selectedAuthors.size);
+    console.log('Selected venues:', selectedVenues.size);
     
-    const view = filterPapers(papers, selectedTags, selectedAuthors, currentSort);
+    const view = filterPapers(papers, selectedTags, selectedAuthors, selectedVenues, currentSort);
     console.log('Filtered papers:', view.length, 'Total papers:', papers.length);
     list.innerHTML = '';
     for(const w of view){ list.appendChild(renderCard(w)); }
@@ -439,6 +607,12 @@ function renderCharts(stats){
   authorContainer.addEventListener('change', refresh);
   clearAuthors.addEventListener('click', ()=>{ 
     authorContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false); 
+    refresh(); 
+  });
+  
+  venueContainer.addEventListener('change', refresh);
+  clearVenues.addEventListener('click', ()=>{ 
+    venueContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false); 
     refresh(); 
   });
   
@@ -503,6 +677,24 @@ function renderCharts(stats){
       authorFilterContent.classList.remove('expanded');
       authorFilterContent.classList.add('collapsed');
       authorToggleIcon.style.transform = 'rotate(0deg)';
+    }
+  });
+
+  // 学会フィルター開閉機能
+  const venueFilterToggle = document.getElementById('venue-filter-toggle');
+  const venueFilterContent = document.getElementById('venue-filter-content');
+  const venueToggleIcon = venueFilterToggle.querySelector('.toggle-icon');
+
+  venueFilterToggle.addEventListener('click', () => {
+    const isCollapsed = venueFilterContent.classList.contains('collapsed');
+    if (isCollapsed) {
+      venueFilterContent.classList.remove('collapsed');
+      venueFilterContent.classList.add('expanded');
+      venueToggleIcon.style.transform = 'rotate(180deg)';
+    } else {
+      venueFilterContent.classList.remove('expanded');
+      venueFilterContent.classList.add('collapsed');
+      venueToggleIcon.style.transform = 'rotate(0deg)';
     }
   });
 
