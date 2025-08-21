@@ -13,18 +13,18 @@
   },
   "by_tag": {
     "Database": 279,
-    "Survey": 187,
     "Updatable": 186,
     "Learned Index": 152,
     "Distributed": 139,
-    "Benchmark": 130,
     "Disk": 125,
     "Query optimization": 112,
     "Multidimensional": 78,
     "Filter": 77,
     "Theoretical": 57,
+    "Benchmark": 54,
     "Caching": 53,
     "Bloom Filter": 51,
+    "Survey": 49,
     "Compression": 44,
     "Nearest Neighbor Search": 44,
     "Cardinality estimation": 42,
@@ -72,9 +72,9 @@
     "Range": 36,
     "Sorting Algorithm": 18,
     "Reinforcement Learning": 42,
-    "Survey": 187,
-    "Benchmark": 130,
     "Theoretical": 57,
+    "Benchmark": 54,
+    "Survey": 49,
     "Security/Adversarial": 42
   },
   "tag_categories": {
@@ -18707,6 +18707,6 @@
     }
   ],
   "citations_sum": 11082,
-  "last_updated": "2025-08-21T12:49:43Z",
-  "execution_time_seconds": 48.59
+  "last_updated": "2025-08-21T18:49:53Z",
+  "execution_time_seconds": 40.75
 }
