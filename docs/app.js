@@ -97,7 +97,30 @@ function renderTopAuthors(stats){
   ol.innerHTML = '';
   for(const a of stats.top_authors||[]){
     const name = a.name;
-    const li = el('li',{}, `${name}: ${a.papers} papers (avg cited_by ${a.avg_citations.toFixed(1)})`);
+    const papers = a.papers;
+    const avgCitations = a.avg_citations.toFixed(1);
+    const totalCitations = Math.round(papers * avgCitations);
+    
+    // 著者のイニシャルを取得（アバター用）
+    const initials = name.split(' ').map(n => n.charAt(0)).join('').toUpperCase();
+    
+    const li = el('li', {},
+      el('div', {class: 'author-rank'}, (stats.top_authors.indexOf(a) + 1).toString()),
+      el('div', {class: 'author-avatar'}, initials),
+      el('div', {class: 'author-info'},
+        el('div', {class: 'author-name'}, name),
+        el('div', {class: 'author-stats'},
+          el('div', {class: 'paper-count'}, 
+            el('span', {}, '📄'),
+            `${papers} papers`
+          ),
+          el('div', {class: 'citation-count'}, 
+            el('span', {}, '📊'),
+            `avg ${avgCitations} citations`
+          )
+        )
+      )
+    );
     ol.appendChild(li);
   }
 }
