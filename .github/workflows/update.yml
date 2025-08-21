@@ -20,12 +20,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests pyyaml
-      - name: Build data
+      - name: Fetch data from OpenAlex
         env:
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}
           TARGET_DOI: 10.1145/3183713.3196909
         run: |
-          python scripts/fetch_and_build.py
+          python scripts/fetch_data.py
+      - name: Process data with tags and statistics
+        run: |
+          python scripts/process_data.py
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
