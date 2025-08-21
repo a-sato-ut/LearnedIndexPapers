@@ -26,15 +26,12 @@ function renderCard(w){
   );
 }
 
-function filterPapers(papers, q, selectedTags){
-  const k = (q||'').toLowerCase();
+function filterPapers(papers, selectedTags){
   const filtered = papers.filter(w=>{
-    const hay = [w.title||'', w.host_venue||'', ...(w.authorships||[]).map(a=>a.name||'')].join('\n').toLowerCase();
-    const okQ = !k || hay.includes(k);
     // AND検索: 選択された全てのタグが含まれている必要がある
     const okTag = !selectedTags.size || selectedTags.size === 0 || 
                   Array.from(selectedTags).every(tag => (w.tags||[]).includes(tag));
-    return okQ && okTag;
+    return okTag;
   });
   
   // 被引用数で降順ソート
@@ -110,19 +107,17 @@ function renderCharts(stats){
 
   const tagSel = mountTagFilter(allTags);
   const list = document.getElementById('list');
-  const q = document.getElementById('q');
   const clear = document.getElementById('clear');
 
   function refresh(){
     const selected = new Set([...tagSel.selectedOptions].map(o=>o.value));
-    const view = filterPapers(papers, q.value, selected);
+    const view = filterPapers(papers, selected);
     list.innerHTML = '';
     for(const w of view){ list.appendChild(renderCard(w)); }
   }
 
-  q.addEventListener('input', refresh);
   tagSel.addEventListener('change', refresh);
-  clear.addEventListener('click', ()=>{ q.value=''; [...tagSel.options].forEach(o=>o.selected=false); refresh(); });
+  clear.addEventListener('click', ()=>{ [...tagSel.options].forEach(o=>o.selected=false); refresh(); });
 
   refresh();
 })(); 

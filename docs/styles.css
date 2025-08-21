@@ -4,7 +4,6 @@ html,body{ margin:0; padding:0; font:16px/1.5 system-ui, -apple-system, Segoe UI
 header{ padding:24px 16px; border-bottom:1px solid #eee; }
 h1{ margin:0 0 4px; font-size:28px; }
 #controls{ display:flex; gap:8px; padding:12px 16px; align-items:center; flex-wrap:wrap; border-bottom:1px solid #eee; }
-#controls input[type=search]{ flex:1; min-width:240px; padding:8px 10px; border:1px solid #ddd; border-radius:8px; }
 #controls select{ min-width:220px; height:96px; border:1px solid #ddd; border-radius:8px; padding:6px; }
 #controls button{ padding:8px 12px; border:1px solid #ddd; border-radius:8px; background:#fff; cursor:pointer; }
 .filter-help{ color:var(--muted); font-size:12px; margin-top:4px; }
