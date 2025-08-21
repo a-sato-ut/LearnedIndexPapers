@@ -14,15 +14,16 @@
     </header>
 
     <section id="controls">
-      <input id="q" type="search" placeholder="Search title/author/venue…" />
+      <input id="q" type="search" placeholder="タイトル・著者・会議名で検索…" />
       <select id="tag-filter" multiple></select>
-      <button id="clear">Clear</button>
+      <button id="clear">クリア</button>
+      <div class="filter-help">※ タグは複数選択可能（AND検索）</div>
     </section>
 
     <section id="stats">
-      <div class="stat"><div class="k" id="total_works">–</div><div class="v">papers</div></div>
-      <div class="stat"><div class="k" id="citations_sum">–</div><div class="v">sum of cited_by_count</div></div>
-      <div class="stat"><div class="k" id="last_updated">–</div><div class="v">last updated (UTC)</div></div>
+      <div class="stat"><div class="k" id="total_works">–</div><div class="v">論文数</div></div>
+      <div class="stat"><div class="k" id="citations_sum">–</div><div class="v">総被引用数</div></div>
+      <div class="stat"><div class="k" id="last_updated">–</div><div class="v">最終更新 (JST)</div></div>
     </section>
 
     <section id="charts">
@@ -31,12 +32,12 @@
     </section>
 
     <section>
-      <h2>Top Authors (by #papers)</h2>
+      <h2>主要著者 (論文数順)</h2>
       <ol id="top-authors"></ol>
     </section>
 
     <section>
-      <h2>Papers</h2>
+      <h2>論文一覧 (被引用数順)</h2>
       <div id="list" class="cards"></div>
     </section>
 

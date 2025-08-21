@@ -20,6 +20,7 @@ function renderCard(w){
   return el('article', {class:'card'},
     el('h3',{}, w.title||'(no title)'),
     el('div',{class:'meta'}, [authors || '(authors unknown)',' • ', w.host_venue||'(venue unknown)',' • ', w.publication_year||'–'].filter(Boolean).join(' ')),
+    el('div',{class:'citation-count'}, `被引用数: ${w.cited_by_count || 0}`),
     el('div',{class:'tags'}, ...tags),
     url ? el('a',{class:'btn', href:url, target:'_blank', rel:'noopener'}, 'Open') : null
   );
@@ -27,12 +28,17 @@ function renderCard(w){
 
 function filterPapers(papers, q, selectedTags){
   const k = (q||'').toLowerCase();
-  return papers.filter(w=>{
+  const filtered = papers.filter(w=>{
     const hay = [w.title||'', w.host_venue||'', ...(w.authorships||[]).map(a=>a.name||'')].join('\n').toLowerCase();
     const okQ = !k || hay.includes(k);
-    const okTag = !selectedTags.size || (w.tags||[]).some(t=>selectedTags.has(t));
+    // AND検索: 選択された全てのタグが含まれている必要がある
+    const okTag = !selectedTags.size || selectedTags.size === 0 || 
+                  Array.from(selectedTags).every(tag => (w.tags||[]).includes(tag));
     return okQ && okTag;
   });
+  
+  // 被引用数で降順ソート
+  return filtered.sort((a, b) => (b.cited_by_count || 0) - (a.cited_by_count || 0));
 }
 
 function mountTagFilter(allTags){
@@ -57,7 +63,20 @@ function renderTopAuthors(stats){
 function renderCounters(stats){
   document.getElementById('total_works').textContent = stats.total_works;
   document.getElementById('citations_sum').textContent = stats.citations_sum;
-  document.getElementById('last_updated').textContent = stats.last_updated;
+  
+  // UTCを日本時間に変換
+  const utcDate = new Date(stats.last_updated);
+  const jstDate = new Date(utcDate.getTime() + (9 * 60 * 60 * 1000)); // UTC+9
+  const jstString = jstDate.toLocaleString('ja-JP', {
+    timeZone: 'Asia/Tokyo',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+  document.getElementById('last_updated').textContent = jstString;
 }
 
 function renderCharts(stats){
