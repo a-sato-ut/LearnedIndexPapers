@@ -161,7 +161,8 @@ def iter_citations(sess: requests.Session, cited_by_api_url: str) -> Iterable[Di
 
 def text_blob(work: Dict[str,Any]) -> str:
     parts: List[str] = []
-    title = work.get("display_name") or ""
+    # タイトルを取得（display_nameまたはtitleフィールドから）
+    title = work.get("title") or work.get("display_name") or ""
     parts.append(str(title))
     # venue names
     for key in ("host_venue","primary_location"):
