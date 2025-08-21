@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Learned-Index Citations</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Learned-Index Citations</h1>
+      <p id="work-meta"></p>
+    </header>
+
+    <section id="controls">
+      <input id="q" type="search" placeholder="Search title/author/venue…" />
+      <select id="tag-filter" multiple></select>
+      <button id="clear">Clear</button>
+    </section>
+
+    <section id="stats">
+      <div class="stat"><div class="k" id="total_works">–</div><div class="v">papers</div></div>
+      <div class="stat"><div class="k" id="citations_sum">–</div><div class="v">sum of cited_by_count</div></div>
+      <div class="stat"><div class="k" id="last_updated">–</div><div class="v">last updated (UTC)</div></div>
+    </section>
+
+    <section id="charts">
+      <canvas id="byYear"></canvas>
+      <canvas id="byTag"></canvas>
+    </section>
+
+    <section>
+      <h2>Top Authors (by #papers)</h2>
+      <ol id="top-authors"></ol>
+    </section>
+
+    <section>
+      <h2>Papers</h2>
+      <div id="list" class="cards"></div>
+    </section>
+
+    <footer>
+      <p>Built from OpenAlex data. This website is not affiliated with OpenAlex.</p>
+      <p><a href="https://openalex.org/" target="_blank" rel="noopener">OpenAlex</a> • <a href="https://dl.acm.org/doi/10.1145/3183713.3196909" target="_blank" rel="noopener">RMI (DOI)</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html> 

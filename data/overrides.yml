@@ -1,0 +1,8 @@
+# Add / remove tags by OpenAlex work id
+add_tags:
+  "https://openalex.org/W1234567890": ["String Key", "Updatable"]
+remove_tags:
+  "https://openalex.org/W0987654321": ["Sketch"]
+# Hide specific works from the site
+hide:
+  - "https://openalex.org/W0000000000" 
