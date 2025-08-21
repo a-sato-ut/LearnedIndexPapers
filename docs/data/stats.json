@@ -13,6 +13,7 @@
   },
   "by_tag": {
     "Database": 279,
+    "Survey": 187,
     "Updatable": 186,
     "Learned Index": 153,
     "Distributed": 139,
@@ -427,6 +428,6 @@
     }
   ],
   "citations_sum": 11082,
-  "last_updated": "2025-08-21T11:33:04Z",
-  "execution_time_seconds": 48.46
+  "last_updated": "2025-08-21T11:36:07Z",
+  "execution_time_seconds": 47.56
 }

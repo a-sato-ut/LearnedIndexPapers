@@ -88,4 +88,7 @@ tag_rules:
     pattern: "\\b(filter|filtering)\\b"
   
   - name: "Caching"
-    pattern: "\\b(cache|caching|memcached|redis|lru|fifo|lfu|cache eviction|cache replacement)\\b" 
+    pattern: "\\b(cache|caching|memcached|redis|lru|fifo|lfu|cache eviction|cache replacement)\\b"
+  
+  - name: "Survey"
+    pattern: "\\b(survey|review|overview|systematic review|literature review|state[- ]of[- ]the[- ]art|sota)\\b" 
