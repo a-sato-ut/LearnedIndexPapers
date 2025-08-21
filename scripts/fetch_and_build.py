@@ -53,8 +53,8 @@ TAG_RULES: List[tuple[str,str]] = [
     ("Benchmark", r"\b(benchmark|microbenchmark|sosd|workload|evaluation framework)\b"),
     ("Range", r"\b(range query|interval|scan)\b"),
     ("Time-series", r"\b(time[- ]?series|temporal)\b"),
-    ("Learned Index", r"\blearned index\b"),
     ("Disk-based Learned Index", r"learned index.*(disk|page|io|secondary storage)"),
+    ("Learned Index", r"\blearned[- ]?index(es)?\b"),
     ("Query optimization", r"\b(query optimization|query plan|query execution|query processing)\b"),
     ("Cardinality estimation", r"\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\b"),
     ("Learned Bloom Filter", r"learned bloom filter|lbf"),
@@ -191,6 +191,11 @@ def auto_tags_for(work: Dict[str,Any]) -> List[str]:
     for tag, pat in TAG_RULES:
         if re.search(pat, blob, flags=re.IGNORECASE):
             tags.add(tag)
+            # より具体的なタグがマッチした場合、より一般的なタグも追加
+            if tag == "Disk-based Learned Index":
+                tags.add("Learned Index")
+            elif tag == "Learned Bloom Filter":
+                tags.add("Bloom Filter")
     return sorted(tags)
 
 
@@ -228,26 +233,47 @@ def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
     citations_sum = 0
     author_counts = Counter()
     author_citations = Counter()
+    author_names = {}  # author_id -> name のマッピング
 
     for w in items:
         citations_sum += int(w.get("cited_by_count") or 0)
         hv = w.get("host_venue")
         if hv: by_venue[hv] += 1
         for a in (w.get("authorships") or []):
-            auth = a.get("author") or {}
-            aid = auth.get("id") or auth.get("display_name") or "unknown"
-            author_counts[aid] += 1
-            author_citations[aid] += int(w.get("cited_by_count") or 0)
+            # データ構造に応じて著者IDと名前を取得
+            aid = a.get("author_id") or "unknown"
+            name = a.get("name") or "unknown"
+            # author_id がある場合はそれを使用、そうでなければ名前を使用
+            author_key = aid if aid != "unknown" else name
+            
+            # 著者名をマッピングに保存
+            if aid != "unknown" and name != "unknown":
+                author_names[aid] = name
+            elif aid == "unknown" and name != "unknown":
+                author_names[name] = name
+                
+            author_counts[author_key] += 1
+            author_citations[author_key] += int(w.get("cited_by_count") or 0)
 
+    # 著者キーから適切な表示名を生成
+    def get_author_display_name(author_key):
+        # 著者名マッピングから実際の名前を取得
+        if author_key in author_names:
+            return author_names[author_key]
+        elif author_key.startswith("https://openalex.org/"):
+            return author_key.split("/")[-1]
+        else:
+            return author_key
+    
     top_authors = [
         {
-            "author_id": aid,
-            "name": aid.split("/")[-1] if aid.startswith("https://") else aid,
+            "author_id": author_key,
+            "name": get_author_display_name(author_key),
             "papers": cnt,
-            "sum_citations": int(author_citations[aid]),
-            "avg_citations": (author_citations[aid] / cnt) if cnt else 0.0,
+            "sum_citations": int(author_citations[author_key]),
+            "avg_citations": (author_citations[author_key] / cnt) if cnt else 0.0,
         }
-        for aid, cnt in author_counts.most_common(50)
+        for author_key, cnt in author_counts.most_common(50)
     ]
 
     return {
