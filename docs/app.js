@@ -117,10 +117,7 @@ function renderCharts(stats){
   const citations = await loadJSON('data/citations.json');
   const stats = await loadJSON('data/stats.json');
 
-  // Header meta
-  const w = citations.work||{};
-  const meta = document.getElementById('work-meta');
-  meta.textContent = `${w.display_name||'Target work'} | OpenAlex: ${w.openalex_id||'N/A'} | cited_by_count: ${w.cited_by_count ?? 'N/A'}`;
+
 
   const papers = citations.results||[];
   const allTags = new Set(papers.flatMap(p=>p.tags||[]));
