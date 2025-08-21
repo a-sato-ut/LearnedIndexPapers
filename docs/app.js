@@ -108,8 +108,7 @@ function renderCounters(stats){
   
   // UTCを日本時間に変換
   const utcDate = new Date(stats.last_updated);
-  const jstDate = new Date(utcDate.getTime() + (9 * 60 * 60 * 1000)); // UTC+9
-  const jstString = jstDate.toLocaleString('ja-JP', {
+  const jstString = utcDate.toLocaleString('ja-JP', {
     timeZone: 'Asia/Tokyo',
     year: 'numeric',
     month: '2-digit',
