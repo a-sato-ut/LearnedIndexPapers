@@ -1,61 +1,81 @@
 {
-  "total_works": 5,
+  "total_works": 764,
   "by_year": {
-    "2020": 2,
-    "2021": 2,
-    "2022": 1
+    "2016": 1,
+    "2018": 34,
+    "2019": 110,
+    "2020": 128,
+    "2021": 146,
+    "2022": 111,
+    "2023": 96,
+    "2024": 95,
+    "2025": 43
   },
   "by_tag": {
-    "Main-memory": 3,
-    "String Key": 2,
-    "Updatable": 2,
-    "ALEX": 1,
-    "Bloom Filter": 1,
-    "Distributed": 1,
-    "Learned Bloom Filter": 1,
-    "PGM-index": 1
+    "Updatable": 175,
+    "Distributed": 139,
+    "Benchmark": 130,
+    "Disk": 125,
+    "Disk-based Learned Index": 103,
+    "Multidimensional": 78,
+    "Theoretical": 57,
+    "Bloom Filter": 51,
+    "Compression": 44,
+    "Security/Adversarial": 42,
+    "Main-memory": 41,
+    "Hash Table": 39,
+    "B-tree": 38,
+    "Range": 36,
+    "String Key": 27,
+    "Time-series": 27,
+    "Learned Bloom Filter": 19,
+    "LSM-tree": 18,
+    "Sketch": 16,
+    "GPU": 13,
+    "ALEX": 10,
+    "PGM-index": 7
   },
   "by_venue": {
-    "SIGMOD": 4,
-    "VLDB": 1
+    "Unknown": 168,
+    "arXiv (Cornell University)": 141,
+    "Proceedings of the VLDB Endowment": 66,
+    "Lecture notes in computer science": 39,
+    "2022 IEEE 38th International Conference on Data Engineering (ICDE)": 33,
+    "Proceedings of the ACM on Management of Data": 28,
+    "Proceedings of the 2022 International Conference on Management of Data": 25,
+    "IEEE Transactions on Knowledge and Data Engineering": 18,
+    "Conference on Innovative Data Systems Research": 8,
+    "2021 IEEE International Conference on Big Data (Big Data)": 8,
+    "IEEE Access": 7,
+    "The VLDB Journal": 7,
+    "ACM Transactions on Storage": 7,
+    "bioRxiv (Cold Spring Harbor Laboratory)": 6,
+    "Communications in computer and information science": 6,
+    "ACM SIGMOD Record": 5,
+    "Proceedings of the AAAI Conference on Artificial Intelligence": 5,
+    "Applied Sciences": 5,
+    "IEEE Data(base) Engineering Bulletin": 4,
+    "International Conference on Learning Representations": 4,
+    "IEEE Transactions on Parallel and Distributed Systems": 4,
+    "Synthesis lectures on data management": 4,
+    "Electronics": 4,
+    "Information Sciences": 4,
+    "Data Science and Engineering": 3,
+    "Distributed and Parallel Databases": 3,
+    "Knowledge and Information Systems": 3,
+    "The Journal of Supercomputing": 3,
+    "Information Processing & Management": 2,
+    "IEEE Communications Surveys & Tutorials": 2
   },
   "top_authors": [
     {
-      "author_id": "https://openalex.org/A1234567890",
-      "name": "A1234567890",
-      "papers": 1,
-      "sum_citations": 45,
-      "avg_citations": 45.0
-    },
-    {
-      "author_id": "https://openalex.org/A0987654321",
-      "name": "A0987654321",
-      "papers": 1,
-      "sum_citations": 67,
-      "avg_citations": 67.0
-    },
-    {
-      "author_id": "https://openalex.org/A1111111111",
-      "name": "A1111111111",
-      "papers": 1,
-      "sum_citations": 89,
-      "avg_citations": 89.0
-    },
-    {
-      "author_id": "https://openalex.org/A2222222222",
-      "name": "A2222222222",
-      "papers": 1,
-      "sum_citations": 34,
-      "avg_citations": 34.0
-    },
-    {
-      "author_id": "https://openalex.org/A3333333333",
-      "name": "A3333333333",
-      "papers": 1,
-      "sum_citations": 56,
-      "avg_citations": 56.0
+      "author_id": "unknown",
+      "name": "unknown",
+      "papers": 3642,
+      "sum_citations": 68945,
+      "avg_citations": 18.93053267435475
     }
   ],
-  "citations_sum": 291,
-  "last_updated": "2025-08-21T09:26:17Z"
+  "citations_sum": 11082,
+  "last_updated": "2025-08-21T09:35:15Z"
 }

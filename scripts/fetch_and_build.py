@@ -31,7 +31,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 TARGET_DOI = os.getenv("TARGET_DOI", "10.1145/3183713.3196909")
 # Your email for OpenAlex usage statistics (optional, no emails sent)
 OPENALEX_MAILTO = os.getenv("OPENALEX_MAILTO", os.getenv("OPENALEX_EMAIL", ""))
-USER_AGENT = os.getenv("USER_AGENT", "learned-index-citations/1.0 (https://github.com/yourusername/learned-index-citations)")
+USER_AGENT = os.getenv("USER_AGENT", "learned-index-citations/1.0 (mailto:your-email@example.com)")
 
 # Tagging rules: (TAG_NAME, regex pattern). Case-insensitive search on title/abstract/venue.
 TAG_RULES: List[tuple[str,str]] = [
@@ -63,22 +63,35 @@ TAG_RULES: List[tuple[str,str]] = [
 
 def _session() -> requests.Session:
     s = requests.Session()
-    s.headers.update({"User-Agent": USER_AGENT})
+    s.headers.update({
+        "User-Agent": USER_AGENT,
+        "Accept": "application/json",
+        "Accept-Encoding": "gzip, deflate"
+    })
     return s
 
 
 def get_work_by_doi(sess: requests.Session, doi: str) -> Dict[str, Any]:
-    # Using the documented "external ID" syntax for DOIs
-    url = f"https://api.openalex.org/works/https://doi.org/{doi}"
-    params = {"mailto": OPENALEX_MAILTO} if OPENALEX_MAILTO else {}
+    # Search for work by DOI using the search endpoint
+    url = "https://api.openalex.org/works"
+    params = {
+        "filter": f"doi:{doi}",
+        "mailto": OPENALEX_MAILTO
+    } if OPENALEX_MAILTO else {"filter": f"doi:{doi}"}
     
     max_retries = 3
     for attempt in range(max_retries):
         try:
             r = sess.get(url, params=params, timeout=30)
             r.raise_for_status()
-            return r.json()
+            data = r.json()
+            results = data.get("results", [])
+            if results:
+                return results[0]  # Return the first (and should be only) result
+            else:
+                raise ValueError(f"No work found for DOI: {doi}")
         except requests.exceptions.HTTPError as e:
+            print(f"HTTP Error {e.response.status_code}: {e.response.text[:200]}")
             if e.response.status_code == 403 and attempt < max_retries - 1:
                 print(f"Rate limited (403), retrying in {2 ** attempt} seconds...")
                 time.sleep(2 ** attempt)
@@ -98,14 +111,14 @@ def iter_citations(sess: requests.Session, cited_by_api_url: str) -> Iterable[Di
     """Iterate all citing works using OpenAlex cursor paging."""
     base = cited_by_api_url
     cursor = "*"
-    per_page = 200  # max 200
+    per_page = 50  # reduced from 200 to avoid rate limiting
     params = {"per-page": per_page, "cursor": cursor}
     if OPENALEX_MAILTO:
         params["mailto"] = OPENALEX_MAILTO
-    # Reduce payload size via select
+    # Reduce payload size via select - using valid field names
     params["select"] = ",".join([
         "id","display_name","publication_year","doi","cited_by_count",
-        "host_venue","primary_location","authorships","concepts","abstract_inverted_index"
+        "primary_location","authorships","concepts","abstract_inverted_index"
     ])
 
     total = 0
@@ -117,6 +130,7 @@ def iter_citations(sess: requests.Session, cited_by_api_url: str) -> Iterable[Di
                 r.raise_for_status()
                 break
             except requests.exceptions.HTTPError as e:
+                print(f"HTTP Error {e.response.status_code}: {e.response.text[:200]}")
                 if e.response.status_code == 403 and attempt < max_retries - 1:
                     print(f"Rate limited (403), retrying in {2 ** attempt} seconds...")
                     time.sleep(2 ** attempt)
@@ -140,8 +154,8 @@ def iter_citations(sess: requests.Session, cited_by_api_url: str) -> Iterable[Di
         if not cursor:
             break
         params["cursor"] = cursor
-        # polite delay
-        time.sleep(1.0)
+        # polite delay - OpenAlex recommends at least 1 second between requests
+        time.sleep(2.0)
 
 
 def text_blob(work: Dict[str,Any]) -> str:
@@ -216,7 +230,7 @@ def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
 
     for w in items:
         citations_sum += int(w.get("cited_by_count") or 0)
-        hv = (w.get("host_venue") or {}).get("display_name")
+        hv = w.get("host_venue")
         if hv: by_venue[hv] += 1
         for a in (w.get("authorships") or []):
             auth = a.get("author") or {}
@@ -261,7 +275,7 @@ def main() -> None:
             "publication_year": w.get("publication_year"),
             "doi": w.get("doi"),
             "cited_by_count": w.get("cited_by_count"),
-            "host_venue": (w.get("host_venue") or {}).get("display_name") or (w.get("primary_location") or {}).get("source",{}).get("display_name"),
+            "host_venue": (w.get("primary_location") or {}).get("source",{}).get("display_name") if w.get("primary_location") and w.get("primary_location").get("source") else "Unknown",
             "landing_page_url": (w.get("primary_location") or {}).get("landing_page_url"),
             "authorships": [
                 {
