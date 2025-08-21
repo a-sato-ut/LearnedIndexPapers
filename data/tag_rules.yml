@@ -70,4 +70,19 @@ tag_rules:
     pattern: "\\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\\b"
   
   - name: "Learned Bloom Filter"
-    pattern: "learned bloom filter|lbf" 
+    pattern: "learned bloom filter|lbf"
+  
+  - name: "Reinforcement Learning"
+    pattern: "\\b(reinforcement learning|rl|q[- ]?learning|policy gradient|actor[- ]?critic|deep q[- ]?network|dqn)\\b"
+  
+  - name: "Spline"
+    pattern: "\\b(spline|splines)\\b"
+  
+  - name: "Database"
+    pattern: "\\b(database|dbms|sql|postgresql|mysql|oracle|sqlite)\\b"
+  
+  - name: "Sorting Algorithm"
+    pattern: "\\b(sort|sorting|quicksort|mergesort|heapsort|radix sort|bucket sort)\\b"
+  
+  - name: "Filter"
+    pattern: "\\b(filter|filtering)\\b" 

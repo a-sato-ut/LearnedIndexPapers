@@ -12,6 +12,7 @@
     "2025": 43
   },
   "by_tag": {
+    "Database": 279,
     "Updatable": 186,
     "Learned Index": 153,
     "Distributed": 139,
@@ -20,10 +21,12 @@
     "Query optimization": 112,
     "Disk-based Learned Index": 103,
     "Multidimensional": 78,
+    "Filter": 77,
     "Theoretical": 57,
     "Bloom Filter": 51,
     "Compression": 44,
     "Cardinality estimation": 42,
+    "Reinforcement Learning": 42,
     "Security/Adversarial": 42,
     "Main-memory": 41,
     "Hash Table": 39,
@@ -33,8 +36,10 @@
     "Time-series": 27,
     "Learned Bloom Filter": 19,
     "LSM-tree": 18,
+    "Sorting Algorithm": 18,
     "Sketch": 16,
-    "GPU": 13
+    "GPU": 13,
+    "Spline": 4
   },
   "by_venue": {
     "Unknown": 168,
@@ -421,6 +426,6 @@
     }
   ],
   "citations_sum": 11082,
-  "last_updated": "2025-08-21T11:24:53Z",
-  "execution_time_seconds": 46.25
+  "last_updated": "2025-08-21T11:31:39Z",
+  "execution_time_seconds": 47.92
 }
