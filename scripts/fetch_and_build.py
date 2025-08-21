@@ -53,6 +53,7 @@ TAG_RULES: List[tuple[str,str]] = [
     ("Benchmark", r"\b(benchmark|microbenchmark|sosd|workload|evaluation framework)\b"),
     ("Range", r"\b(range query|interval|scan)\b"),
     ("Time-series", r"\b(time[- ]?series|temporal)\b"),
+    ("Learned Index", r"\blearned index\b"),
     ("Disk-based Learned Index", r"learned index.*(disk|page|io|secondary storage)"),
     ("Query optimization", r"\b(query optimization|query plan|query execution|query processing)\b"),
     ("Cardinality estimation", r"\b(cardinality estimation|selectivity estimation|row count estimation|table statistics)\b"),
@@ -261,6 +262,8 @@ def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
 
 
 def main() -> None:
+    start_time = time.time()
+    
     sess = _session()
     work = get_work_by_doi(sess, TARGET_DOI)
     cited_by_url = work.get("cited_by_api_url")
@@ -306,11 +309,18 @@ def main() -> None:
         }, "results": items}, f, ensure_ascii=False, indent=2)
 
     stats = build_stats(items)
+    
+    # 実行時間を記録
+    end_time = time.time()
+    execution_time = end_time - start_time
+    stats["execution_time_seconds"] = round(execution_time, 2)
+    
     with open(stats_path, "w", encoding="utf-8") as f:
         json.dump(stats, f, ensure_ascii=False, indent=2)
 
     print(f"Wrote {citations_path}")
     print(f"Wrote {stats_path}")
+    print(f"Execution time: {execution_time:.2f} seconds")
 
 if __name__ == "__main__":
     main() 

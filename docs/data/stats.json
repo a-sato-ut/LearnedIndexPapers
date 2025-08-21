@@ -77,5 +77,6 @@
     }
   ],
   "citations_sum": 11082,
-  "last_updated": "2025-08-21T10:58:32Z"
+  "last_updated": "2025-08-21T10:58:32Z",
+  "execution_time_seconds": 35.42
 }

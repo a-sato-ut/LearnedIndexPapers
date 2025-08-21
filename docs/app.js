@@ -93,6 +93,10 @@ function renderCounters(stats){
     second: '2-digit'
   });
   document.getElementById('last_updated').textContent = jstString;
+  
+  // 実行時間を表示
+  const executionTime = stats.execution_time_seconds || 0;
+  document.getElementById('execution_time').textContent = executionTime;
 }
 
 function renderCharts(stats){
