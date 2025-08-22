@@ -501,6 +501,9 @@
     "Themis Gouleakis": 1,
     "Pieter Kleer": 1,
     "Pavel Kolev": 1,
+    "Doyub Kim": 1,
+    "Minjae Lee": 1,
+    "Ken Museth": 1,
     "Lianggui Weng": 1,
     "Wenqing Wei": 1,
     "Di Wu": 1,
@@ -509,9 +512,6 @@
     "Bolin Ding": 4,
     "Defu Lian": 2,
     "Bolong Zheng": 3,
-    "Doyub Kim": 1,
-    "Minjae Lee": 1,
-    "Ken Museth": 1,
     "Sepideh Nikookar": 1,
     "Sohrab Namazi Nia": 1,
     "Senjuti Basu Roy": 1,
@@ -881,24 +881,6 @@
     "Dingheng Mo": 1,
     "Fanchao Chen": 1,
     "Caihua Shan": 1,
-    "Jiesong Liu": 1,
-    "Feng Zhang": 1,
-    "Lu Lv": 1,
-    "Qi Chang": 1,
-    "Xiaoguang Guo": 1,
-    "Dong Deng": 1,
-    "Jidong Zhai": 1,
-    "Hechen Zhang": 1,
-    "Xiaoyong Du": 1,
-    "Hao Qi": 1,
-    "Y. Wu": 1,
-    "Ligang He": 1,
-    "Yu Zhang": 1,
-    "Kang Luo": 1,
-    "Minzhi Cai": 1,
-    "Hai Jin": 1,
-    "Zhan Zhang": 1,
-    "Jin Zhao": 1,
     "Wenkun Xiang": 1,
     "Rui Cui": 1,
     "Xing Chu": 2,
@@ -979,6 +961,24 @@
     "Yinxuan He": 1,
     "Mark F. Pekala": 1,
     "Lev Kruglyak": 1,
+    "Jiesong Liu": 1,
+    "Feng Zhang": 1,
+    "Lu Lv": 1,
+    "Qi Chang": 1,
+    "Xiaoguang Guo": 1,
+    "Dong Deng": 1,
+    "Jidong Zhai": 1,
+    "Hechen Zhang": 1,
+    "Xiaoyong Du": 1,
+    "Hao Qi": 1,
+    "Y. Wu": 1,
+    "Ligang He": 1,
+    "Yu Zhang": 1,
+    "Kang Luo": 1,
+    "Minzhi Cai": 1,
+    "Hai Jin": 1,
+    "Zhan Zhang": 1,
+    "Jin Zhao": 1,
     "David Justen": 1,
     "Daniel P. Ritter": 1,
     "Campbell Fraser": 1,
@@ -1044,6 +1044,12 @@
     "Rongfeng He": 1,
     "Qin Zhang": 1,
     "Cheng Wang": 1,
+    "Sanjay Kukreja": 1,
+    "Tarun Kumar": 1,
+    "Vishal Bharate": 1,
+    "Amit Purohit": 1,
+    "Abhijit Dasgupta": 1,
+    "Debashis Guha": 1,
     "Bapi Chatterjee": 2,
     "Sathya Peri": 2,
     "Mengyi Liu": 1,
@@ -1256,12 +1262,6 @@
     "Minguk Choi": 2,
     "Yoojin Chung": 1,
     "Jongmoo Choi": 2,
-    "Sanjay Kukreja": 1,
-    "Tarun Kumar": 1,
-    "Vishal Bharate": 1,
-    "Amit Purohit": 1,
-    "Abhijit Dasgupta": 1,
-    "Debashis Guha": 1,
     "Luis Alberto Croquevielle": 1,
     "Victor Giannakouris": 1,
     "Shunkang Zhang": 1,
@@ -1602,9 +1602,6 @@
     "Srinjay Sarkar": 1,
     "Abubakar Abid": 1,
     "James Zou": 1,
-    "Moin Hussain Moti": 1,
-    "Panagiotis Simatis": 1,
-    "Dimitris Papadias": 1,
     "Francesca Falzon": 1,
     "Evangelia Anna Markatou": 1,
     "Zachary Espiritu": 1,
@@ -1703,6 +1700,9 @@
     "María Jesús Algar": 1,
     "Isaac Martín de Diego": 1,
     "Javier M. Moguerza": 1,
+    "Moin Hussain Moti": 1,
+    "Panagiotis Simatis": 1,
+    "Dimitris Papadias": 1,
     "Supriya Mishra": 1,
     "Bhavesh N. Gohil": 1,
     "Hairu Wang": 1,
@@ -2013,8 +2013,6 @@
     "Claudio Gennaro": 1,
     "Fabrizio Falchi": 1,
     "Giuseppe Amato": 1,
-    "Yì Wáng": 1,
-    "Jiaxian Chen": 1,
     "Yingtian Tang": 2,
     "Lu Han": 2,
     "Xijun Li": 2,
@@ -2091,6 +2089,8 @@
     "Ge Yu": 1,
     "Zhaoxuan Ji": 1,
     "Yuncheng Wu": 1,
+    "Yì Wáng": 1,
+    "Jiaxian Chen": 1,
     "Viktor Sanca": 1,
     "Manos Chatzakis": 1,
     "Shih-Wen Hsu": 1,
@@ -8052,6 +8052,27 @@
       "avg_citations": 20.0
     },
     {
+      "author_id": "https://openalex.org/A5036448571",
+      "name": "Doyub Kim",
+      "papers": 1,
+      "sum_citations": 12,
+      "avg_citations": 12.0
+    },
+    {
+      "author_id": "https://openalex.org/A5100449738",
+      "name": "Minjae Lee",
+      "papers": 1,
+      "sum_citations": 12,
+      "avg_citations": 12.0
+    },
+    {
+      "author_id": "https://openalex.org/A5034723250",
+      "name": "Ken Museth",
+      "papers": 1,
+      "sum_citations": 12,
+      "avg_citations": 12.0
+    },
+    {
       "author_id": "https://openalex.org/A5001264074",
       "name": "Rong Zhu",
       "papers": 1,
@@ -8092,27 +8113,6 @@
       "papers": 1,
       "sum_citations": 11,
       "avg_citations": 11.0
-    },
-    {
-      "author_id": "https://openalex.org/A5036448571",
-      "name": "Doyub Kim",
-      "papers": 1,
-      "sum_citations": 10,
-      "avg_citations": 10.0
-    },
-    {
-      "author_id": "https://openalex.org/A5100449738",
-      "name": "Minjae Lee",
-      "papers": 1,
-      "sum_citations": 10,
-      "avg_citations": 10.0
-    },
-    {
-      "author_id": "https://openalex.org/A5034723250",
-      "name": "Ken Museth",
-      "papers": 1,
-      "sum_citations": 10,
-      "avg_citations": 10.0
     },
     {
       "author_id": "https://openalex.org/A5069238664",
@@ -9746,132 +9746,6 @@
       "avg_citations": 8.0
     },
     {
-      "author_id": "https://openalex.org/A5047469209",
-      "name": "Jiesong Liu",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5091139467",
-      "name": "Feng Zhang",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5100366058",
-      "name": "Lu Lv",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5114357299",
-      "name": "Qi Chang",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5024519576",
-      "name": "Xiaoguang Guo",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5103237059",
-      "name": "Dong Deng",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5071200777",
-      "name": "Jidong Zhai",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5101511302",
-      "name": "Hechen Zhang",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5008721449",
-      "name": "Xiaoyong Du",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5020403202",
-      "name": "Hao Qi",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5103158400",
-      "name": "Y. Wu",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5064596191",
-      "name": "Ligang He",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5100433675",
-      "name": "Yu Zhang",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5010357721",
-      "name": "Kang Luo",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5028039097",
-      "name": "Minzhi Cai",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5022262922",
-      "name": "Hai Jin",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5100393411",
-      "name": "Zhan Zhang",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
-      "author_id": "https://openalex.org/A5102730151",
-      "name": "Jin Zhao",
-      "papers": 1,
-      "sum_citations": 3,
-      "avg_citations": 3.0
-    },
-    {
       "author_id": "https://openalex.org/A5030869707",
       "name": "Wenkun Xiang",
       "papers": 1,
@@ -10306,6 +10180,132 @@
       "avg_citations": 3.0
     },
     {
+      "author_id": "https://openalex.org/A5047469209",
+      "name": "Jiesong Liu",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5091139467",
+      "name": "Feng Zhang",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5100366058",
+      "name": "Lu Lv",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5114357299",
+      "name": "Qi Chang",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5024519576",
+      "name": "Xiaoguang Guo",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5103237059",
+      "name": "Dong Deng",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5071200777",
+      "name": "Jidong Zhai",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5101511302",
+      "name": "Hechen Zhang",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5008721449",
+      "name": "Xiaoyong Du",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5020403202",
+      "name": "Hao Qi",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5103158400",
+      "name": "Y. Wu",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5064596191",
+      "name": "Ligang He",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5100433675",
+      "name": "Yu Zhang",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5010357721",
+      "name": "Kang Luo",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5028039097",
+      "name": "Minzhi Cai",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5022262922",
+      "name": "Hai Jin",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5100393411",
+      "name": "Zhan Zhang",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
+      "author_id": "https://openalex.org/A5102730151",
+      "name": "Jin Zhao",
+      "papers": 1,
+      "sum_citations": 3,
+      "avg_citations": 3.0
+    },
+    {
       "author_id": "https://openalex.org/A5096327283",
       "name": "David Justen",
       "papers": 1,
@@ -10560,6 +10560,48 @@
     {
       "author_id": "https://openalex.org/A5100717278",
       "name": "Cheng Wang",
+      "papers": 1,
+      "sum_citations": 6,
+      "avg_citations": 6.0
+    },
+    {
+      "author_id": "https://openalex.org/A5007754745",
+      "name": "Sanjay Kukreja",
+      "papers": 1,
+      "sum_citations": 6,
+      "avg_citations": 6.0
+    },
+    {
+      "author_id": "https://openalex.org/A5103747887",
+      "name": "Tarun Kumar",
+      "papers": 1,
+      "sum_citations": 6,
+      "avg_citations": 6.0
+    },
+    {
+      "author_id": "https://openalex.org/A5083054036",
+      "name": "Vishal Bharate",
+      "papers": 1,
+      "sum_citations": 6,
+      "avg_citations": 6.0
+    },
+    {
+      "author_id": "https://openalex.org/A5017499474",
+      "name": "Amit Purohit",
+      "papers": 1,
+      "sum_citations": 6,
+      "avg_citations": 6.0
+    },
+    {
+      "author_id": "https://openalex.org/A5074203487",
+      "name": "Abhijit Dasgupta",
+      "papers": 1,
+      "sum_citations": 6,
+      "avg_citations": 6.0
+    },
+    {
+      "author_id": "https://openalex.org/A5078858567",
+      "name": "Debashis Guha",
       "papers": 1,
       "sum_citations": 6,
       "avg_citations": 6.0
@@ -11743,48 +11785,6 @@
     {
       "author_id": "https://openalex.org/A5036531018",
       "name": "Yoojin Chung",
-      "papers": 1,
-      "sum_citations": 5,
-      "avg_citations": 5.0
-    },
-    {
-      "author_id": "https://openalex.org/A5007754745",
-      "name": "Sanjay Kukreja",
-      "papers": 1,
-      "sum_citations": 5,
-      "avg_citations": 5.0
-    },
-    {
-      "author_id": "https://openalex.org/A5103747887",
-      "name": "Tarun Kumar",
-      "papers": 1,
-      "sum_citations": 5,
-      "avg_citations": 5.0
-    },
-    {
-      "author_id": "https://openalex.org/A5083054036",
-      "name": "Vishal Bharate",
-      "papers": 1,
-      "sum_citations": 5,
-      "avg_citations": 5.0
-    },
-    {
-      "author_id": "https://openalex.org/A5017499474",
-      "name": "Amit Purohit",
-      "papers": 1,
-      "sum_citations": 5,
-      "avg_citations": 5.0
-    },
-    {
-      "author_id": "https://openalex.org/A5074203487",
-      "name": "Abhijit Dasgupta",
-      "papers": 1,
-      "sum_citations": 5,
-      "avg_citations": 5.0
-    },
-    {
-      "author_id": "https://openalex.org/A5078858567",
-      "name": "Debashis Guha",
       "papers": 1,
       "sum_citations": 5,
       "avg_citations": 5.0
@@ -13498,27 +13498,6 @@
       "avg_citations": 5.0
     },
     {
-      "author_id": "https://openalex.org/A5056559717",
-      "name": "Moin Hussain Moti",
-      "papers": 1,
-      "sum_citations": 5,
-      "avg_citations": 5.0
-    },
-    {
-      "author_id": "https://openalex.org/A5055947648",
-      "name": "Panagiotis Simatis",
-      "papers": 1,
-      "sum_citations": 5,
-      "avg_citations": 5.0
-    },
-    {
-      "author_id": "https://openalex.org/A5091887420",
-      "name": "Dimitris Papadias",
-      "papers": 1,
-      "sum_citations": 5,
-      "avg_citations": 5.0
-    },
-    {
       "author_id": "https://openalex.org/A5089313722",
       "name": "Francesca Falzon",
       "papers": 1,
@@ -14144,6 +14123,27 @@
     {
       "author_id": "https://openalex.org/A5037239553",
       "name": "Javier M. Moguerza",
+      "papers": 1,
+      "sum_citations": 5,
+      "avg_citations": 5.0
+    },
+    {
+      "author_id": "https://openalex.org/A5056559717",
+      "name": "Moin Hussain Moti",
+      "papers": 1,
+      "sum_citations": 5,
+      "avg_citations": 5.0
+    },
+    {
+      "author_id": "https://openalex.org/A5055947648",
+      "name": "Panagiotis Simatis",
+      "papers": 1,
+      "sum_citations": 5,
+      "avg_citations": 5.0
+    },
+    {
+      "author_id": "https://openalex.org/A5091887420",
+      "name": "Dimitris Papadias",
       "papers": 1,
       "sum_citations": 5,
       "avg_citations": 5.0
@@ -16137,20 +16137,6 @@
       "avg_citations": 2.0
     },
     {
-      "author_id": "https://openalex.org/A5108047889",
-      "name": "Yì Wáng",
-      "papers": 1,
-      "sum_citations": 0,
-      "avg_citations": 0.0
-    },
-    {
-      "author_id": "https://openalex.org/A5057512648",
-      "name": "Jiaxian Chen",
-      "papers": 1,
-      "sum_citations": 0,
-      "avg_citations": 0.0
-    },
-    {
       "author_id": "https://openalex.org/A5024492200",
       "name": "Jin Wang",
       "papers": 1,
@@ -16678,6 +16664,20 @@
     {
       "author_id": "https://openalex.org/A5101635565",
       "name": "Yuncheng Wu",
+      "papers": 1,
+      "sum_citations": 0,
+      "avg_citations": 0.0
+    },
+    {
+      "author_id": "https://openalex.org/A5108047889",
+      "name": "Yì Wáng",
+      "papers": 1,
+      "sum_citations": 0,
+      "avg_citations": 0.0
+    },
+    {
+      "author_id": "https://openalex.org/A5057512648",
+      "name": "Jiaxian Chen",
       "papers": 1,
       "sum_citations": 0,
       "avg_citations": 0.0
@@ -18706,7 +18706,7 @@
       "avg_citations": 0.0
     }
   ],
-  "citations_sum": 11082,
-  "last_updated": "2025-08-21T18:49:53Z",
-  "execution_time_seconds": 40.75
+  "citations_sum": 11085,
+  "last_updated": "2025-08-22T18:49:43Z",
+  "execution_time_seconds": 47.48
 }
