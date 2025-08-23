@@ -21,6 +21,34 @@ python scripts/fetch_and_build.py
 # Open docs/index.html in a browser (uses relative JSON paths)
 ```
 
+## コミットメッセージの自動生成
+
+新しく追加された論文の数とタイトルを含むコミットメッセージが自動生成されます。
+
+### 自動生成されるコミットメッセージの例
+```
+データ更新 (2024-01-15): 3件の新論文を追加
+
+新しく追加された論文:
+1. Learned Index Structures for Database Systems (2024)
+2. Efficient Learned Indexing for Time Series Data (2024)
+3. Neural Database Indexes: A Survey (2024)
+```
+
+### 手動でのコミットとプッシュ
+```bash
+# コミットメッセージを生成
+python scripts/generate_commit_message.py
+
+# 生成されたメッセージでコミットとプッシュ
+python scripts/commit_and_push.py
+```
+
+### GitHub Actionsでの自動更新
+- 毎週月曜日の午前9時（UTC）に自動実行
+- 新しい論文がある場合のみコミットとプッシュ
+- 生成されたコミットメッセージを使用
+
 ## Notes
 
 * OpenAlex API is free and no key is required. Respect rate limits; we include short delays and `mailto` for usage statistics.

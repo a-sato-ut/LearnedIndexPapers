@@ -29,12 +29,13 @@ jobs:
       - name: Process data with tags and statistics
         run: |
           python scripts/process_data.py
+      - name: Generate commit message
+        run: |
+          python scripts/generate_commit_message.py
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "Update data: $(date -u +"%Y-%m-%dT%H:%MZ")" || echo "No changes"
-          git push
+          python scripts/commit_and_push.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
