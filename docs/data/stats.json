@@ -20,6 +20,7 @@
     "Query optimization": 112,
     "Filter": 77,
     "Multidimensional": 77,
+    "Bioinformatics": 67,
     "Theoretical": 57,
     "Benchmark": 54,
     "Caching": 53,
@@ -41,12 +42,14 @@
     "Sorting Algorithm": 18,
     "Sketch": 16,
     "GPU": 13,
+    "LLM": 9,
     "Space-Filling Curve": 9,
     "Spline": 4
   },
   "by_tag_category": {
     "Database": 278,
     "Query optimization": 112,
+    "Bioinformatics": 67,
     "Cardinality estimation": 42,
     "Learned Index": 153,
     "Bloom Filter": 51,
@@ -72,6 +75,7 @@
     "Range": 36,
     "Sorting Algorithm": 18,
     "Reinforcement Learning": 42,
+    "LLM": 9,
     "Theoretical": 57,
     "Benchmark": 54,
     "Survey": 46,
@@ -104,6 +108,8 @@
     "Query optimization": "Applications",
     "Cardinality estimation": "Applications",
     "Reinforcement Learning": "Others",
+    "LLM": "Others",
+    "Bioinformatics": "Applications",
     "Spline": "Data Structure",
     "Theoretical": "Research Type",
     "Security/Adversarial": "Research Type",
@@ -18723,5 +18729,5 @@
     }
   ],
   "citations_sum": 11096,
-  "last_updated": "2025-08-25T18:51:23Z"
+  "last_updated": "2025-08-25T21:41:26Z"
 }

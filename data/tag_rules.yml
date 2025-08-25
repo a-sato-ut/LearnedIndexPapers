@@ -107,6 +107,14 @@ tag_rules:
     pattern: "\\b(reinforcement learning|rl|q[- ]?learning|policy gradient|actor[- ]?critic|deep q[- ]?network|dqn)\\b"
     category: "Others"
   
+  - name: "LLM"
+    pattern: "\\b(llm|large language model|gpt|bert|transformer|language model|foundation model)\\b"
+    category: "Others"
+  
+  - name: "Bioinformatics"
+    pattern: "\\b(bioinformatics|genomics|proteomics|metabolomics|transcriptomics|dna|rna|protein|genome|sequence|alignment|phylogenetic|evolutionary|biological|biomedical|medical|healthcare|drug|pharmaceutical)\\b"
+    category: "Applications"
+  
   - name: "Spline"
     pattern: "\\b(spline|splines)\\b"
     category: "Data Structure"
