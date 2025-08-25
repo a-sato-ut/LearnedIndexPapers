@@ -3,7 +3,7 @@ name: Update citations & build data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 18 * * *"  # 03:30 JST daily (GitHub cron is UTC)
+    - cron: "30 22 * * *"  # 07:30 JST daily (GitHub cron is UTC)
 
 permissions:
   contents: write
