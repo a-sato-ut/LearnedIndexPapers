@@ -1,5 +1,1 @@
-データ更新 (2025-08-24): 2件の新論文を追加
-
-新しく追加された論文:
-1. On the Costs and Benefits of Learned Indexing for Dynamic High-Dimensional Data (2025)
-2. DALdex: A DPU-Accelerated Persistent Learned Index via Incremental Learning (2025)
+データ更新: 新しく追加された論文なし
