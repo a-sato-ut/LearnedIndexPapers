@@ -115,6 +115,10 @@ tag_rules:
     pattern: "\\b(bioinformatics|genomics|proteomics|metabolomics|transcriptomics|dna|rna|protein|genome|sequence|alignment|phylogenetic|evolutionary|biological|biomedical|medical|healthcare|drug|pharmaceutical)\\b"
     category: "Applications"
   
+  - name: "Computer Vision"
+    pattern: "\\b(computer vision|image processing|image recognition|object detection|image segmentation|face recognition|optical character recognition|image classification|image analysis|visual recognition|computer graphics|image generation|image synthesis)\\b"
+    category: "Applications"
+  
   - name: "Spline"
     pattern: "\\b(spline|splines)\\b"
     category: "Data Structure"

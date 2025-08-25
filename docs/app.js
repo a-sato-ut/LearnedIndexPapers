@@ -1,5 +1,8 @@
 async function loadJSON(path){
-  const r = await fetch(path);
+  // キャッシュを回避するためにタイムスタンプを追加
+  const timestamp = new Date().getTime();
+  const url = path.includes('?') ? `${path}&t=${timestamp}` : `${path}?t=${timestamp}`;
+  const r = await fetch(url);
   if(!r.ok) throw new Error("Failed: "+path);
   return await r.json();
 }
@@ -13,13 +16,30 @@ function el(tag, attrs={}, ...children){
   return e;
 }
 
+
+
 function renderCard(w){
-  const authors = (w.authorships||[]).map(a=>a.name).filter(Boolean).join(', ');
+  const authors = (w.authorships||[]).map(a=>a.name).filter(Boolean);
+  const authorCount = authors.length;
+  const maxAuthorsToShow = 3; // 最初に表示する著者数
+  
+  let authorDisplay;
+  if (authorCount === 0) {
+    authorDisplay = '(authors unknown)';
+  } else if (authorCount <= maxAuthorsToShow) {
+    authorDisplay = authors.join(', ');
+  } else {
+    const firstAuthors = authors.slice(0, maxAuthorsToShow).join(', ');
+    const remainingCount = authorCount - maxAuthorsToShow;
+    authorDisplay = `${firstAuthors} +${remainingCount} more`;
+  }
+  
   const url = w.landing_page_url || (w.doi ? `https://doi.org/${w.doi.replace('https://doi.org/','')}` : null);
   const tags = (w.tags||[]).map(t=>el('span',{class:'tag'}, t));
+  
   return el('article', {class:'card'},
     el('h3',{}, w.title||'(no title)'),
-    el('div',{class:'meta'}, [authors || '(authors unknown)',' • ', w.host_venue||'(venue unknown)',' • ', w.publication_year||'–'].filter(Boolean).join(' ')),
+    el('div',{class:'meta'}, [authorDisplay,' • ', w.host_venue||'(venue unknown)',' • ', w.publication_year||'–'].filter(Boolean).join(' ')),
     el('div',{class:'citation-count'}, `被引用数: ${w.cited_by_count || 0}`),
     el('div',{class:'tags'}, ...tags),
     url ? el('a',{class:'btn', href:url, target:'_blank', rel:'noopener'}, 'Open') : null
@@ -411,6 +431,43 @@ function renderTopAuthors(stats, papers){
   renderAuthorsPage();
 }
 
+function getAuthorInstitutionsWithYears(authorName, papers, stats) {
+  // まず統計データから所属情報を取得
+  const topAuthor = stats.top_authors?.find(a => a.name === authorName);
+  if (topAuthor && topAuthor.institution_years) {
+    return Object.entries(topAuthor.institution_years).map(([institution, data]) => ({
+      name: institution,
+      yearRange: data.year_range,
+      years: data.years
+    }));
+  }
+  
+  // 統計データにない場合は論文データから取得
+  const institutionYears = {};
+  papers.forEach(paper => {
+    const year = paper.publication_year;
+    (paper.authorships || []).forEach(authorship => {
+      if (authorship.name === authorName && authorship.institutions && year) {
+        authorship.institutions.forEach(inst => {
+          if (!institutionYears[inst]) {
+            institutionYears[inst] = new Set();
+          }
+          institutionYears[inst].add(year);
+        });
+      }
+    });
+  });
+  
+  return Object.entries(institutionYears).map(([institution, years]) => {
+    const yearArray = Array.from(years).sort();
+    return {
+      name: institution,
+      yearRange: `${Math.min(...yearArray)}-${Math.max(...yearArray)}`,
+      years: yearArray
+    };
+  });
+}
+
 function renderAuthorsPage() {
   const tbody = document.getElementById('top-authors-tbody');
   tbody.innerHTML = '';
@@ -427,6 +484,18 @@ function renderAuthorsPage() {
     const totalCitations = Math.round(papers * avgCitations);
     const rank = startIndex + i + 1;
     
+    // 著者の所属を取得（年次情報付き）
+    const institutionsWithYears = getAuthorInstitutionsWithYears(name, window.allPapers || [], window.allStats || {});
+    const institutionText = institutionsWithYears.length > 0 
+      ? ` (${institutionsWithYears.map(inst => `${inst.name} (${inst.yearRange})`).join(', ')})` 
+      : '';
+    
+    // デバッグ用（Tim Kraskaの場合）
+    if (name === 'Tim Kraska') {
+      console.log('Tim Kraska institutions with years:', institutionsWithYears);
+      console.log('Tim Kraska stats data:', window.allStats?.top_authors?.find(a => a.name === 'Tim Kraska'));
+    }
+    
     // 著者の主要タグを取得
     const topTags = getAuthorTopTags(name, window.allPapers || []);
     const tagsHtml = topTags.map(tag => 
@@ -438,7 +507,7 @@ function renderAuthorsPage() {
         el('div', {class: 'author-rank'}, rank.toString())
       ),
       el('td', {class: 'name-cell'}, 
-        el('div', {class: 'author-name', onclick: `filterByAuthor('${name}')`}, name)
+        el('div', {class: 'author-name', onclick: `filterByAuthor('${name}')`}, name + institutionText)
       ),
       el('td', {class: 'papers-cell'}, 
         el('div', {class: 'paper-count'}, 
@@ -525,13 +594,24 @@ function renderCharts(stats){
 }
 
 (async function(){
+  console.log('Loading data...');
   const citations = await loadJSON('data/citations.json');
+  console.log('Citations loaded');
   const stats = await loadJSON('data/stats.json');
-
-
+  console.log('Stats loaded');
 
   const papers = citations.results||[];
   console.log('Loaded papers:', papers.length);
+  console.log('Stats data loaded:', !!stats);
+  console.log('Stats keys:', Object.keys(stats || {}));
+  console.log('Top authors count:', stats.top_authors?.length || 0);
+  if (stats.top_authors) {
+    const timKraska = stats.top_authors.find(a => a.name === 'Tim Kraska');
+    console.log('Tim Kraska in stats:', timKraska);
+    if (timKraska) {
+      console.log('Tim Kraska institutions:', timKraska.institutions);
+    }
+  }
   const allTags = new Set(papers.flatMap(p=>p.tags||[]));
   const allAuthors = new Set(papers.flatMap(p=>(p.authorships||[]).map(a=>a.name).filter(Boolean)));
   const allVenues = new Set(papers.map(p=>p.host_venue||'Unknown').filter(Boolean));

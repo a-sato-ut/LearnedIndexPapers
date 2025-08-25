@@ -156,6 +156,25 @@ def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
         else:
             return author_key
     
+    # 著者の所属情報を収集（年次情報付き）
+    author_institutions = defaultdict(set)
+    author_institution_years = defaultdict(lambda: defaultdict(set))
+    for w in items:
+        year = w.get("publication_year")
+        for authorship in w.get("authorships", []):
+            author_id = authorship.get("author_id", "unknown")
+            author_name = authorship.get("name", "unknown")
+            institutions = authorship.get("institutions", [])
+            
+            # 著者キーを決定
+            author_key = author_id if author_id != "unknown" else author_name
+            
+            # 所属情報を追加
+            for institution in institutions:
+                author_institutions[author_key].add(institution)
+                if year:
+                    author_institution_years[author_key][institution].add(year)
+    
     top_authors = [
         {
             "author_id": author_key,
@@ -163,6 +182,14 @@ def build_stats(items: List[Dict[str,Any]]) -> Dict[str,Any]:
             "papers": cnt,
             "sum_citations": int(author_citations[author_key]),
             "avg_citations": (author_citations[author_key] / cnt) if cnt else 0.0,
+            "institutions": list(author_institutions[author_key]),
+            "institution_years": {
+                institution: {
+                    "years": sorted(list(years)),
+                    "year_range": f"{min(years)}-{max(years)}" if years else ""
+                }
+                for institution, years in author_institution_years[author_key].items()
+            }
         }
         for author_key, cnt in author_counts.most_common()
     ]

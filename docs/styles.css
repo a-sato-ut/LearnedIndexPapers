@@ -96,6 +96,8 @@ h1{ margin:0 0 2px; font-size:24px; }
 .clear-all-btn:active {
   transform: translateY(1px);
 }
+
+
 .stat{ background:var(--card); border:1px solid #eee; border-radius:12px; padding:12px; }
 .stat .k{ font-size:24px; font-weight:700; }
 .stat .v{ color:var(--muted); font-size:12px; }
