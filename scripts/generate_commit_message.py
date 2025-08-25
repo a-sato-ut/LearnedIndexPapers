@@ -73,7 +73,12 @@ def generate_commit_message(new_papers: List[Dict[str, Any]]) -> str:
     for i, paper in enumerate(new_papers, 1):
         title = paper.get("title") or paper.get("display_name") or "タイトルなし"
         year = paper.get("publication_year") or "年不明"
+        url = paper.get("url") or paper.get("doi") or ""
+        
         message += f"{i}. {title} ({year})\n"
+        if url:
+            message += f"   URL: {url}\n"
+        message += "\n"
     
     return message
 
