@@ -1,1 +1,6 @@
-データ更新: 新しく追加された論文なし
+データ更新 (2025-09-04): 1件の新論文を追加
+
+新しく追加された論文:
+1. SwiftKV: A Metadata Indexing Scheme Integrating LSM-Tree and Learned Index for Distributed KV Stores (2025)
+   URL: https://doi.org/10.3390/fi17090398
+
