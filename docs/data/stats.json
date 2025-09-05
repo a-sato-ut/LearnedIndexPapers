@@ -337,6 +337,7 @@
     "Ani Kristo": 2,
     "Guillaume Leclerc": 1,
     "Samuel Madden": 3,
+    "Olga Papaemmanouil": 5,
     "Xuanhe Zhou": 7,
     "Chengliang Chai": 3,
     "Guoliang Li": 10,
@@ -344,7 +345,6 @@
     "Sanchit Misra": 7,
     "Hang Zhu": 2,
     "Xin Jin": 1,
-    "Olga Papaemmanouil": 5,
     "Bailu Ding": 1,
     "Sudipto Das": 1,
     "Wentao Wu": 2,
@@ -2411,11 +2411,11 @@
       "sum_citations": 1555,
       "avg_citations": 44.42857142857143,
       "institutions": [
-        "Amazon (United States)",
-        "John Brown University",
         "IIT@MIT",
-        "Massachusetts Institute of Technology",
-        "Moscow Institute of Thermal Technology"
+        "Amazon (United States)",
+        "Moscow Institute of Thermal Technology",
+        "John Brown University",
+        "Massachusetts Institute of Technology"
       ],
       "institution_years": {
         "Massachusetts Institute of Technology": {
@@ -2460,16 +2460,16 @@
       "author_id": "https://openalex.org/A5025731013",
       "name": "Ryan Marcus",
       "papers": 19,
-      "sum_citations": 889,
-      "avg_citations": 46.78947368421053,
+      "sum_citations": 891,
+      "avg_citations": 46.89473684210526,
       "institutions": [
         "Amazon (United States)",
-        "Intel (United States)",
-        "Brandeis University",
-        "Massachusetts Institute of Technology",
-        "University of Pennsylvania",
+        "California University of Pennsylvania",
         "Philadelphia University",
-        "California University of Pennsylvania"
+        "Brandeis University",
+        "Intel (United States)",
+        "University of Pennsylvania",
+        "Massachusetts Institute of Technology"
       ],
       "institution_years": {
         "Intel (United States)": {
@@ -2556,8 +2556,8 @@
       "sum_citations": 543,
       "avg_citations": 49.36363636363637,
       "institutions": [
-        "Intel (United States)",
-        "Technical University of Munich"
+        "Technical University of Munich",
+        "Intel (United States)"
       ],
       "institution_years": {
         "Intel (United States)": {
@@ -2584,8 +2584,8 @@
       "sum_citations": 215,
       "avg_citations": 19.545454545454547,
       "institutions": [
-        "Harvard University Press",
-        "Harvard University"
+        "Harvard University",
+        "Harvard University Press"
       ],
       "institution_years": {
         "Harvard University Press": {
@@ -2647,8 +2647,8 @@
       "sum_citations": 358,
       "avg_citations": 35.8,
       "institutions": [
-        "Intel (United States)",
-        "Technical University of Munich"
+        "Technical University of Munich",
+        "Intel (United States)"
       ],
       "institution_years": {
         "Intel (United States)": {
@@ -2785,9 +2785,9 @@
       "sum_citations": 221,
       "avg_citations": 24.555555555555557,
       "institutions": [
+        "Microsoft Research (United Kingdom)",
         "Microsoft (Germany)",
-        "Microsoft (United States)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft Research (United Kingdom)": {
@@ -2905,8 +2905,8 @@
       "sum_citations": 31,
       "avg_citations": 3.4444444444444446,
       "institutions": [
-        "Peng Cheng Laboratory",
-        "Harbin Institute of Technology"
+        "Harbin Institute of Technology",
+        "Peng Cheng Laboratory"
       ],
       "institution_years": {
         "Harbin Institute of Technology": {
@@ -2954,10 +2954,10 @@
       "sum_citations": 409,
       "avg_citations": 51.125,
       "institutions": [
-        "Apple (United Kingdom)",
-        "Microsoft (United States)",
+        "Microsoft Research (United Kingdom)",
         "Microsoft Research (India)",
-        "Microsoft Research (United Kingdom)"
+        "Apple (United Kingdom)",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft (United States)": {
@@ -3016,8 +3016,8 @@
       "sum_citations": 221,
       "avg_citations": 27.625,
       "institutions": [
-        "University of Toronto",
-        "The University of Texas at Arlington"
+        "The University of Texas at Arlington",
+        "University of Toronto"
       ],
       "institution_years": {
         "University of Toronto": {
@@ -3042,8 +3042,8 @@
       "sum_citations": 180,
       "avg_citations": 22.5,
       "institutions": [
-        "Harvard University Press",
-        "Harvard University"
+        "Harvard University",
+        "Harvard University Press"
       ],
       "institution_years": {
         "Harvard University": {
@@ -3120,8 +3120,8 @@
       "sum_citations": 48,
       "avg_citations": 6.0,
       "institutions": [
-        "Imperial College London",
-        "Iran University of Science and Technology"
+        "Iran University of Science and Technology",
+        "Imperial College London"
       ],
       "institution_years": {
         "Imperial College London": {
@@ -3166,8 +3166,8 @@
       "author_id": "https://openalex.org/A5063461652",
       "name": "Giorgio Vinciguerra",
       "papers": 7,
-      "sum_citations": 281,
-      "avg_citations": 40.142857142857146,
+      "sum_citations": 282,
+      "avg_citations": 40.285714285714285,
       "institutions": [
         "University of Pisa"
       ],
@@ -3190,8 +3190,8 @@
       "sum_citations": 308,
       "avg_citations": 44.0,
       "institutions": [
-        "Intel (United States)",
-        "Technical University of Munich"
+        "Technical University of Munich",
+        "Intel (United States)"
       ],
       "institution_years": {
         "Intel (United States)": {
@@ -3238,8 +3238,8 @@
       "sum_citations": 228,
       "avg_citations": 32.57142857142857,
       "institutions": [
-        "Intel (India)",
-        "Intel (United States)"
+        "Intel (United States)",
+        "Intel (India)"
       ],
       "institution_years": {
         "Intel (United States)": {
@@ -3266,8 +3266,8 @@
       "sum_citations": 214,
       "avg_citations": 30.571428571428573,
       "institutions": [
-        "Microsoft (United States)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft Research (United Kingdom)",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft Research (United Kingdom)": {
@@ -3295,8 +3295,8 @@
       "sum_citations": 214,
       "avg_citations": 30.571428571428573,
       "institutions": [
-        "Microsoft (United States)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft Research (United Kingdom)",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft Research (United Kingdom)": {
@@ -3324,9 +3324,9 @@
       "sum_citations": 101,
       "avg_citations": 14.428571428571429,
       "institutions": [
+        "University of Chinese Academy of Sciences",
         "Chinese Academy of Sciences",
-        "Institute of Computing Technology",
-        "University of Chinese Academy of Sciences"
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "Chinese Academy of Sciences": {
@@ -3360,9 +3360,9 @@
       "sum_citations": 88,
       "avg_citations": 12.571428571428571,
       "institutions": [
-        "Huawei Technologies (China)",
         "Alibaba Group (China)",
-        "Alibaba Group (United States)"
+        "Alibaba Group (United States)",
+        "Huawei Technologies (China)"
       ],
       "institution_years": {
         "Alibaba Group (United States)": {
@@ -3561,8 +3561,8 @@
       "author_id": "https://openalex.org/A5046786328",
       "name": "Paolo Ferragina",
       "papers": 6,
-      "sum_citations": 281,
-      "avg_citations": 46.833333333333336,
+      "sum_citations": 282,
+      "avg_citations": 47.0,
       "institutions": [
         "University of Pisa"
       ],
@@ -3665,11 +3665,11 @@
       "sum_citations": 239,
       "avg_citations": 39.833333333333336,
       "institutions": [
-        "University of California, Berkeley",
         "Berkeley College",
+        "Centrum Wiskunde & Informatica",
         "Delft University of Technology",
-        "Leiden University",
-        "Centrum Wiskunde & Informatica"
+        "University of California, Berkeley",
+        "Leiden University"
       ],
       "institution_years": {
         "Centrum Wiskunde & Informatica": {
@@ -3737,11 +3737,11 @@
       "author_id": "https://openalex.org/A5041920173",
       "name": "Ion Stoica",
       "papers": 6,
-      "sum_citations": 352,
-      "avg_citations": 58.666666666666664,
+      "sum_citations": 354,
+      "avg_citations": 59.0,
       "institutions": [
-        "University of California, Berkeley",
         "Association for Computing Machinery",
+        "University of California, Berkeley",
         "Berkeley College"
       ],
       "institution_years": {
@@ -3774,8 +3774,8 @@
       "sum_citations": 312,
       "avg_citations": 52.0,
       "institutions": [
-        "Intel (United States)",
-        "Technical University of Munich"
+        "Technical University of Munich",
+        "Intel (United States)"
       ],
       "institution_years": {
         "Intel (United States)": {
@@ -3801,9 +3801,9 @@
       "avg_citations": 11.5,
       "institutions": [
         "Tsinghua University",
-        "Huazhong University of Science and Technology",
+        "Alibaba Group (United States)",
         "The University of Melbourne",
-        "Alibaba Group (United States)"
+        "Huazhong University of Science and Technology"
       ],
       "institution_years": {
         "Alibaba Group (United States)": {
@@ -4066,8 +4066,8 @@
       "author_id": "https://openalex.org/A5051190490",
       "name": "Olga Papaemmanouil",
       "papers": 5,
-      "sum_citations": 281,
-      "avg_citations": 56.2,
+      "sum_citations": 283,
+      "avg_citations": 56.6,
       "institutions": [
         "Brandeis University"
       ],
@@ -4106,8 +4106,8 @@
       "sum_citations": 191,
       "avg_citations": 38.2,
       "institutions": [
-        "University of Toronto",
-        "The University of Texas at Arlington"
+        "The University of Texas at Arlington",
+        "University of Toronto"
       ],
       "institution_years": {
         "The University of Texas at Arlington": {
@@ -4215,8 +4215,8 @@
       "author_id": "https://openalex.org/A5088998781",
       "name": "Yu Hua",
       "papers": 5,
-      "sum_citations": 67,
-      "avg_citations": 13.4,
+      "sum_citations": 68,
+      "avg_citations": 13.6,
       "institutions": [
         "Wuhan National Laboratory for Optoelectronics",
         "Huazhong University of Science and Technology"
@@ -4242,11 +4242,11 @@
       "author_id": "https://openalex.org/A5034442315",
       "name": "Pengfei Zuo",
       "papers": 5,
-      "sum_citations": 67,
-      "avg_citations": 13.4,
+      "sum_citations": 68,
+      "avg_citations": 13.6,
       "institutions": [
-        "Wuhan National Laboratory for Optoelectronics",
         "Huawei Technologies (China)",
+        "Wuhan National Laboratory for Optoelectronics",
         "Huazhong University of Science and Technology"
       ],
       "institution_years": {
@@ -4306,8 +4306,8 @@
       "sum_citations": 108,
       "avg_citations": 21.6,
       "institutions": [
-        "Harvard University Press",
-        "Harvard University"
+        "Harvard University",
+        "Harvard University Press"
       ],
       "institution_years": {
         "Harvard University": {
@@ -4406,8 +4406,8 @@
       "sum_citations": 29,
       "avg_citations": 5.8,
       "institutions": [
-        "University of Science and Technology of China",
-        "Wuhan National Laboratory for Optoelectronics"
+        "Wuhan National Laboratory for Optoelectronics",
+        "University of Science and Technology of China"
       ],
       "institution_years": {
         "University of Science and Technology of China": {
@@ -4472,8 +4472,8 @@
       "sum_citations": 3,
       "avg_citations": 0.6,
       "institutions": [
-        "Heilongjiang University of Science and Technology",
-        "Heilongjiang University"
+        "Heilongjiang University",
+        "Heilongjiang University of Science and Technology"
       ],
       "institution_years": {
         "Heilongjiang University of Science and Technology": {
@@ -4574,8 +4574,8 @@
       "sum_citations": 233,
       "avg_citations": 58.25,
       "institutions": [
-        "Huawei Technologies (Sweden)",
-        "Huawei Technologies (China)"
+        "Huawei Technologies (China)",
+        "Huawei Technologies (Sweden)"
       ],
       "institution_years": {
         "Huawei Technologies (Sweden)": {
@@ -4731,8 +4731,8 @@
       "author_id": "https://openalex.org/A5103011963",
       "name": "Zongheng Yang",
       "papers": 4,
-      "sum_citations": 308,
-      "avg_citations": 77.0,
+      "sum_citations": 310,
+      "avg_citations": 77.5,
       "institutions": [
         "University of California, Berkeley",
         "Berkeley College"
@@ -4757,8 +4757,8 @@
       "author_id": "https://openalex.org/A5064891668",
       "name": "Eric Liang",
       "papers": 4,
-      "sum_citations": 273,
-      "avg_citations": 68.25,
+      "sum_citations": 275,
+      "avg_citations": 68.75,
       "institutions": [
         "University of California, Berkeley",
         "Berkeley College"
@@ -4902,8 +4902,8 @@
       "sum_citations": 73,
       "avg_citations": 18.25,
       "institutions": [
-        "Harbin Institute of Technology",
-        "Alibaba Group (United States)"
+        "Alibaba Group (United States)",
+        "Harbin Institute of Technology"
       ],
       "institution_years": {
         "Alibaba Group (United States)": {
@@ -5016,10 +5016,10 @@
       "sum_citations": 52,
       "avg_citations": 13.0,
       "institutions": [
-        "Centre National de la Recherche Scientifique",
-        "Institut National de Physique Nucléaire et de Physique des Particules",
         "Centre de Calcul de l’Institut National de Physique Nucléaire et de Physique des Particules",
-        "University of Bremen"
+        "University of Bremen",
+        "Institut National de Physique Nucléaire et de Physique des Particules",
+        "Centre National de la Recherche Scientifique"
       ],
       "institution_years": {
         "Centre National de la Recherche Scientifique": {
@@ -5088,8 +5088,8 @@
       "avg_citations": 12.75,
       "institutions": [
         "RMIT University",
-        "The University of Queensland",
-        "MIT University"
+        "MIT University",
+        "The University of Queensland"
       ],
       "institution_years": {
         "RMIT University": {
@@ -5293,8 +5293,8 @@
       "sum_citations": 27,
       "avg_citations": 6.75,
       "institutions": [
-        "UC Irvine Health",
-        "University of California, Santa Cruz"
+        "University of California, Santa Cruz",
+        "UC Irvine Health"
       ],
       "institution_years": {
         "UC Irvine Health": {
@@ -5391,9 +5391,9 @@
       "sum_citations": 21,
       "avg_citations": 5.25,
       "institutions": [
+        "Moscow Institute of Thermal Technology",
         "University of Michigan",
         "Michigan United",
-        "Moscow Institute of Thermal Technology",
         "Massachusetts Institute of Technology"
       ],
       "institution_years": {
@@ -5451,8 +5451,8 @@
       "sum_citations": 30,
       "avg_citations": 7.5,
       "institutions": [
-        "Bellevue Hospital Center",
-        "Alibaba Group (United States)"
+        "Alibaba Group (United States)",
+        "Bellevue Hospital Center"
       ],
       "institution_years": {
         "Alibaba Group (United States)": {
@@ -5825,9 +5825,9 @@
       "sum_citations": 12,
       "avg_citations": 3.0,
       "institutions": [
+        "Christian-Albrechts-Universität zu Kiel",
         "Ludwig-Maximilians-Universität München",
-        "LMU Klinikum",
-        "Christian-Albrechts-Universität zu Kiel"
+        "LMU Klinikum"
       ],
       "institution_years": {
         "Ludwig-Maximilians-Universität München": {
@@ -5884,8 +5884,8 @@
       "sum_citations": 9,
       "avg_citations": 2.25,
       "institutions": [
-        "China Mobile (China)",
-        "Central South University"
+        "Central South University",
+        "China Mobile (China)"
       ],
       "institution_years": {
         "China Mobile (China)": {
@@ -5997,8 +5997,8 @@
       "author_id": "https://openalex.org/A5101457713",
       "name": "Hamed Zamani",
       "papers": 3,
-      "sum_citations": 345,
-      "avg_citations": 115.0,
+      "sum_citations": 347,
+      "avg_citations": 115.66666666666667,
       "institutions": [
         "University of Massachusetts Amherst"
       ],
@@ -6242,8 +6242,8 @@
       "sum_citations": 156,
       "avg_citations": 52.0,
       "institutions": [
-        "Microsoft (United States)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft Research (United Kingdom)",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft Research (United Kingdom)": {
@@ -6444,8 +6444,8 @@
       "sum_citations": 32,
       "avg_citations": 10.666666666666666,
       "institutions": [
-        "Nanyang Technological University",
-        "Beijing Institute of Technology"
+        "Beijing Institute of Technology",
+        "Nanyang Technological University"
       ],
       "institution_years": {
         "Nanyang Technological University": {
@@ -6571,8 +6571,8 @@
       "sum_citations": 67,
       "avg_citations": 22.333333333333332,
       "institutions": [
-        "Technische Universität Berlin",
-        "Alibaba Group (United States)"
+        "Alibaba Group (United States)",
+        "Technische Universität Berlin"
       ],
       "institution_years": {
         "Alibaba Group (United States)": {
@@ -6618,8 +6618,8 @@
       "author_id": "https://openalex.org/A5000527614",
       "name": "Pengfei Li",
       "papers": 3,
-      "sum_citations": 56,
-      "avg_citations": 18.666666666666668,
+      "sum_citations": 57,
+      "avg_citations": 19.0,
       "institutions": [
         "Wuhan National Laboratory for Optoelectronics",
         "Huazhong University of Science and Technology"
@@ -6644,8 +6644,8 @@
       "author_id": "https://openalex.org/A5114858861",
       "name": "Jingnan Jia",
       "papers": 3,
-      "sum_citations": 63,
-      "avg_citations": 21.0,
+      "sum_citations": 64,
+      "avg_citations": 21.333333333333332,
       "institutions": [
         "Huazhong University of Science and Technology"
       ],
@@ -6685,8 +6685,8 @@
       "sum_citations": 74,
       "avg_citations": 24.666666666666668,
       "institutions": [
-        "Chinese University of Hong Kong",
-        "Massachusetts Institute of Technology"
+        "Massachusetts Institute of Technology",
+        "Chinese University of Hong Kong"
       ],
       "institution_years": {
         "Chinese University of Hong Kong": {
@@ -6711,9 +6711,9 @@
       "sum_citations": 71,
       "avg_citations": 23.666666666666668,
       "institutions": [
-        "Max Planck Institute for Informatics",
         "University of Twente",
-        "Saarland University"
+        "Saarland University",
+        "Max Planck Institute for Informatics"
       ],
       "institution_years": {
         "University of Twente": {
@@ -6762,8 +6762,8 @@
       "sum_citations": 16,
       "avg_citations": 5.333333333333333,
       "institutions": [
-        "Centre National de la Recherche Scientifique",
-        "Université Grenoble Alpes"
+        "Université Grenoble Alpes",
+        "Centre National de la Recherche Scientifique"
       ],
       "institution_years": {
         "Université Grenoble Alpes": {
@@ -6827,9 +6827,9 @@
       "sum_citations": 35,
       "avg_citations": 11.666666666666666,
       "institutions": [
-        "Hong Kong University of Science and Technology",
         "University of Hong Kong",
-        "Southwest University"
+        "Southwest University",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Southwest University": {
@@ -6861,9 +6861,9 @@
       "sum_citations": 35,
       "avg_citations": 11.666666666666666,
       "institutions": [
-        "Hong Kong University of Science and Technology",
+        "Shanghai Jiao Tong University",
         "University of Hong Kong",
-        "Shanghai Jiao Tong University"
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Shanghai Jiao Tong University": {
@@ -7274,8 +7274,8 @@
       "sum_citations": 20,
       "avg_citations": 6.666666666666667,
       "institutions": [
-        "Microsoft (United States)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft Research (United Kingdom)",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft (United States)": {
@@ -7300,8 +7300,8 @@
       "sum_citations": 17,
       "avg_citations": 5.666666666666667,
       "institutions": [
-        "Hong Kong University of Science and Technology",
-        "University of Hong Kong"
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Hong Kong University of Science and Technology": {
@@ -7498,8 +7498,8 @@
       "sum_citations": 19,
       "avg_citations": 6.333333333333333,
       "institutions": [
-        "University of Science and Technology of China",
-        "Suzhou University of Science and Technology"
+        "Suzhou University of Science and Technology",
+        "University of Science and Technology of China"
       ],
       "institution_years": {
         "University of Science and Technology of China": {
@@ -7859,8 +7859,8 @@
       "sum_citations": 20,
       "avg_citations": 6.666666666666667,
       "institutions": [
-        "Shanghai Key Laboratory of Trustworthy Computing",
-        "East China Normal University"
+        "East China Normal University",
+        "Shanghai Key Laboratory of Trustworthy Computing"
       ],
       "institution_years": {
         "Shanghai Key Laboratory of Trustworthy Computing": {
@@ -7886,9 +7886,9 @@
       "sum_citations": 20,
       "avg_citations": 6.666666666666667,
       "institutions": [
+        "East China Normal University",
         "Shanghai Key Laboratory of Trustworthy Computing",
-        "Tongji University",
-        "East China Normal University"
+        "Tongji University"
       ],
       "institution_years": {
         "Shanghai Key Laboratory of Trustworthy Computing": {
@@ -8108,9 +8108,9 @@
       "sum_citations": 5,
       "avg_citations": 1.6666666666666667,
       "institutions": [
+        "Shenyang Aerospace University",
         "Universidad del Noreste",
-        "Northeastern University",
-        "Shenyang Aerospace University"
+        "Northeastern University"
       ],
       "institution_years": {
         "Shenyang Aerospace University": {
@@ -8160,8 +8160,8 @@
       "sum_citations": 3,
       "avg_citations": 1.0,
       "institutions": [
-        "University of Science and Technology of China",
-        "Southwest University of Science and Technology"
+        "Southwest University of Science and Technology",
+        "University of Science and Technology of China"
       ],
       "institution_years": {
         "Southwest University of Science and Technology": {
@@ -8355,12 +8355,12 @@
       "author_id": "https://openalex.org/A5088621320",
       "name": "Jiafeng Guo",
       "papers": 2,
-      "sum_citations": 325,
-      "avg_citations": 162.5,
+      "sum_citations": 327,
+      "avg_citations": 163.5,
       "institutions": [
+        "University of Chinese Academy of Sciences",
         "Chinese Academy of Sciences",
-        "Institute of Computing Technology",
-        "University of Chinese Academy of Sciences"
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "Chinese Academy of Sciences": {
@@ -8387,12 +8387,12 @@
       "author_id": "https://openalex.org/A5006971161",
       "name": "Yixing Fan",
       "papers": 2,
-      "sum_citations": 325,
-      "avg_citations": 162.5,
+      "sum_citations": 327,
+      "avg_citations": 163.5,
       "institutions": [
-        "Institute of Computing Technology",
         "University of Chinese Academy of Sciences",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "University of Chinese Academy of Sciences": {
@@ -8419,12 +8419,12 @@
       "author_id": "https://openalex.org/A5004759804",
       "name": "Liang Pang",
       "papers": 2,
-      "sum_citations": 325,
-      "avg_citations": 162.5,
+      "sum_citations": 327,
+      "avg_citations": 163.5,
       "institutions": [
+        "University of Chinese Academy of Sciences",
         "Chinese Academy of Sciences",
-        "Institute of Computing Technology",
-        "University of Chinese Academy of Sciences"
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "Chinese Academy of Sciences": {
@@ -8451,8 +8451,8 @@
       "author_id": "https://openalex.org/A5100355692",
       "name": "Yang Liu",
       "papers": 2,
-      "sum_citations": 325,
-      "avg_citations": 162.5,
+      "sum_citations": 327,
+      "avg_citations": 163.5,
       "institutions": [
         "University of Massachusetts Amherst"
       ],
@@ -8469,8 +8469,8 @@
       "author_id": "https://openalex.org/A5089655391",
       "name": "Qingyao Ai",
       "papers": 2,
-      "sum_citations": 325,
-      "avg_citations": 162.5,
+      "sum_citations": 327,
+      "avg_citations": 163.5,
       "institutions": [
         "University of Massachusetts Amherst"
       ],
@@ -8487,12 +8487,12 @@
       "author_id": "https://openalex.org/A5100707380",
       "name": "Chen Wu",
       "papers": 2,
-      "sum_citations": 325,
-      "avg_citations": 162.5,
+      "sum_citations": 327,
+      "avg_citations": 163.5,
       "institutions": [
-        "Institute of Computing Technology",
         "University of Chinese Academy of Sciences",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "University of Chinese Academy of Sciences": {
@@ -8519,8 +8519,8 @@
       "author_id": "https://openalex.org/A5105659698",
       "name": "W. Bruce Croft",
       "papers": 2,
-      "sum_citations": 325,
-      "avg_citations": 162.5,
+      "sum_citations": 327,
+      "avg_citations": 163.5,
       "institutions": [
         "University of Massachusetts Amherst"
       ],
@@ -8537,12 +8537,12 @@
       "author_id": "https://openalex.org/A5029998682",
       "name": "Xueqi Cheng",
       "papers": 2,
-      "sum_citations": 325,
-      "avg_citations": 162.5,
+      "sum_citations": 327,
+      "avg_citations": 163.5,
       "institutions": [
-        "Institute of Computing Technology",
         "University of Chinese Academy of Sciences",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "University of Chinese Academy of Sciences": {
@@ -8873,8 +8873,8 @@
       "sum_citations": 136,
       "avg_citations": 68.0,
       "institutions": [
-        "University of Chicago",
-        "Broad Institute"
+        "Broad Institute",
+        "University of Chicago"
       ],
       "institution_years": {
         "Broad Institute": {
@@ -9295,8 +9295,8 @@
       "author_id": "https://openalex.org/A5018727500",
       "name": "Amog Kamsetty",
       "papers": 2,
-      "sum_citations": 153,
-      "avg_citations": 76.5,
+      "sum_citations": 155,
+      "avg_citations": 77.5,
       "institutions": [
         "University of California, Berkeley",
         "Berkeley College"
@@ -9320,8 +9320,8 @@
       "author_id": "https://openalex.org/A5057622403",
       "name": "Sifei Luan",
       "papers": 2,
-      "sum_citations": 153,
-      "avg_citations": 76.5,
+      "sum_citations": 155,
+      "avg_citations": 77.5,
       "institutions": [
         "University of California, Berkeley",
         "Berkeley College"
@@ -9345,8 +9345,8 @@
       "author_id": "https://openalex.org/A5102881531",
       "name": "Yan Duan",
       "papers": 2,
-      "sum_citations": 153,
-      "avg_citations": 76.5,
+      "sum_citations": 155,
+      "avg_citations": 77.5,
       "institutions": [],
       "institution_years": {}
     },
@@ -9455,8 +9455,8 @@
       "sum_citations": 127,
       "avg_citations": 63.5,
       "institutions": [
-        "Microsoft (United States)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft Research (United Kingdom)",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft (United States)": {
@@ -9480,8 +9480,8 @@
       "sum_citations": 95,
       "avg_citations": 47.5,
       "institutions": [
-        "Peng Cheng Laboratory",
-        "Tianjin University"
+        "Tianjin University",
+        "Peng Cheng Laboratory"
       ],
       "institution_years": {
         "Tianjin University": {
@@ -9525,8 +9525,8 @@
       "sum_citations": 84,
       "avg_citations": 42.0,
       "institutions": [
-        "Microsoft (United States)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft Research (United Kingdom)",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft (United States)": {
@@ -9550,8 +9550,8 @@
       "sum_citations": 103,
       "avg_citations": 51.5,
       "institutions": [
-        "Microsoft (United States)",
-        "University of Waterloo"
+        "University of Waterloo",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft (United States)": {
@@ -9736,8 +9736,8 @@
       "sum_citations": 77,
       "avg_citations": 38.5,
       "institutions": [
-        "Aalborg University",
-        "Roskilde University"
+        "Roskilde University",
+        "Aalborg University"
       ],
       "institution_years": {
         "Aalborg University": {
@@ -9815,8 +9815,8 @@
       "sum_citations": 64,
       "avg_citations": 32.0,
       "institutions": [
-        "Microsoft (United States)",
-        "University of Illinois Urbana-Champaign"
+        "University of Illinois Urbana-Champaign",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "University of Illinois Urbana-Champaign": {
@@ -9858,8 +9858,8 @@
       "sum_citations": 51,
       "avg_citations": 25.5,
       "institutions": [
-        "University of Oxford",
-        "Centrum Wiskunde & Informatica"
+        "Centrum Wiskunde & Informatica",
+        "University of Oxford"
       ],
       "institution_years": {
         "University of Oxford": {
@@ -9883,8 +9883,8 @@
       "sum_citations": 51,
       "avg_citations": 25.5,
       "institutions": [
-        "Bocconi University",
-        "École Polytechnique Fédérale de Lausanne"
+        "École Polytechnique Fédérale de Lausanne",
+        "Bocconi University"
       ],
       "institution_years": {
         "Bocconi University": {
@@ -9908,8 +9908,8 @@
       "sum_citations": 51,
       "avg_citations": 25.5,
       "institutions": [
-        "Max Planck Institute for Informatics",
-        "Jagiellonian University"
+        "Jagiellonian University",
+        "Max Planck Institute for Informatics"
       ],
       "institution_years": {
         "Max Planck Institute for Informatics": {
@@ -10460,8 +10460,8 @@
       "sum_citations": 42,
       "avg_citations": 21.0,
       "institutions": [
-        "Meta (Israel)",
-        "University of Cambridge"
+        "University of Cambridge",
+        "Meta (Israel)"
       ],
       "institution_years": {
         "Meta (Israel)": {
@@ -10872,8 +10872,8 @@
       "sum_citations": 20,
       "avg_citations": 10.0,
       "institutions": [
-        "Chinese University of Hong Kong",
-        "Renmin University of China"
+        "Renmin University of China",
+        "Chinese University of Hong Kong"
       ],
       "institution_years": {
         "Chinese University of Hong Kong": {
@@ -10916,8 +10916,8 @@
       "sum_citations": 39,
       "avg_citations": 19.5,
       "institutions": [
-        "Microsoft (United States)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft Research (United Kingdom)",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft (United States)": {
@@ -11134,8 +11134,8 @@
       "sum_citations": 26,
       "avg_citations": 13.0,
       "institutions": [
-        "Hong Kong University of Science and Technology",
-        "University of Hong Kong"
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Hong Kong University of Science and Technology": {
@@ -11186,8 +11186,8 @@
       "sum_citations": 31,
       "avg_citations": 15.5,
       "institutions": [
-        "University of Rio Grande and Rio Grande Community College",
         "Pontifícia Universidade Católica de São Paulo",
+        "University of Rio Grande and Rio Grande Community College",
         "Pontifícia Universidade Católica do Rio Grande do Sul"
       ],
       "institution_years": {
@@ -11218,8 +11218,8 @@
       "sum_citations": 31,
       "avg_citations": 15.5,
       "institutions": [
-        "University of Rio Grande and Rio Grande Community College",
         "Pontifícia Universidade Católica de São Paulo",
+        "University of Rio Grande and Rio Grande Community College",
         "Pontifícia Universidade Católica do Rio Grande do Sul"
       ],
       "institution_years": {
@@ -11530,8 +11530,8 @@
       "sum_citations": 42,
       "avg_citations": 21.0,
       "institutions": [
-        "Microsoft (Germany)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft Research (United Kingdom)",
+        "Microsoft (Germany)"
       ],
       "institution_years": {
         "Microsoft Research (United Kingdom)": {
@@ -11829,8 +11829,8 @@
       "sum_citations": 20,
       "avg_citations": 10.0,
       "institutions": [
-        "The Ohio State University",
-        "Simon Fraser University"
+        "Simon Fraser University",
+        "The Ohio State University"
       ],
       "institution_years": {
         "Simon Fraser University": {
@@ -11873,8 +11873,8 @@
       "sum_citations": 20,
       "avg_citations": 10.0,
       "institutions": [
-        "The Ohio State University",
-        "Simon Fraser University"
+        "Simon Fraser University",
+        "The Ohio State University"
       ],
       "institution_years": {
         "Simon Fraser University": {
@@ -11898,8 +11898,8 @@
       "sum_citations": 16,
       "avg_citations": 8.0,
       "institutions": [
-        "Microsoft (United States)",
-        "Microsoft Research (United Kingdom)"
+        "Microsoft Research (United Kingdom)",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Microsoft (United States)": {
@@ -12026,8 +12026,8 @@
       "sum_citations": 16,
       "avg_citations": 8.0,
       "institutions": [
-        "Zhejiang University",
-        "Alibaba Group (China)"
+        "Alibaba Group (China)",
+        "Zhejiang University"
       ],
       "institution_years": {
         "Zhejiang University": {
@@ -12399,8 +12399,8 @@
       "sum_citations": 14,
       "avg_citations": 7.0,
       "institutions": [
-        "Centre National de la Recherche Scientifique",
-        "Université Grenoble Alpes"
+        "Université Grenoble Alpes",
+        "Centre National de la Recherche Scientifique"
       ],
       "institution_years": {
         "Université Grenoble Alpes": {
@@ -12847,8 +12847,8 @@
       "sum_citations": 2,
       "avg_citations": 1.0,
       "institutions": [
-        "Imperial College London",
-        "École Polytechnique Fédérale de Lausanne"
+        "École Polytechnique Fédérale de Lausanne",
+        "Imperial College London"
       ],
       "institution_years": {
         "École Polytechnique Fédérale de Lausanne": {
@@ -13236,8 +13236,8 @@
       "sum_citations": 11,
       "avg_citations": 5.5,
       "institutions": [
-        "Indiana University",
-        "Indiana University Bloomington"
+        "Indiana University Bloomington",
+        "Indiana University"
       ],
       "institution_years": {
         "Indiana University Bloomington": {
@@ -13261,8 +13261,8 @@
       "sum_citations": 11,
       "avg_citations": 5.5,
       "institutions": [
-        "Indiana University",
-        "Indiana University Bloomington"
+        "Indiana University Bloomington",
+        "Indiana University"
       ],
       "institution_years": {
         "Indiana University Bloomington": {
@@ -13304,8 +13304,8 @@
       "sum_citations": 19,
       "avg_citations": 9.5,
       "institutions": [
-        "Shanghai Key Laboratory of Trustworthy Computing",
-        "East China Normal University"
+        "East China Normal University",
+        "Shanghai Key Laboratory of Trustworthy Computing"
       ],
       "institution_years": {
         "Shanghai Key Laboratory of Trustworthy Computing": {
@@ -13930,8 +13930,8 @@
       "sum_citations": 11,
       "avg_citations": 5.5,
       "institutions": [
-        "The University of Osaka",
-        "KDDI Research (Japan)"
+        "KDDI Research (Japan)",
+        "The University of Osaka"
       ],
       "institution_years": {
         "KDDI Research (Japan)": {
@@ -14770,8 +14770,8 @@
       "sum_citations": 5,
       "avg_citations": 2.5,
       "institutions": [
-        "China Mobile (China)",
-        "Central South University"
+        "Central South University",
+        "China Mobile (China)"
       ],
       "institution_years": {
         "China Mobile (China)": {
@@ -14942,10 +14942,10 @@
       "sum_citations": 4,
       "avg_citations": 2.0,
       "institutions": [
-        "Centre National de la Recherche Scientifique",
         "Institut national de recherche en sciences et technologies du numérique",
         "Université de Montpellier",
-        "Laboratoire d'Informatique, de Robotique et de Microélectronique de Montpellier"
+        "Laboratoire d'Informatique, de Robotique et de Microélectronique de Montpellier",
+        "Centre National de la Recherche Scientifique"
       ],
       "institution_years": {
         "Laboratoire d'Informatique, de Robotique et de Microélectronique de Montpellier": {
@@ -15095,8 +15095,8 @@
       "sum_citations": 3,
       "avg_citations": 1.5,
       "institutions": [
-        "Heilongjiang University of Science and Technology",
-        "Heilongjiang University"
+        "Heilongjiang University",
+        "Heilongjiang University of Science and Technology"
       ],
       "institution_years": {
         "Heilongjiang University of Science and Technology": {
@@ -15298,8 +15298,8 @@
       "sum_citations": 2,
       "avg_citations": 1.0,
       "institutions": [
-        "Bridge University",
-        "University of Cambridge"
+        "University of Cambridge",
+        "Bridge University"
       ],
       "institution_years": {
         "Bridge University": {
@@ -15373,8 +15373,8 @@
       "sum_citations": 2,
       "avg_citations": 1.0,
       "institutions": [
-        "University of Science and Technology of China",
-        "Huawei Technologies (China)"
+        "Huawei Technologies (China)",
+        "University of Science and Technology of China"
       ],
       "institution_years": {
         "Huawei Technologies (China)": {
@@ -15552,8 +15552,8 @@
       "avg_citations": 1.0,
       "institutions": [
         "State Key Laboratory of Mobile Networks and Mobile Multimedia Technology",
-        "ZTE (China)",
-        "Fudan University"
+        "Fudan University",
+        "ZTE (China)"
       ],
       "institution_years": {
         "ZTE (China)": {
@@ -15831,8 +15831,8 @@
       "author_id": "https://openalex.org/A5073938714",
       "name": "Shams Forruque Ahmed",
       "papers": 1,
-      "sum_citations": 444,
-      "avg_citations": 444.0,
+      "sum_citations": 451,
+      "avg_citations": 451.0,
       "institutions": [
         "Asian University for Women"
       ],
@@ -15849,8 +15849,8 @@
       "author_id": "https://openalex.org/A5056383055",
       "name": "Md. Sakib Bin Alam",
       "papers": 1,
-      "sum_citations": 444,
-      "avg_citations": 444.0,
+      "sum_citations": 451,
+      "avg_citations": 451.0,
       "institutions": [
         "Asian Institute of Technology"
       ],
@@ -15867,8 +15867,8 @@
       "author_id": "https://openalex.org/A5075887922",
       "name": "Maruf Hassan",
       "papers": 1,
-      "sum_citations": 444,
-      "avg_citations": 444.0,
+      "sum_citations": 451,
+      "avg_citations": 451.0,
       "institutions": [
         "Asian University for Women"
       ],
@@ -15885,8 +15885,8 @@
       "author_id": "https://openalex.org/A5004666484",
       "name": "Mahtabin Rodela Rozbu",
       "papers": 1,
-      "sum_citations": 444,
-      "avg_citations": 444.0,
+      "sum_citations": 451,
+      "avg_citations": 451.0,
       "institutions": [
         "Carnegie Mellon University"
       ],
@@ -15903,8 +15903,8 @@
       "author_id": "https://openalex.org/A5041357642",
       "name": "Taoseef Ishtiak",
       "papers": 1,
-      "sum_citations": 444,
-      "avg_citations": 444.0,
+      "sum_citations": 451,
+      "avg_citations": 451.0,
       "institutions": [
         "Carleton University"
       ],
@@ -15921,8 +15921,8 @@
       "author_id": "https://openalex.org/A5079931078",
       "name": "Nazifa Rafa",
       "papers": 1,
-      "sum_citations": 444,
-      "avg_citations": 444.0,
+      "sum_citations": 451,
+      "avg_citations": 451.0,
       "institutions": [
         "University of Cambridge"
       ],
@@ -15939,8 +15939,8 @@
       "author_id": "https://openalex.org/A5107942006",
       "name": "M. Mofijur",
       "papers": 1,
-      "sum_citations": 444,
-      "avg_citations": 444.0,
+      "sum_citations": 451,
+      "avg_citations": 451.0,
       "institutions": [
         "University of Technology Sydney",
         "Prince Mohammad bin Fahd University"
@@ -15964,8 +15964,8 @@
       "author_id": "https://openalex.org/A5100326993",
       "name": "A. B. M. Shawkat Ali",
       "papers": 1,
-      "sum_citations": 444,
-      "avg_citations": 444.0,
+      "sum_citations": 451,
+      "avg_citations": 451.0,
       "institutions": [
         "University of Fiji",
         "Central Queensland University"
@@ -15989,8 +15989,8 @@
       "author_id": "https://openalex.org/A5039341855",
       "name": "Amir H. Gandomi",
       "papers": 1,
-      "sum_citations": 444,
-      "avg_citations": 444.0,
+      "sum_citations": 451,
+      "avg_citations": 451.0,
       "institutions": [
         "Obuda University",
         "University of Technology Sydney"
@@ -16071,8 +16071,8 @@
       "sum_citations": 227,
       "avg_citations": 227.0,
       "institutions": [
-        "Microsoft (United States)",
-        "Georgia Institute of Technology"
+        "Georgia Institute of Technology",
+        "Microsoft (United States)"
       ],
       "institution_years": {
         "Georgia Institute of Technology": {
@@ -16867,8 +16867,8 @@
       "author_id": "https://openalex.org/A5100718286",
       "name": "Xi Chen",
       "papers": 1,
-      "sum_citations": 128,
-      "avg_citations": 128.0,
+      "sum_citations": 130,
+      "avg_citations": 130.0,
       "institutions": [],
       "institution_years": {}
     },
@@ -19454,9 +19454,9 @@
       "sum_citations": 6,
       "avg_citations": 6.0,
       "institutions": [
+        "Central European Institute of Technology",
         "Masaryk University",
-        "Central European Institute of Technology – Masaryk University",
-        "Central European Institute of Technology"
+        "Central European Institute of Technology – Masaryk University"
       ],
       "institution_years": {
         "Masaryk University": {
@@ -19547,9 +19547,9 @@
       "sum_citations": 6,
       "avg_citations": 6.0,
       "institutions": [
+        "Central European Institute of Technology",
         "Masaryk University",
-        "Central European Institute of Technology – Masaryk University",
-        "Central European Institute of Technology"
+        "Central European Institute of Technology – Masaryk University"
       ],
       "institution_years": {
         "Central European Institute of Technology": {
@@ -19579,9 +19579,9 @@
       "sum_citations": 6,
       "avg_citations": 6.0,
       "institutions": [
+        "Central European Institute of Technology",
         "Masaryk University",
-        "Central European Institute of Technology – Masaryk University",
-        "Central European Institute of Technology"
+        "Central European Institute of Technology – Masaryk University"
       ],
       "institution_years": {
         "Central European Institute of Technology": {
@@ -19611,8 +19611,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Hong Kong University of Science and Technology",
-        "University of Hong Kong"
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Hong Kong University of Science and Technology": {
@@ -19654,8 +19654,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Hong Kong University of Science and Technology",
         "University of Hong Kong",
+        "Hong Kong University of Science and Technology",
         "HKUST Shenzhen Research Institute"
       ],
       "institution_years": {
@@ -20451,8 +20451,8 @@
       "sum_citations": 13,
       "avg_citations": 13.0,
       "institutions": [
-        "Hong Kong University of Science and Technology",
-        "University of Hong Kong"
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Hong Kong University of Science and Technology": {
@@ -21257,8 +21257,8 @@
       "sum_citations": 20,
       "avg_citations": 20.0,
       "institutions": [
-        "University of Bologna",
-        "Scuola Normale Superiore"
+        "Scuola Normale Superiore",
+        "University of Bologna"
       ],
       "institution_years": {
         "Scuola Normale Superiore": {
@@ -22074,8 +22074,8 @@
       "sum_citations": 19,
       "avg_citations": 19.0,
       "institutions": [
-        "Shanghai Artificial Intelligence Laboratory",
-        "Shanghai Jiao Tong University"
+        "Shanghai Jiao Tong University",
+        "Shanghai Artificial Intelligence Laboratory"
       ],
       "institution_years": {
         "Shanghai Jiao Tong University": {
@@ -22099,8 +22099,8 @@
       "sum_citations": 19,
       "avg_citations": 19.0,
       "institutions": [
-        "Shanghai Artificial Intelligence Laboratory",
-        "Shanghai Jiao Tong University"
+        "Shanghai Jiao Tong University",
+        "Shanghai Artificial Intelligence Laboratory"
       ],
       "institution_years": {
         "Shanghai Artificial Intelligence Laboratory": {
@@ -22412,8 +22412,8 @@
       "sum_citations": 13,
       "avg_citations": 13.0,
       "institutions": [
-        "Hong Kong University of Science and Technology",
-        "University of Hong Kong"
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Hong Kong University of Science and Technology": {
@@ -22955,8 +22955,8 @@
       "sum_citations": 19,
       "avg_citations": 19.0,
       "institutions": [
-        "Le Moyne College",
-        "Rensselaer Polytechnic Institute"
+        "Rensselaer Polytechnic Institute",
+        "Le Moyne College"
       ],
       "institution_years": {
         "Rensselaer Polytechnic Institute": {
@@ -23984,8 +23984,8 @@
       "sum_citations": 3,
       "avg_citations": 3.0,
       "institutions": [
-        "Hasso Plattner Institute",
-        "University of Potsdam"
+        "University of Potsdam",
+        "Hasso Plattner Institute"
       ],
       "institution_years": {
         "Hasso Plattner Institute": {
@@ -24009,8 +24009,8 @@
       "sum_citations": 3,
       "avg_citations": 3.0,
       "institutions": [
-        "Institut national de recherche en sciences et technologies du numérique",
-        "École Polytechnique"
+        "École Polytechnique",
+        "Institut national de recherche en sciences et technologies du numérique"
       ],
       "institution_years": {
         "École Polytechnique": {
@@ -24465,8 +24465,8 @@
       "sum_citations": 6,
       "avg_citations": 6.0,
       "institutions": [
-        "Max Planck Institute for Informatics",
-        "Saarland University"
+        "Saarland University",
+        "Max Planck Institute for Informatics"
       ],
       "institution_years": {
         "Max Planck Institute for Informatics": {
@@ -26088,8 +26088,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "University of Konstanz",
-        "Norwegian University of Science and Technology"
+        "Norwegian University of Science and Technology",
+        "University of Konstanz"
       ],
       "institution_years": {
         "Norwegian University of Science and Technology": {
@@ -26298,8 +26298,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Hasso Plattner Institute",
-        "University of Potsdam"
+        "University of Potsdam",
+        "Hasso Plattner Institute"
       ],
       "institution_years": {
         "Hasso Plattner Institute": {
@@ -26323,8 +26323,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Hasso Plattner Institute",
-        "University of Potsdam"
+        "University of Potsdam",
+        "Hasso Plattner Institute"
       ],
       "institution_years": {
         "Hasso Plattner Institute": {
@@ -26348,8 +26348,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Hasso Plattner Institute",
-        "University of Potsdam"
+        "University of Potsdam",
+        "Hasso Plattner Institute"
       ],
       "institution_years": {
         "Hasso Plattner Institute": {
@@ -26382,8 +26382,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Wuhan University",
-        "Ningxia University"
+        "Ningxia University",
+        "Wuhan University"
       ],
       "institution_years": {
         "Wuhan University": {
@@ -27658,8 +27658,8 @@
       "sum_citations": 2,
       "avg_citations": 2.0,
       "institutions": [
-        "Hong Kong University of Science and Technology",
-        "University of Hong Kong"
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Hong Kong University of Science and Technology": {
@@ -27683,8 +27683,8 @@
       "sum_citations": 2,
       "avg_citations": 2.0,
       "institutions": [
-        "Chinese Academy of Sciences",
-        "Institute of Software"
+        "Institute of Software",
+        "Chinese Academy of Sciences"
       ],
       "institution_years": {
         "Institute of Software": {
@@ -28046,9 +28046,9 @@
       "sum_citations": 8,
       "avg_citations": 8.0,
       "institutions": [
-        "Beijing Normal University - Hong Kong Baptist University United International College",
+        "Beijing Normal University",
         "Hong Kong Baptist University",
-        "Beijing Normal University"
+        "Beijing Normal University - Hong Kong Baptist University United International College"
       ],
       "institution_years": {
         "Beijing Normal University - Hong Kong Baptist University United International College": {
@@ -29577,8 +29577,8 @@
       "sum_citations": 9,
       "avg_citations": 9.0,
       "institutions": [
-        "Hasso Plattner Institute",
-        "University of Potsdam"
+        "University of Potsdam",
+        "Hasso Plattner Institute"
       ],
       "institution_years": {
         "Hasso Plattner Institute": {
@@ -29638,8 +29638,8 @@
       "sum_citations": 9,
       "avg_citations": 9.0,
       "institutions": [
-        "Université de Bretagne Occidentale",
         "Laboratoire de Mathématiques",
+        "Université de Bretagne Occidentale",
         "Centre National de la Recherche Scientifique"
       ],
       "institution_years": {
@@ -29976,8 +29976,8 @@
       "sum_citations": 8,
       "avg_citations": 8.0,
       "institutions": [
-        "Shanghai Key Laboratory of Trustworthy Computing",
-        "East China Normal University"
+        "East China Normal University",
+        "Shanghai Key Laboratory of Trustworthy Computing"
       ],
       "institution_years": {
         "Shanghai Key Laboratory of Trustworthy Computing": {
@@ -30224,8 +30224,8 @@
       "sum_citations": 8,
       "avg_citations": 8.0,
       "institutions": [
-        "Institute of Computing Technology",
-        "University of Chinese Academy of Sciences"
+        "University of Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "Institute of Computing Technology": {
@@ -31091,8 +31091,8 @@
       "sum_citations": 3,
       "avg_citations": 3.0,
       "institutions": [
-        "China Mobile (China)",
-        "Central South University"
+        "Central South University",
+        "China Mobile (China)"
       ],
       "institution_years": {
         "China Mobile (China)": {
@@ -31116,8 +31116,8 @@
       "sum_citations": 3,
       "avg_citations": 3.0,
       "institutions": [
-        "China Mobile (China)",
-        "Central South University"
+        "Central South University",
+        "China Mobile (China)"
       ],
       "institution_years": {
         "China Mobile (China)": {
@@ -31453,8 +31453,8 @@
       "sum_citations": 3,
       "avg_citations": 3.0,
       "institutions": [
-        "Institute of Computing Technology",
-        "University of Chinese Academy of Sciences"
+        "University of Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "Institute of Computing Technology": {
@@ -32104,8 +32104,8 @@
       "sum_citations": 5,
       "avg_citations": 5.0,
       "institutions": [
-        "Hugging Face",
-        "FACE Foundation"
+        "FACE Foundation",
+        "Hugging Face"
       ],
       "institution_years": {
         "Hugging Face": {
@@ -32172,8 +32172,8 @@
       "sum_citations": 5,
       "avg_citations": 5.0,
       "institutions": [
-        "Hong Kong University of Science and Technology",
-        "University of Hong Kong"
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Hong Kong University of Science and Technology": {
@@ -32197,8 +32197,8 @@
       "sum_citations": 5,
       "avg_citations": 5.0,
       "institutions": [
-        "Hong Kong University of Science and Technology",
-        "University of Hong Kong"
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Hong Kong University of Science and Technology": {
@@ -32222,8 +32222,8 @@
       "sum_citations": 5,
       "avg_citations": 5.0,
       "institutions": [
-        "University of Chicago",
-        "Brown University"
+        "Brown University",
+        "University of Chicago"
       ],
       "institution_years": {
         "University of Chicago": {
@@ -32319,8 +32319,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "DeepMind (United Kingdom)",
-        "Google (United Kingdom)"
+        "Google (United Kingdom)",
+        "DeepMind (United Kingdom)"
       ],
       "institution_years": {
         "Google (United Kingdom)": {
@@ -32344,8 +32344,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Institute of Computing Technology",
-        "University of Chinese Academy of Sciences"
+        "University of Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "Institute of Computing Technology": {
@@ -32459,9 +32459,9 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "University of Science and Technology of China",
         "Institute of Computing Technology",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "University of Science and Technology of China"
       ],
       "institution_years": {
         "University of Science and Technology of China": {
@@ -32779,8 +32779,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Chinese Academy of Sciences",
-        "Institute of Software"
+        "Institute of Software",
+        "Chinese Academy of Sciences"
       ],
       "institution_years": {
         "Institute of Software": {
@@ -33524,8 +33524,8 @@
       "sum_citations": 5,
       "avg_citations": 5.0,
       "institutions": [
-        "Google (Israel)",
-        "Tel Aviv University"
+        "Tel Aviv University",
+        "Google (Israel)"
       ],
       "institution_years": {
         "Tel Aviv University": {
@@ -34341,8 +34341,8 @@
       "sum_citations": 2,
       "avg_citations": 2.0,
       "institutions": [
-        "Chinese Academy of Sciences",
-        "Academy of Mathematics and Systems Science"
+        "Academy of Mathematics and Systems Science",
+        "Chinese Academy of Sciences"
       ],
       "institution_years": {
         "Academy of Mathematics and Systems Science": {
@@ -34420,8 +34420,8 @@
       "sum_citations": 2,
       "avg_citations": 2.0,
       "institutions": [
-        "Hong Kong University of Science and Technology",
-        "University of Hong Kong"
+        "University of Hong Kong",
+        "Hong Kong University of Science and Technology"
       ],
       "institution_years": {
         "Hong Kong University of Science and Technology": {
@@ -34661,8 +34661,8 @@
       "sum_citations": 2,
       "avg_citations": 2.0,
       "institutions": [
-        "University of Nebraska System",
-        "University of Nebraska–Lincoln"
+        "University of Nebraska–Lincoln",
+        "University of Nebraska System"
       ],
       "institution_years": {
         "University of Nebraska System": {
@@ -35220,8 +35220,8 @@
       "sum_citations": 4,
       "avg_citations": 4.0,
       "institutions": [
-        "Centre National de la Recherche Scientifique",
-        "Université Grenoble Alpes"
+        "Université Grenoble Alpes",
+        "Centre National de la Recherche Scientifique"
       ],
       "institution_years": {
         "Université Grenoble Alpes": {
@@ -35353,8 +35353,8 @@
       "sum_citations": 4,
       "avg_citations": 4.0,
       "institutions": [
-        "University of California, Riverside",
-        "Naval Research Laboratory Ocean Sciences Division"
+        "Naval Research Laboratory Ocean Sciences Division",
+        "University of California, Riverside"
       ],
       "institution_years": {
         "Naval Research Laboratory Ocean Sciences Division": {
@@ -35378,8 +35378,8 @@
       "sum_citations": 4,
       "avg_citations": 4.0,
       "institutions": [
-        "University of California, Riverside",
-        "Naval Research Laboratory Ocean Sciences Division"
+        "Naval Research Laboratory Ocean Sciences Division",
+        "University of California, Riverside"
       ],
       "institution_years": {
         "Naval Research Laboratory Ocean Sciences Division": {
@@ -35734,8 +35734,8 @@
       "sum_citations": 3,
       "avg_citations": 3.0,
       "institutions": [
-        "Michigan United",
-        "University of Michigan"
+        "University of Michigan",
+        "Michigan United"
       ],
       "institution_years": {
         "Michigan United": {
@@ -35759,8 +35759,8 @@
       "sum_citations": 3,
       "avg_citations": 3.0,
       "institutions": [
-        "Michigan United",
-        "University of Michigan"
+        "University of Michigan",
+        "Michigan United"
       ],
       "institution_years": {
         "Michigan United": {
@@ -36822,8 +36822,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Shandong Institute of Automation",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "Shandong Institute of Automation"
       ],
       "institution_years": {
         "Shandong Institute of Automation": {
@@ -36847,8 +36847,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Shandong Institute of Automation",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "Shandong Institute of Automation"
       ],
       "institution_years": {
         "Shandong Institute of Automation": {
@@ -37950,8 +37950,8 @@
       "sum_citations": 2,
       "avg_citations": 2.0,
       "institutions": [
-        "Institut de Recherche en Informatique et Systèmes Aléatoires",
         "Université de Rennes",
+        "Institut de Recherche en Informatique et Systèmes Aléatoires",
         "Centre National de la Recherche Scientifique"
       ],
       "institution_years": {
@@ -39388,8 +39388,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Institute of Computing Technology",
-        "University of Chinese Academy of Sciences"
+        "University of Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "Institute of Computing Technology": {
@@ -39539,8 +39539,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "China University of Geosciences",
         "Hubei Provincial Water Resources and Hydropower Planning Survey and Design Institute",
+        "China University of Geosciences",
         "Ministry of Education of the People's Republic of China"
       ],
       "institution_years": {
@@ -39571,8 +39571,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "China University of Geosciences",
         "Hubei Provincial Water Resources and Hydropower Planning Survey and Design Institute",
+        "China University of Geosciences",
         "Ministry of Education of the People's Republic of China",
         "Ministry of Natural Resources"
       ],
@@ -39610,8 +39610,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "China University of Geosciences",
         "Hubei Provincial Water Resources and Hydropower Planning Survey and Design Institute",
+        "China University of Geosciences",
         "Ministry of Education of the People's Republic of China"
       ],
       "institution_years": {
@@ -39642,8 +39642,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "China University of Geosciences",
         "Hubei Provincial Water Resources and Hydropower Planning Survey and Design Institute",
+        "China University of Geosciences",
         "Ministry of Education of the People's Republic of China",
         "Ministry of Natural Resources"
       ],
@@ -39681,8 +39681,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "China University of Geosciences",
         "Hubei Provincial Water Resources and Hydropower Planning Survey and Design Institute",
+        "China University of Geosciences",
         "Ministry of Education of the People's Republic of China",
         "Ministry of Natural Resources"
       ],
@@ -40179,8 +40179,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "China Telecom",
-        "China Telecom (China)"
+        "China Telecom (China)",
+        "China Telecom"
       ],
       "institution_years": {
         "China Telecom (China)": {
@@ -40699,8 +40699,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Fundação Getulio Vargas",
-        "Escola de Economia de São Paulo"
+        "Escola de Economia de São Paulo",
+        "Fundação Getulio Vargas"
       ],
       "institution_years": {
         "Escola de Economia de São Paulo": {
@@ -40877,8 +40877,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Shanghai Key Laboratory of Trustworthy Computing",
-        "East China Normal University"
+        "East China Normal University",
+        "Shanghai Key Laboratory of Trustworthy Computing"
       ],
       "institution_years": {
         "East China Normal University": {
@@ -40902,8 +40902,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Shanghai Key Laboratory of Trustworthy Computing",
-        "East China Normal University"
+        "East China Normal University",
+        "Shanghai Key Laboratory of Trustworthy Computing"
       ],
       "institution_years": {
         "East China Normal University": {
@@ -41260,8 +41260,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Chinese Academy of Sciences",
-        "Aerospace Information Research Institute"
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences"
       ],
       "institution_years": {
         "Aerospace Information Research Institute": {
@@ -41285,8 +41285,8 @@
       "sum_citations": 1,
       "avg_citations": 1.0,
       "institutions": [
-        "Chinese Academy of Sciences",
-        "Aerospace Information Research Institute"
+        "Aerospace Information Research Institute",
+        "Chinese Academy of Sciences"
       ],
       "institution_years": {
         "Aerospace Information Research Institute": {
@@ -42619,9 +42619,9 @@
       "avg_citations": 0.0,
       "institutions": [
         "San Antonio College",
-        "Universidade de São Paulo",
+        "Brazilian Society of Computational and Applied Mathematics",
         "Fundação de Amparo à Pesquisa do Estado de São Paulo",
-        "Brazilian Society of Computational and Applied Mathematics"
+        "Universidade de São Paulo"
       ],
       "institution_years": {
         "Brazilian Society of Computational and Applied Mathematics": {
@@ -42738,8 +42738,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Rutgers Sexual and Reproductive Health and Rights",
         "Rütgers (Germany)",
+        "Rutgers Sexual and Reproductive Health and Rights",
         "Rutgers, The State University of New Jersey"
       ],
       "institution_years": {
@@ -42770,8 +42770,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Rutgers Sexual and Reproductive Health and Rights",
         "Rütgers (Germany)",
+        "Rutgers Sexual and Reproductive Health and Rights",
         "Rutgers, The State University of New Jersey"
       ],
       "institution_years": {
@@ -42856,9 +42856,9 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Institute of Computing Technology",
         "University of Chinese Academy of Sciences",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "University of Chinese Academy of Sciences": {
@@ -42888,8 +42888,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Institute of Computing Technology",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "Institute of Computing Technology": {
@@ -42913,8 +42913,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Institute of Computing Technology",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "Institute of Computing Technology": {
@@ -42938,9 +42938,9 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Institute of Computing Technology",
         "University of Chinese Academy of Sciences",
-        "Chinese Academy of Sciences"
+        "Chinese Academy of Sciences",
+        "Institute of Computing Technology"
       ],
       "institution_years": {
         "University of Chinese Academy of Sciences": {
@@ -43236,8 +43236,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Polytechnic University",
-        "Université Mohammed VI Polytechnique"
+        "Université Mohammed VI Polytechnique",
+        "Polytechnic University"
       ],
       "institution_years": {
         "Polytechnic University": {
@@ -43288,8 +43288,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Shanghai Key Laboratory of Trustworthy Computing",
-        "East China Normal University"
+        "East China Normal University",
+        "Shanghai Key Laboratory of Trustworthy Computing"
       ],
       "institution_years": {
         "Shanghai Key Laboratory of Trustworthy Computing": {
@@ -43313,8 +43313,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Shanghai Key Laboratory of Trustworthy Computing",
-        "East China Normal University"
+        "East China Normal University",
+        "Shanghai Key Laboratory of Trustworthy Computing"
       ],
       "institution_years": {
         "East China Normal University": {
@@ -43338,8 +43338,8 @@
       "sum_citations": 0,
       "avg_citations": 0.0,
       "institutions": [
-        "Shanghai Key Laboratory of Trustworthy Computing",
-        "East China Normal University"
+        "East China Normal University",
+        "Shanghai Key Laboratory of Trustworthy Computing"
       ],
       "institution_years": {
         "Shanghai Key Laboratory of Trustworthy Computing": {
@@ -43915,6 +43915,6 @@
       "institution_years": {}
     }
   ],
-  "citations_sum": 11210,
-  "last_updated": "2025-09-04T22:38:29Z"
+  "citations_sum": 11225,
+  "last_updated": "2025-09-05T22:38:55Z"
 }
